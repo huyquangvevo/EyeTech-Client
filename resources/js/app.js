@@ -18,6 +18,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('branch-select-component', require('./components/BranchSelectComponent.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
 
@@ -31,6 +32,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+const register = new Vue({
     el: '#app'
 });
