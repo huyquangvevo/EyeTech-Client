@@ -15,19 +15,18 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     protected $redirectTo = '/home';
-    protected $storeArr = [];
 
     public function __construct()
     {
         $this->middleware('guest');
 
-        $client = new GuzzleHttp\Client();
-        $request = $client->request('GET', 'http://202.191.56.249/eyetech/api/v1/list-stores-id');
-        $res = json_decode($request->getBody());
-        $storeArrJson = $res->stores_id;
-        foreach ($storeArrJson as $store) {
-            array_push($this->storeArr, $store->id);
-        }
+//        $client = new GuzzleHttp\Client();
+//        $request = $client->request('GET', 'http://202.191.56.249/eyetech/api/v1/list-stores-id');
+//        $res = json_decode($request->getBody());
+//        $storeArrJson = $res->stores_id;
+//        foreach ($storeArrJson as $store) {
+//            array_push($this->storeArr, $store->id);
+//        }
     }
 
     protected function validator(array $data)
@@ -50,30 +49,19 @@ class RegisterController extends Controller
         ]);
     }
 
-    protected function showRegistrationForm()
-    {
-        $storeArr = $this->storeArr;
-        return view('auth.register', compact('storeArr'));
-    }
-
     protected function register(Request $request)
     {
         $this->validator($request->all())->validate();
-
         $data = $request->all();
-        $selectedStoreKey = $data['store'];
-        $selectedStoreValue = $this->storeArr[$selectedStoreKey];
-
-        $selectedBranchKey = $data['branch'];
-        $selectedBranchValue = $this->storeArr[$selectedBranchKey];
 
         $user = new User();
-        $user->branch_id = $selectedBranchValue;
+        $user->branch_id = 0;
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->password = bcrypt($data['password']);
         $user->save();
 
         return redirect()->route('login')->with('message', 'Please wait to verify account!');
+
     }
 }

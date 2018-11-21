@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div id="app" class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -9,19 +9,7 @@
 
                 <div class="card-body">
                     {!! Form::open(['method' => 'POST', 'url' => route('register')]) !!}
-                        <div class="form-group row">
-                            {!! Form::label('store', 'Store', ['class' => 'col-md-4 col-form-label text-md-right']) !!}
-                            <div class="col-md-6">
-                                {!! Form::select('store', $storeArr, null, ['class' => 'form-control']) !!}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            {!! Form::label('branch', 'Branch', ['class' => 'col-md-4 col-form-label text-md-right']) !!}
-                            <div class="col-md-6">
-                                {!! Form::select('branch', $storeArr, null, ['id' => 'branch', 'class' => 'form-control']) !!}
-                            </div>
-                        </div>
+                        {{--<branch-select-component></branch-select-component>--}}
 
                         <div class="form-group row">
                             {!! Form::label('name', 'Name', ['class' => 'col-md-4 col-form-label text-md-right']) !!}
@@ -84,4 +72,7 @@
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+    <script src="{{ url('js/app.js') }}"></script>
 @endsection
