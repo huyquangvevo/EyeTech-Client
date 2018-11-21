@@ -7,60 +7,40 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use GuzzleHttp;
 
 class RegisterController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
-    */
-
     use RegistersUsers;
 
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
     protected $redirectTo = '/home';
+    protected $storeArr = [];
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('guest');
+
+        $client = new GuzzleHttp\Client();
+        $request = $client->request('GET', 'http://202.191.56.249/eyetech/api/v1/list-stores-id');
+        $res = json_decode($request->getBody());
+        $storeArrJson = $res->stores_id;
+        foreach ($storeArrJson as $store) {
+            array_push($this->storeArr, $store->id);
+        }
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'store' => ['required'],
+            'branch' => ['required'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
     protected function create(array $data)
     {
         return User::create([
@@ -68,5 +48,32 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    protected function showRegistrationForm()
+    {
+        $storeArr = $this->storeArr;
+        return view('auth.register', compact('storeArr'));
+    }
+
+    protected function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        $data = $request->all();
+        $selectedStoreKey = $data['store'];
+        $selectedStoreValue = $this->storeArr[$selectedStoreKey];
+
+        $selectedBranchKey = $data['branch'];
+        $selectedBranchValue = $this->storeArr[$selectedBranchKey];
+
+        $user = new User();
+        $user->branch_id = $selectedBranchValue;
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->password = bcrypt($data['password']);
+        $user->save();
+
+        return redirect()->route('login')->with('message', 'Please wait to verify account!');
     }
 }
