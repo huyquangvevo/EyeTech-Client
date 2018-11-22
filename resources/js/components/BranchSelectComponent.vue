@@ -22,54 +22,54 @@
     </div>
 </template>
 
-<!--<script>-->
-    <!--export default {-->
-        <!--data() {-->
-            <!--return {-->
-                <!--storeSelected: '',-->
-                <!--branchSelected: '',-->
-                <!--storeArr: null,-->
-                <!--branchArr: null,-->
-            <!--}-->
-        <!--},-->
-        <!--mounted() {-->
-            <!--axios.get('http://202.191.56.249/eyetech/api/v1/list-stores-id', {-->
-                <!--headers: {-->
-                    <!--'Access-Control-Allow-Origin' : '*',-->
-                    <!--'Access-Control-Allow-Methods' : 'GET, POST, PATCH, PUT, DELETE, OPTIONS',-->
-                    <!--'Access-Control-Allow-Headers' : 'Content-Type, Accept, Authorization, X-Requested-With, Application',-->
-                <!--}-->
-            <!--})-->
-                <!--.then(response => (this.storeArr = response.data.stores_id))-->
-                <!--.catch(function (error) {-->
-                    <!--console.log(error);-->
-                <!--});-->
-        <!--},-->
-        <!--beforeUpdate() {-->
-            <!--axios({-->
-                <!--method: 'post',-->
-                <!--url: 'http://202.191.56.249/eyetech/api/v1/list-branches-id',-->
-                <!--headers: {-->
-                    <!--'Access-Control-Allow-Origin' : '*',-->
-                    <!--'Access-Control-Allow-Methods' : 'GET, POST, PATCH, PUT, DELETE, OPTIONS',-->
-                    <!--'Access-Control-Allow-Headers' : 'Content-Type, Accept, Authorization, X-Requested-With, Application',-->
-                    <!--'Content-Type': 'application/json',-->
-                <!--},-->
-                <!--data: {-->
-                    <!--store_id: this.storeSelected,-->
-                <!--}-->
-            <!--})-->
-                <!--.then(response => (this.branchArr = response.data.data))-->
-                <!--.catch(function (error) {-->
-                    <!--console.log(error);-->
-                <!--});-->
-        <!--},-->
-        <!--updated() {-->
+<script>
+    export default {
+        data() {
+            return {
+                storeSelected: '',
+                branchSelected: '',
+                storeArr: null,
+                branchArr: null,
+            }
+        },
+        mounted() {
+            axios.get('http://202.191.56.249/eyetech/api/v1/list-stores-id', {
+                headers: {
+                    'Access-Control-Allow-Origin' : '*',
+                    'Access-Control-Allow-Methods' : 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers' : 'Content-Type, Accept, Authorization, X-Requested-With, Application',
+                }
+            })
+                .then(response => (this.storeArr = response.data.stores_id))
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+        beforeUpdate() {
+            axios({
+                method: 'post',
+                url: 'http://202.191.56.249/eyetech/api/v1/list-branches-id',
+                headers: {
+                    'Access-Control-Allow-Origin' : '*',
+                    'Access-Control-Allow-Methods' : 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers' : 'Content-Type, Accept, Authorization, X-Requested-With, Application',
+                    'Content-Type': 'application/json',
+                },
+                data: {
+                    store_id: this.storeSelected,
+                }
+            })
+                .then(response => (this.branchArr = response.data.data))
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+        updated() {
 
 
-        <!--}-->
-    <!--}-->
-<!--</script>-->
+        }
+    }
+</script>
 
 <style scoped>
 

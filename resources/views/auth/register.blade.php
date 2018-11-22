@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     {!! Form::open(['method' => 'POST', 'url' => route('register')]) !!}
-                        {{--<branch-select-component></branch-select-component>--}}
+                        <branch-select-component></branch-select-component>
 
                         <div class="form-group row">
                             {!! Form::label('name', 'Name', ['class' => 'col-md-4 col-form-label text-md-right']) !!}
@@ -74,5 +74,5 @@
 </div>
 @endsection
 @section('script')
-    <script src="{{ url('js/app.js') }}"></script>
+    <script src="{{ url('public/js/app.js') }}"></script>
 @endsection

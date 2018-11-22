@@ -13,21 +13,14 @@
                     <th align="center"><div>Image Detection</div></th>
                     <th align="center"><div>Detail</div></th>
                 </tr>
-                <!--<tr>-->
-                <!--<td>-->
-                <!--<span class="label label-primary">Paid</span>-->
-                <!--<span class="label label-success">Active</span>-->
-                <!--</td>-->
-                <!--<td>John Doe</td>-->
-                <!--<td align="center">3435362</td>-->
-                <!--<td class="color-blue-grey" nowrap align="center"><span class="semibold">Today</span> 8:30</td>-->
-                <!--</tr>-->
                 <tr v-for="event in events">
                     <td>{{ event.name}}</td>
                     <td>{{ event.type}}</td>
                     <td>{{ event.time_in}}</td>
-                    <td>{{ event.image_camera_url_array}}</td>
-                    <td>{{ event.image_detection_url_array}}</td>
+                    <td>
+                        <img v-for="image in images" v-bind:src="image.url"/>
+                    </td>
+                    <!--<td>{{ event.image_detection_url_array}}</td>-->
                     <td>Action</td>
                 </tr>
             </table>
@@ -41,20 +34,21 @@
         data() {
             return {
                 events: null,
+                images: [
+                    {url: 'public/img/photo-220-1.jpg', alt: ''},
+                    {url: 'public/img/photo-220-1.jpg', alt: ''},
+                ],
             }
         },
         mounted() {
             axios.post('http://202.191.56.249/eyetech/api/v1/event-format', {
-                store_id: 1
+                camera_id: 4
             })
                 .then(response => (this.events = response.data.data))
                 .catch(function (error) {
                     console.log(error)
                 });
         },
-        computed: {
-
-        }
     }
 </script>
 

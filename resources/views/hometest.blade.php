@@ -4,35 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>Eyetech Home</title>
 
-    <link href="{{ url('img/favicon.144x144.png') }}" rel="apple-touch-icon" type="image/png" sizes="144x144">
-    <link href="{{ url('img/favicon.114x114.png') }}" rel="apple-touch-icon" type="image/png" sizes="114x114">
-    <link href="{{ url('img/favicon.72x72.png') }}" rel="apple-touch-icon" type="image/png" sizes="72x72">
-    <link href="{{ url('img/favicon.57x57.png') }}" rel="apple-touch-icon" type="image/png">
-    <link href="{{ url('img/favicon.png') }}" rel="icon" type="image/png">
-    <link href="{{ url('img/favicon.ico') }}" rel="shortcut icon">
+    <link href="{{ url('public/img/favicon.144x144.png') }}" rel="apple-touch-icon" type="image/png" sizes="144x144">
+    <link href="{{ url('public/img/favicon.114x114.png') }}" rel="apple-touch-icon" type="image/png" sizes="114x114">
+    <link href="{{ url('public/img/favicon.72x72.png') }}" rel="apple-touch-icon" type="image/png" sizes="72x72">
+    <link href="{{ url('public/img/favicon.57x57.png') }}" rel="apple-touch-icon" type="image/png">
+    <link href="{{ url('public/img/favicon.png') }}" rel="icon" type="image/png">
+    <link href="{{ url('public/img/favicon.ico') }}" rel="shortcut icon">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
     <![endif]-->
-    <link rel="stylesheet" href="{{ url('css/lib/lobipanel/lobipanel.min.css') }}">
-    <link rel="stylesheet" href="{{ url('css/separate/vendor/lobipanel.min.css') }}">
-    <link rel="stylesheet" href="{{ url('css/lib/jqueryui/jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ url('css/separate/pages/widgets.min.css') }}">
-    <link rel="stylesheet" href="{{ url('css/lib/font-awesome/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ url('css/lib/bootstrap/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url('css/main.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/lib/lobipanel/lobipanel.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/separate/vendor/lobipanel.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/lib/jqueryui/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/separate/pages/widgets.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/lib/font-awesome/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/lib/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/main.css') }}">
 </head>
 <body class="with-side-menu control-panel control-panel-compact">
 
 <header class="site-header">
     <div class="container-fluid">
         <a href="#" class="site-logo">
-            <img class="hidden-md-down" src="img/logo-22.png" alt="">
-            <img class="hidden-lg-down" src="img/logo-22-mob.png" alt="">
+            <img class="hidden-md-down" src="public/img/logo-22.png" alt="">
+            <img class="hidden-lg-down" src="public/img/logo-22-mob.png" alt="">
         </a>
 
         <button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
@@ -62,7 +67,7 @@
                             <div class="dropdown-menu-notif-list">
                                 <div class="dropdown-menu-notif-item">
                                     <div class="photo">
-                                        <img src="img/photo-64-1.jpg" alt="">
+                                        <img src="public/img/photo-64-1.jpg" alt="">
                                     </div>
                                     <div class="dot"></div>
                                     <a href="#">Morgan</a> was bothering about something
@@ -70,7 +75,7 @@
                                 </div>
                                 <div class="dropdown-menu-notif-item">
                                     <div class="photo">
-                                        <img src="img/photo-64-2.jpg" alt="">
+                                        <img src="public/img/photo-64-2.jpg" alt="">
                                     </div>
                                     <div class="dot"></div>
                                     <a href="#">Lioneli</a> had commented on this <a href="#">Super Important Thing</a>
@@ -78,7 +83,7 @@
                                 </div>
                                 <div class="dropdown-menu-notif-item">
                                     <div class="photo">
-                                        <img src="img/photo-64-3.jpg" alt="">
+                                        <img src="public/img/photo-64-3.jpg" alt="">
                                     </div>
                                     <div class="dot"></div>
                                     <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
@@ -86,7 +91,7 @@
                                 </div>
                                 <div class="dropdown-menu-notif-item">
                                     <div class="photo">
-                                        <img src="img/photo-64-4.jpg" alt="">
+                                        <img src="{{ url('public/img/photo-64-4.jpg') }}" alt="">
                                     </div>
                                     <a href="#">Lionely</a> wants to go to <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
                                     <div class="color-blue-grey-lighter">7 hours ago</div>
@@ -134,22 +139,22 @@
                                 <div class="tab-pane active" id="tab-incoming" role="tabpanel">
                                     <div class="dropdown-menu-messages-list">
                                         <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+                                            <span class="avatar-preview avatar-preview-32"><img src="{{ url('public/img/photo-64-2.jpg') }}" alt=""></span>
                                             <span class="mess-item-name">Tim Collins</span>
                                             <span class="mess-item-txt">Morgan was bothering about something!</span>
                                         </a>
                                         <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
+                                            <span class="avatar-preview avatar-preview-32"><img src="public/img/avatar-2-64.png" alt=""></span>
                                             <span class="mess-item-name">Christian Burton</span>
                                             <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
                                         </a>
                                         <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+                                            <span class="avatar-preview avatar-preview-32"><img src="public/img/photo-64-2.jpg" alt=""></span>
                                             <span class="mess-item-name">Tim Collins</span>
                                             <span class="mess-item-txt">Morgan was bothering about something!</span>
                                         </a>
                                         <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
+                                            <span class="avatar-preview avatar-preview-32"><img src="public/img/avatar-2-64.png" alt=""></span>
                                             <span class="mess-item-name">Christian Burton</span>
                                             <span class="mess-item-txt">Morgan was bothering about something...</span>
                                         </a>
@@ -158,22 +163,22 @@
                                 <div class="tab-pane" id="tab-outgoing" role="tabpanel">
                                     <div class="dropdown-menu-messages-list">
                                         <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
+                                            <span class="avatar-preview avatar-preview-32"><img src="public/img/avatar-2-64.png" alt=""></span>
                                             <span class="mess-item-name">Christian Burton</span>
                                             <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something...</span>
                                         </a>
                                         <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+                                            <span class="avatar-preview avatar-preview-32"><img src="public/img/photo-64-2.jpg" alt=""></span>
                                             <span class="mess-item-name">Tim Collins</span>
                                             <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
                                         </a>
                                         <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
+                                            <span class="avatar-preview avatar-preview-32"><img src="public/img/avatar-2-64.png" alt=""></span>
                                             <span class="mess-item-name">Christian Burtons</span>
                                             <span class="mess-item-txt">Morgan was bothering about something!</span>
                                         </a>
                                         <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+                                            <span class="avatar-preview avatar-preview-32"><img src="public/img/photo-64-2.jpg" alt=""></span>
                                             <span class="mess-item-name">Tim Collins</span>
                                             <span class="mess-item-txt">Morgan was bothering about something!</span>
                                         </a>
@@ -212,7 +217,7 @@
 
                     <div class="dropdown user-menu">
                         <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="img/avatar-2-64.png" alt="">
+                            <img src="public/img/avatar-2-64.png" alt="">
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
                             <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
@@ -428,95 +433,9 @@
             </div><!--.col-->
         </div><!--.row-->
 
-        <div class="row">
-            <div class="col-xl-6 dahsboard-column">
-                <section class="box-typical box-typical-dashboard panel panel-default scrollable">
-                    <header class="box-typical-header panel-heading">
-                        <h3 class="panel-title">Recent orders</h3>
-                    </header>
-                    <div class="box-typical-body panel-body">
-                        <table class="tbl-typical">
-                            <tr>
-                                <th><div>Status</div></th>
-                                <th><div>Clients</div></th>
-                                <th align="center"><div>Orders#</div></th>
-                                <th align="center"><div>Date</div></th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="label label-primary">Paid</span>
-                                    <span class="label label-success">Active</span>
-                                </td>
-                                <td>John Doe</td>
-                                <td align="center">3435362</td>
-                                <td class="color-blue-grey" nowrap align="center"><span class="semibold">Today</span> 8:30</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="label label-primary">Paid</span>
-                                    <span class="label label-success">Active</span>
-                                </td>
-                                <td>Thomas Bayer</td>
-                                <td align="center">3435362</td>
-                                <td class="color-blue-grey" nowrap align="center"><span class="semibold">Today</span> 16:30</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="label label-primary">Paid</span>
-                                    <span class="label label-default">Inactive</span>
-                                </td>
-                                <td>Nicolas Karabat</td>
-                                <td align="center">3435362</td>
-                                <td class="color-blue-grey" nowrap align="center"><span class="semibold">Yesterday</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="label label-default">Unpaid</span>
-                                    <span class="label label-default">Inactive</span>
-                                </td>
-                                <td>Alexandre Pome</td>
-                                <td align="center">3435362</td>
-                                <td class="color-blue-grey" nowrap align="center">23th May</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="label label-primary">Paid</span>
-                                    <span class="label label-success">Active</span>
-                                </td>
-                                <td>John Doe</td>
-                                <td align="center">3435362</td>
-                                <td class="color-blue-grey" nowrap align="center"><span class="semibold">Today</span> 8:30</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="label label-primary">Paid</span>
-                                    <span class="label label-success">Active</span>
-                                </td>
-                                <td>Thomas Bayer</td>
-                                <td align="center">3435362</td>
-                                <td class="color-blue-grey" nowrap align="center"><span class="semibold">Today</span> 16:30</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="label label-primary">Paid</span>
-                                    <span class="label label-default">Inactive</span>
-                                </td>
-                                <td>Nicolas Karabat</td>
-                                <td align="center">3435362</td>
-                                <td class="color-blue-grey" nowrap align="center"><span class="semibold">Yesterday</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="label label-default">Unpaid</span>
-                                    <span class="label label-default">Inactive</span>
-                                </td>
-                                <td>Alexandre Pome</td>
-                                <td align="center">3435362</td>
-                                <td class="color-blue-grey" nowrap align="center">23th May</td>
-                            </tr>
-                        </table>
-                    </div><!--.box-typical-body-->
-                </section><!--.box-typical-dashboard-->
+        <div id="event" class="row">
+            <div class="col-xl-12 dahsboard-column">
+                <event-component></event-component>
             </div><!--.col-->
         </div>
     </div><!--.container-fluid-->
@@ -643,15 +562,15 @@
     </a>
 </div>
 
-<script src="js/lib/jquery/jquery-3.2.1.min.js"></script>
-<script src="js/lib/popper/popper.min.js"></script>
-<script src="js/lib/tether/tether.min.js"></script>
-<script src="js/lib/bootstrap/bootstrap.min.js"></script>
-<script src="js/plugins.js"></script>
+<script src="{{ url('public/js/lib/jquery/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ url('public/js/lib/popper/popper.min.js') }}"></script>
+<script src="{{ url('public/js/lib/tether/tether.min.js') }}"></script>
+<script src="{{ url('public/js/lib/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ url('public/js/plugins.js') }}"></script>
 
-<script type="text/javascript" src="js/lib/jqueryui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/lib/lobipanel/lobipanel.min.js"></script>
-<script type="text/javascript" src="js/lib/match-height/jquery.matchHeight.min.js"></script>
+<script type="text/javascript" src="{{ url('public/js/lib/jqueryui/jquery-ui.min.js') }}"></script>
+<script type="text/javascript" src="{{ url('public/js/lib/lobipanel/lobipanel.min.js') }}"></script>
+<script type="text/javascript" src="{{ url('public/js/lib/match-height/jquery.matchHeight.min.js') }}"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
     $(document).ready(function() {
@@ -752,6 +671,7 @@
         });
     });
 </script>
-<script src="{{ url('js/app.js') }}"></script>
+<script src="{{ url('public/js/event.js') }}"></script>
+<script src="{{ url('public/js/app.js') }}"></script>
 </body>
 </html>
