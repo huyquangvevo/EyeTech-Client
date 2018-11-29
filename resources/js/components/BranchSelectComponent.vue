@@ -33,7 +33,7 @@
             }
         },
         mounted() {
-            axios.get('http://202.191.56.249/eyetech/api/v1/list-stores-id', {
+            axios.get('http://localhost/eyetech/api/v1/list-stores-id', {
                 headers: {
                     'Access-Control-Allow-Origin' : '*',
                     'Access-Control-Allow-Methods' : 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
@@ -48,7 +48,7 @@
         beforeUpdate() {
             axios({
                 method: 'post',
-                url: 'http://202.191.56.249/eyetech/api/v1/list-branches-id',
+                url: 'http://localhost/eyetech/api/v1/list-branches-id',
                 headers: {
                     'Access-Control-Allow-Origin' : '*',
                     'Access-Control-Allow-Methods' : 'GET, POST, PATCH, PUT, DELETE, OPTIONS',

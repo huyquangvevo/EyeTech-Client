@@ -17,10 +17,11 @@
                     <td>{{ event.name}}</td>
                     <td>{{ event.type}}</td>
                     <td>{{ event.time_in}}</td>
-                    <td>
-                        <img v-for="image in images" v-bind:src="image.url"/>
-                    </td>
-                    <!--<td>{{ event.image_detection_url_array}}</td>-->
+                    <!--<td>-->
+                        <!--<img v-for="image in images" v-bind:src="image.url"/>-->
+                    <!--</td>-->
+                    <td>{{ event.image_camera_url_array}}</td>
+                    <td>{{ event.image_detection_url_array}}</td>
                     <td>Action</td>
                 </tr>
             </table>
@@ -41,7 +42,7 @@
             }
         },
         mounted() {
-            axios.post('http://202.191.56.249/eyetech/api/v1/event-format', {
+            axios.post('http://localhost/eyetech/api/v1/event-format', {
                 camera_id: 4
             })
                 .then(response => (this.events = response.data.data))
