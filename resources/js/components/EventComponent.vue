@@ -43,7 +43,7 @@
         },
         mounted() {
             axios.post('http://localhost/eyetech/api/v1/event-format', {
-                camera_id: 4
+                camera_id: 5
             })
                 .then(response => (this.events = response.data.data))
                 .catch(function (error) {
