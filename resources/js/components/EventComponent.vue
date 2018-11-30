@@ -51,7 +51,7 @@
         },
         methods: {
             fetchEventsList() {
-                axios.post('http://localhost/eyetech/api/v1/events-format', {
+                axios.post('http://202.191.56.249/eyetech/api/v1/events-format', {
                     camera_id: 5
                 })
                     .then(response => {
