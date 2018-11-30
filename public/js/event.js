@@ -47896,7 +47896,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var _this = this;
 
-        axios.get('http://localhost/eyetech/api/v1/list-stores-id', {
+        axios.get('http://202.191.56.249/eyetech/api/v1/list-stores-id', {
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
@@ -47913,7 +47913,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         axios({
             method: 'post',
-            url: 'http://localhost/eyetech/api/v1/list-branches-id',
+            url: 'http://202.191.56.249/eyetech/api/v1/list-branches-id',
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
@@ -48193,7 +48193,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchEventsList: function fetchEventsList() {
             var _this = this;
 
-            axios.post('http://localhost/eyetech/api/v1/events-format', {
+            axios.post('http://202.191.56.249/eyetech/api/v1/events-format', {
                 camera_id: 5
             }).then(function (response) {
                 _this.events = response.data.data;
