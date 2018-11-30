@@ -42,7 +42,7 @@
             return {
                 events: null,
                 timer: '',
-                delayTime: 30000,
+                delayTime: 5000, //5s
             }
         },
         created() {

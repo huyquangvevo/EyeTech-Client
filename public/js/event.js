@@ -48181,7 +48181,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             events: null,
             timer: '',
-            delayTime: 30000
+            delayTime: 5000 //5s
         };
     },
     created: function created() {
