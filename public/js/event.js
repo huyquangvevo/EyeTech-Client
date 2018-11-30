@@ -47896,7 +47896,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var _this = this;
 
-        axios.get('http://202.191.56.249/eyetech/api/v1/list-stores-id', {
+        axios.get('http://localhost/eyetech/api/v1/list-stores-id', {
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
@@ -47913,7 +47913,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         axios({
             method: 'post',
-            url: 'http://202.191.56.249/eyetech/api/v1/list-branches-id',
+            url: 'http://localhost/eyetech/api/v1/list-branches-id',
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
@@ -48126,7 +48126,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -48167,25 +48167,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "EventComponent",
     data: function data() {
         return {
             events: null,
-            images: [{ url: 'public/img/photo-220-1.jpg', alt: '' }, { url: 'public/img/photo-220-1.jpg', alt: '' }]
+            timer: '',
+            delayTime: 30000
         };
     },
-    mounted: function mounted() {
-        var _this = this;
+    created: function created() {
+        this.fetchEventsList();
+        this.timer = setInterval(this.fetchEventsList, this.delayTime);
+    },
 
-        axios.post('http://202.191.56.249/eyetech/api/v1/event-format', {
-            camera_id: 4
-        }).then(function (response) {
-            return _this.events = response.data.data;
-        }).catch(function (error) {
-            console.log(error);
-        });
+    methods: {
+        fetchEventsList: function fetchEventsList() {
+            var _this = this;
+
+            axios.post('http://localhost/eyetech/api/v1/events-format', {
+                camera_id: 5
+            }).then(function (response) {
+                _this.events = response.data.data;
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        cancelAutoUpdate: function cancelAutoUpdate() {
+            clearInterval(this.timer);
+        }
+    },
+    beforeDestroy: function beforeDestroy() {
+        this.cancelAutoUpdate();
     }
 });
 
@@ -48201,40 +48223,62 @@ var render = function() {
     "section",
     {
       staticClass:
-        "box-typical box-typical-dashboard panel panel-default scrollable"
+        "box-typical box-typical-dashboard panel panel-default scrollable",
+      attrs: { id: "c1-test" }
     },
     [
       _vm._m(0),
       _vm._v(" "),
-      _c("div", { staticClass: "box-typical-body panel-body" }, [
-        _c(
-          "table",
-          { staticClass: "tbl-typical" },
-          [
+      _c(
+        "div",
+        { staticClass: "recent-eventTable box-typical-body panel-body" },
+        [
+          _c("table", { staticClass: "table table-bordered table-hover" }, [
             _vm._m(1),
             _vm._v(" "),
-            _vm._l(_vm.events, function(event) {
-              return _c("tr", [
-                _c("td", [_vm._v(_vm._s(event.name))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(event.type))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(event.time_in))]),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  _vm._l(_vm.images, function(image) {
-                    return _c("img", { attrs: { src: image.url } })
-                  })
-                ),
-                _vm._v(" "),
-                _c("td", [_vm._v("Action")])
-              ])
-            })
-          ],
-          2
-        )
-      ])
+            _c(
+              "tbody",
+              _vm._l(_vm.events, function(event) {
+                return _c("tr", [
+                  _c("td", { attrs: { align: "center" } }, [
+                    _vm._v(_vm._s(event.type))
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(event.name))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(event.favorites))]),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    { attrs: { align: "center" } },
+                    _vm._l(event.image_camera_url_array, function(imageCam) {
+                      return _c("img", {
+                        staticClass: "recent-eventImage",
+                        attrs: { src: imageCam }
+                      })
+                    })
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    { attrs: { align: "center" } },
+                    _vm._l(event.image_detection_url_array, function(imageDet) {
+                      return _c("img", {
+                        staticClass: "recent-eventImage",
+                        attrs: { src: imageDet }
+                      })
+                    })
+                  ),
+                  _vm._v(" "),
+                  _c("td", { attrs: { align: "center" } }, [
+                    _vm._v(_vm._s(event.time_in))
+                  ])
+                ])
+              })
+            )
+          ])
+        ]
+      )
     ]
   )
 }
@@ -48251,22 +48295,22 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("th", [_c("div", [_vm._v("Name")])]),
-      _vm._v(" "),
-      _c("th", [_c("div", [_vm._v("Type")])]),
-      _vm._v(" "),
-      _c("th", [_c("div", [_vm._v("Time In")])]),
-      _vm._v(" "),
-      _c("th", { attrs: { align: "center" } }, [
-        _c("div", [_vm._v("Image Camera")])
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { align: "center" } }, [
-        _c("div", [_vm._v("Image Detection")])
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { align: "center" } }, [_c("div", [_vm._v("Detail")])])
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Type")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Camera")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Library")]),
+        _vm._v(" "),
+        _c("th", { attrs: { width: "150" } }, [_vm._v("Time In")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Action")])
+      ])
     ])
   }
 ]

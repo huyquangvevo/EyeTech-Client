@@ -1,32 +1,38 @@
 <template>
-    <section class="box-typical box-typical-dashboard panel panel-default scrollable">
+    <section id="c1-test" class="box-typical box-typical-dashboard panel panel-default scrollable">
         <header class="box-typical-header panel-heading">
             <h3 class="panel-title">Recent events</h3>
         </header>
-        <div class="box-typical-body panel-body">
-            <table class="tbl-typical">
+        <div class="recent-eventTable box-typical-body panel-body">
+            <table class="table table-bordered table-hover">
+                <thead>
                 <tr>
-                    <th><div>Name</div></th>
-                    <th><div>Type</div></th>
-                    <th><div>Time In</div></th>
-                    <th align="center"><div>Image Camera</div></th>
-                    <th align="center"><div>Image Detection</div></th>
-                    <th align="center"><div>Detail</div></th>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Camera</th>
+                    <th>Library</th>
+                    <th width="150">Time In</th>
+                    <th>Action</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr v-for="event in events">
-                    <td>{{ event.name}}</td>
-                    <td>{{ event.type}}</td>
-                    <td>{{ event.time_in}}</td>
-                    <!--<td>-->
-                        <!--<img v-for="image in images" v-bind:src="image.url"/>-->
-                    <!--</td>-->
-                    <td>{{ event.image_camera_url_array}}</td>
-                    <td>{{ event.image_detection_url_array}}</td>
-                    <td>Action</td>
+                    <td align="center">{{ event.type }}</td>
+                    <td>{{ event.name }}</td>
+                    <td>{{ event.favorites}}</td>
+                    <td align="center">
+                        <img class="recent-eventImage" v-for="imageCam in event.image_camera_url_array" v-bind:src="imageCam">
+                    </td>
+                    <td align="center">
+                        <img class="recent-eventImage" v-for="imageDet in event.image_detection_url_array" v-bind:src="imageDet">
+                    </td>
+                    <td align="center">{{ event.time_in }}</td>
                 </tr>
+                </tbody>
             </table>
-        </div><!--.box-typical-body-->
-    </section><!--.box-typical-dashboard-->
+        </div>
+    </section>
 </template>
 
 <script>
@@ -35,24 +41,36 @@
         data() {
             return {
                 events: null,
-                images: [
-                    {url: 'public/img/photo-220-1.jpg', alt: ''},
-                    {url: 'public/img/photo-220-1.jpg', alt: ''},
-                ],
+                timer: '',
+                delayTime: 30000,
             }
         },
-        mounted() {
-            axios.post('http://localhost/eyetech/api/v1/event-format', {
-                camera_id: 5
-            })
-                .then(response => (this.events = response.data.data))
-                .catch(function (error) {
-                    console.log(error)
-                });
+        created() {
+            this.fetchEventsList();
+            this.timer = setInterval(this.fetchEventsList, this.delayTime);
         },
+        methods: {
+            fetchEventsList() {
+                axios.post('http://localhost/eyetech/api/v1/events-format', {
+                    camera_id: 5
+                })
+                    .then(response => {
+                        this.events = response.data.data;
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        console.log(error)
+                    });
+            },
+            cancelAutoUpdate() {
+                clearInterval(this.timer);
+            },
+        },
+        beforeDestroy() {
+            this.cancelAutoUpdate();
+        }
     }
 </script>
 
 <style scoped>
-
 </style>

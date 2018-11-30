@@ -1,3 +1,15 @@
 table, tr {
-    line-height: 5;
+    line-height: 50px;
+}
+.recent-eventImage {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    height: 100px !important;
+    width: 100px !important;
+    margin: 0 10px 0 0;
+}
+.recent-eventTable {
+    height: 400px !important;
 }

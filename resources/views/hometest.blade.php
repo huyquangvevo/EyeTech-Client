@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="{{ url('public/css/lib/font-awesome/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ url('public/css/lib/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('public/css/main.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/custom.css') }}">
 </head>
 <body class="with-side-menu control-panel control-panel-compact">
 
