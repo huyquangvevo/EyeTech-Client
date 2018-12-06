@@ -11,7 +11,5 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js')
-//    .sass('resources/sass/app.scss', 'public/css');
-
-mix.js('resources/js/event.js', 'public/js/event.js');
+mix.js('resources/js/custom-vue.js', 'public/js/custom-vue.js');
+mix.js('resources/js/register.js', 'public/js/register.js');

@@ -434,7 +434,7 @@
             </div><!--.col-->
         </div><!--.row-->
 
-        <div id="event" class="row">
+        <div id="custom-vue" class="row">
             <div class="col-xl-12 dahsboard-column">
                 <event-component></event-component>
             </div><!--.col-->
@@ -672,7 +672,7 @@
         });
     });
 </script>
-<script src="{{ url('public/js/event.js') }}"></script>
+<script src="{{ url('public/js/custom-vue.js') }}"></script>
 <script src="{{ url('public/js/app.js') }}"></script>
 </body>
 </html>
