@@ -1,78 +1,45 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-<div id="app" class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
 
-                <div class="card-body">
-                    {!! Form::open(['method' => 'POST', 'url' => route('register')]) !!}
-                        <branch-select-component></branch-select-component>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-                        <div class="form-group row">
-                            {!! Form::label('name', 'Name', ['class' => 'col-md-4 col-form-label text-md-right']) !!}
-                            <div class="col-md-6">
-                                {!! Form::text('name', old('name'), ['id' => 'name', 'class' => 'form-control' . ( $errors->has('name') ? ' is-invalid' : '' ), 'required' => 'required', 'autofocus' => 'autofocus', 'placeholder' => 'Name']) !!}
+    <!-- Title Page-->
+    <title>Eyetech Register</title>
 
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('name') }}</strong>
-                                        </span>
-                                @endif
-                            </div>
-                        </div>
+    <!-- Icons font CSS-->
+    <link rel="stylesheet" href="{{ url('public/css/lib/font-awesome/font-awesome.min.css') }}">
 
-                        <div class="form-group row">
-                            {!! Form::label('email', 'Email', ['class' => 'col-md-4 col-form-label text-md-right']) !!}
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
-                            <div class="col-md-6">
-                                {!! Form::text('email', old('email'), ['id' => 'email', 'class' => 'form-control' . ( $errors->has('email') ? ' is-invalid' : '' ), 'required' => 'required', 'autofocus' => 'autofocus', 'placeholder' => 'Email']) !!}
+    <!-- Vendor CSS-->
+{{--    <script src="{{ url('public/bower_components/bootstrap/dist/css/bootstrap.min.css') }}"></script>--}}
+    <link href="public/bower_components/select2/dist/css/select2.min.css" rel="stylesheet" media="all">
+    <link href="public/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+    <!-- Main CSS-->
+    <link href="public/css/register.css" rel="stylesheet" media="all">
+</head>
 
-                        <div class="form-group row">
-                            {!! Form::label('password', 'Password', ['class' => 'col-md-4 col-form-label text-md-right']) !!}
-
-                            <div class="col-md-6">
-                                {!! Form::password('password', ['id' => 'password', 'class' => 'form-control' . ( $errors->has('password') ? ' is-invalid' : '' ), 'required' => 'required', 'placeholder' => 'Password']) !!}
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            {!! Form::label('password_confirmation', 'Password Confirm', ['class' => 'col-md-4 col-form-label text-md-right']) !!}
-
-                            <div class="col-md-6">
-                                {!! Form::password('password_confirmation', ['id' => 'password-confirm', 'class' => 'form-control', 'required' => 'required', 'placeholder' => 'Password Confirmation']) !!}
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                {!! Form::submit('Register', ['class' => 'btn btn-primary']) !!}
-                            </div>
-                        </div>
-
-                    {!! Form::close() !!}
-                </div>
-            </div>
-        </div>
-    </div>
+<body>
+<div id="register" class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+    <register-component></register-component>
 </div>
-@endsection
-@section('script')
-    <script src="{{ url('public/js/app.js') }}"></script>
-@endsection
+
+<script src="{{ url('public/js/lib/jquery/jquery.min.js') }}"></script>
+<script src="{{ url('public/bower_components/select2/dist/js/select2.min.js') }}"></script>
+<script src="{{ url('public/js/register.js') }}"></script>
+<script src="{{ url('public/js/global.js') }}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
