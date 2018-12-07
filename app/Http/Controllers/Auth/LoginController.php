@@ -4,48 +4,41 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
     protected $redirectTo = '/home';
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
 
+    public function getWebserviceToken($branch_id)
+    {
+        $client = new \GuzzleHttp\Client();
+        try {
+            $res = $client->request('POST', 'http://localhost/eyetech/api/v1/users/client-login', [
+                'form_params' => [
+                    'branch_id' => $branch_id,
+                ]
+            ]);
+        } catch (GuzzleException $e) {
+            //
+        }
+        $data = json_decode($res->getBody()->getContents());
+
+        return $data->webservice_token;
+    }
     protected function login(Request $request)
     {
         $this->validateLogin($request);
 
-        // If the class is using the ThrottlesLogins trait, we can automatically throttle
-        // the login attempts for this application. We'll key this by the username and
-        // the IP address of the client making these requests into this application.
         if ($this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
 
@@ -57,13 +50,15 @@ class LoginController extends Controller
 
         if ($isActive == true) {
             if ($this->attemptLogin($request)) {
+                //login webservice
+                $webservice_token = $this->getWebserviceToken($user->branch_id);
+                $user->webservice_token = $webservice_token;
+                $user->save();
+
                 return $this->sendLoginResponse($request);
             }
         }
 
-        // If the login attempt was unsuccessful we will increment the number of attempts
-        // to login and redirect the user back to the login form. Of course, when this
-        // user surpasses their maximum number of attempts they will get locked out.
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
