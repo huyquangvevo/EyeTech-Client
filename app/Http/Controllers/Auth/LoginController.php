@@ -19,22 +19,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function getWebserviceToken($branch_id)
-    {
-        $client = new \GuzzleHttp\Client();
-        try {
-            $res = $client->request('POST', 'http://localhost/eyetech/api/v1/users/client-login', [
-                'form_params' => [
-                    'branch_id' => $branch_id,
-                ]
-            ]);
-        } catch (GuzzleException $e) {
-            //
-        }
-        $data = json_decode($res->getBody()->getContents());
-
-        return $data->webservice_token;
-    }
     protected function login(Request $request)
     {
         $this->validateLogin($request);
@@ -62,5 +46,22 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    public function getWebserviceToken($branch_id)
+    {
+        $client = new \GuzzleHttp\Client();
+        try {
+            $res = $client->request('POST', 'http://localhost/eyetech/api/v1/users/client-login', [
+                'form_params' => [
+                    'branch_id' => $branch_id,
+                ]
+            ]);
+        } catch (GuzzleException $e) {
+            //
+        }
+        $data = json_decode($res->getBody()->getContents());
+
+        return $data->webservice_token;
     }
 }

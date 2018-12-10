@@ -28,6 +28,9 @@
                         <img class="recent-eventImage" v-for="imageDet in event.image_detection_url_array" v-bind:src="imageDet">
                     </td>
                     <td align="center">{{ event.time_in }}</td>
+                    <td>
+                        <a v-bind:href="'http://localhost/eyetech-client/customers/' + event.customer_id + '/edit'">View</a>
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -41,18 +44,20 @@
         data() {
             return {
                 events: null,
+                customerUrl: '',
                 timer: '',
                 delayTime: 5000, //5s
             }
         },
         created() {
             this.fetchEventsList();
+            this.fetchCustomerUrl();
             this.timer = setInterval(this.fetchEventsList, this.delayTime);
         },
         methods: {
             fetchEventsList() {
-                axios.post('http://202.191.56.249/eyetech/api/v1/events-format', {
-                    camera_id: 5
+                axios.post('http://localhost/eyetech/api/v1/events-format', {
+                    branch_id: 1
                 })
                     .then(response => {
                         this.events = response.data.data;
@@ -64,6 +69,9 @@
             },
             cancelAutoUpdate() {
                 clearInterval(this.timer);
+            },
+            fetchCustomerUrl() {
+                this.customerUrl = 'http://localhost/eyetech-client/customers/';
             },
         },
         beforeDestroy() {
