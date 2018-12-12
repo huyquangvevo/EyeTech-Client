@@ -52,7 +52,7 @@ class LoginController extends Controller
     {
         $client = new \GuzzleHttp\Client();
         try {
-            $res = $client->request('POST', 'http://localhost/eyetech/api/v1/users/client-login', [
+            $res = $client->request('POST', 'http://202.191.56.249/eyetech/api/v1/users/client-login', [
                 'form_params' => [
                     'branch_id' => $branch_id,
                 ]

@@ -56,8 +56,8 @@
         },
         methods: {
             fetchEventsList() {
-                axios.post('http://localhost/eyetech/api/v1/events-format', {
-                    branch_id: 1
+                axios.post('http://202.191.56.249/eyetech/api/v1/events-format', {
+                    branch_id: 4
                 })
                     .then(response => {
                         this.events = response.data.data;

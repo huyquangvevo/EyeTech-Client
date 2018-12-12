@@ -1,6 +1,3 @@
-table, tr {
-    line-height: 50px;
-}
 .recent-eventImage {
     border-radius: 50%;
     border-style: solid;
@@ -12,4 +9,10 @@ table, tr {
 }
 .recent-eventTable {
     height: 600px !important;
+}
+.recent-event-body{
+
+}
+.recent-event-body tr{
+    height: 100px;
 }
