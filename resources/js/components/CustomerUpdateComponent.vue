@@ -113,7 +113,7 @@
             fetchCustomerInfo() {
                 axios({
                     method: 'get',
-                    url: 'http://localhost/eyetech/api/v1/customers/' + this.id,
+                    url: 'http://202.191.56.249/eyetech/api/v1/customers/' + this.id,
                 })
                     .then(response => {
                         console.log(response);
@@ -139,7 +139,7 @@
             update() {
                 axios({
                     method: 'patch',
-                    url: 'http://localhost/eyetech/api/v1/customers/' + this.id,
+                    url: 'http://202.191.56.249/eyetech/api/v1/customers/' + this.id,
                     data: {
                         store_id: this.store_id,
                         image_url_array: this.image_url_array,

@@ -1,67 +1,320 @@
-<nav class="side-menu">
-    <ul class="side-menu-list">
-        <li class="purple with-sub">
-	            <span>
-	                <i class="font-icon font-icon-comments active"></i>
-	                <span class="lbl">Messages</span>
-	            </span>
-            <ul>
-                <li><a href="messenger.html"><span class="lbl">Messenger</span></a></li>
-                <li><a href="chat.html"><span class="lbl">Messages</span><span class="label label-custom label-pill label-danger">8</span></a></li>
-                <li><a href="chat-write.html"><span class="lbl">Write Message</span></a></li>
-                <li><a href="chat-index.html"><span class="lbl">Select User</span></a></li>
-            </ul>
-        </li>
-        <li class="red">
-            <a href="mail.html">
-                <i class="font-icon glyphicon glyphicon-send"></i>
-                <span class="lbl">Mail</span>
-            </a>
-        </li>
-        <li class="gold with-sub">
-	            <span>
-	                <i class="font-icon font-icon-edit"></i>
-	                <span class="lbl">Forms</span>
-	            </span>
-            <ul>
-                <li><a href="ui-form.html"><span class="lbl">Basic Inputs</span></a></li>
-                <li><a href="ui-buttons.html"><span class="lbl">Buttons</span></a></li>
-                <li><a href="ui-select.html"><span class="lbl">Select &amp; Tags</span></a></li>
-                <li><a href="ui-checkboxes.html"><span class="lbl">Checkboxes &amp; Radios</span></a></li>
-                <li><a href="ui-form-validation.html"><span class="lbl">Validation</span></a></li>
-                <li><a href="typeahead.html"><span class="lbl">Typeahead</span></a></li>
-                <li><a href="steps.html"><span class="lbl">Steps</span></a></li>
-                <li><a href="ui-form-input-mask.html"><span class="lbl">Input Mask</span></a></li>
-                <li><a href="form-flex-labels.html"><span class="lbl">Flex Labels</span></a></li>
-                <li><a href="ui-form-extras.html"><span class="lbl">Extras</span></a></li>
-            </ul>
-        </li>
-        <li class="blue with-sub">
-	            <span>
-	                <i class="font-icon font-icon-user"></i>
-	                <span class="lbl">Profile</span>
-	            </span>
-            <ul>
-                <li><a href="profile.html"><span class="lbl">Version 1</span></a></li>
-                <li><a href="profile-2.html"><span class="lbl">Version 2</span></a></li>
-            </ul>
-        </li>
-        <li class="orange-red with-sub">
-	            <span>
-	                <i class="font-icon font-icon-help"></i>
-	                <span class="lbl">Support</span>
-	            </span>
-            <ul>
-                <li><a href="documentation.html"><span class="lbl">Docs (example)</span></a></li>
-                <li><a href="faq.html"><span class="lbl">FAQ Simple</span></a></li>
-                <li><a href="faq-search.html"><span class="lbl">FAQ Search</span></a></li>
-            </ul>
-        </li>
-        <li class="magenta opened">
-            <a href="scheduler.html">
-                <i class="font-icon font-icon-calend"></i>
-                <span class="lbl">Calendar</span>
-            </a>
-        </li>
-    </ul>
-</nav>
+<div class="side-nav expand-lg">
+    <div class="side-nav-inner">
+        <ul class="side-nav-menu scrollable">
+            <li class="side-nav-header">
+                <span>Navigation</span>
+            </li>
+            <li class="nav-item dropdown open">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-gauge"></i>
+                                </span>
+                    <span class="title">Dashboard</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="index.html">Default</a>
+                    </li>
+                    <li class="active">
+                        <a href="index-analytical.html">Analytical</a>
+                    </li>
+                    <li>
+                        <a href="index-bank.html">Bank</a>
+                    </li>
+                    <li>
+                        <a href="index-saas.html">Saas</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-image-filter-drama"></i>
+                                </span>
+                    <span class="title">Apps</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="email.html">Email</a>
+                    </li>
+                    <li>
+                        <a href="calendar.html">Calendar</a>
+                    </li>
+                    <li>
+                        <a href="chat-app.html">Chat App</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="task.html">Task</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+									<i class="mdi mdi-vector-arrange-above"></i>
+								</span>
+                    <span class="title">UI Elements</span>
+                    <span class="arrow">
+									<i class="mdi mdi-chevron-right"></i>
+								</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="alert.html">Alert</a>
+                    </li>
+                    <li>
+                        <a href="badge.html">Badge</a>
+                    </li>
+                    <li>
+                        <a href="buttons.html">Buttons</a>
+                    </li>
+                    <li>
+                        <a href="cards.html">Cards</a>
+                    </li>
+                    <li>
+                        <a href="colors.html">Colors</a>
+                    </li>
+                    <li>
+                        <a href="grid.html">Grid</a>
+                    </li>
+                    <li>
+                        <a href="icons.html">Icons</a>
+                    </li>
+                    <li>
+                        <a href="lists.html">Lists</a>
+                    </li>
+                    <li>
+                        <a href="typography.html">Typography</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-compass-outline"></i>
+                                </span>
+                    <span class="title">Components</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="accordion.html">Accordion</a>
+                    </li>
+                    <li>
+                        <a href="carousel.html">Carousel</a>
+                    </li>
+                    <li>
+                        <a href="dropdown.html">Dropdown</a>
+                    </li>
+                    <li>
+                        <a href="modals.html">Modals</a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">Notifications</a>
+                    </li>
+                    <li>
+                        <a href="popover.html">Popover</a>
+                    </li>
+                    <li>
+                        <a href="slider-progress.html">Slider & Progress</a>
+                    </li>
+                    <li>
+                        <a href="tabs.html">Tabs</a>
+                    </li>
+                    <li>
+                        <a href="tooltips.html">Tooltips</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-grid-large"></i>
+                                </span>
+                    <span class="title">Widgets</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="widgets-data.html">Data Widgets</a>
+                    </li>
+                    <li>
+                        <a href="widgets-media.html">Media Widgets</a>
+                    </li>
+                    <li>
+                        <a href="widgets-chart.html">Chart Widgets</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-file-outline"></i>
+                                </span>
+                    <span class="title">Forms</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="form-elements.html">Form Elements</a>
+                    </li>
+                    <li>
+                        <a href="form-layouts.html">Form Layouts</a>
+                    </li>
+                    <li>
+                        <a href="form-validation.html">Form Validation</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-tune-vertical"></i>
+                                </span>
+                    <span class="title">Tables</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="basic-table.html">Basic Table</a>
+                    </li>
+                    <li>
+                        <a href="data-table.html">Data Table</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-chart-donut"></i>
+                                </span>
+                    <span class="title">Charts</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="chartist.html">Chartist</a>
+                    </li>
+                    <li>
+                        <a href="chartjs.html">ChartJs</a>
+                    </li>
+                    <li>
+                        <a href="sparkline.html">Sparkline</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-map-marker-outline"></i>
+                                </span>
+                    <span class="title">Map</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="google-map.html">Google Map</a>
+                    </li>
+                    <li>
+                        <a href="vector-map.html">Vector Map</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="side-nav-header">
+                <span>Others</span>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-image-filter-tilt-shift"></i>
+                                </span>
+                    <span class="title">Extra</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="invoice.html">Invoice</a>
+                    </li>
+                    <li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                    <li>
+                        <a href="login-2.html">Login 2</a>
+                    </li>
+                    <li>
+                        <a href="sign-up.html">Sign Up</a>
+                    </li>
+                    <li>
+                        <a href="404.html">404</a>
+                    </li>
+                    <li>
+                        <a href="500.html">500</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-menu"></i>
+                                </span>
+                    <span class="title">Multiple Levels</span>
+                    <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item dropdown">
+                        <a href="javascript:void(0);">
+                            <span>Level 1.2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="javascript:void(0);">
+                            <span>Level 1.1</span>
+                            <span class="arrow">
+												<i class="mdi mdi-chevron-right"></i>
+											</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="javascript:void(0);">Level 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

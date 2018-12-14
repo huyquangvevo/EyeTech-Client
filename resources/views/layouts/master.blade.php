@@ -1,30 +1,40 @@
 <html dir="ltr" lang="en-US">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="SemiColonWeb" />
+    <title> @yield('title') </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{ url('public/css/bootstrap.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ url('public/css/style.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ url('public/css/dark.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ url('public/css/font-icons.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ url('public/css/animate.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ url('public/css/magnific-popup.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ url('public/css/responsive.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ url('public/bower_components/Font-Awesome/web-fonts-with-css/css/fontawesome.min.css') }}" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="{{ url('public/images/dashboard/apple-touch-icon.html') }}">
+    <link rel="shortcut icon" href="{{ url('public/images/dashboard/favicon.png') }}">
 
-    <title> @yield('title') </title>
+    <link rel="stylesheet" href="{{ url('public/css/dashboard/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ url('public/css/dashboard/pace-theme-minimal.css') }}" />
+    <link rel="stylesheet" href="{{ url('public/css/dashboard/perfect-scrollbar.min.css') }}" />
+
+    <link rel="stylesheet" href="{{ url('public/css/dashboard/dataTables.bootstrap4.min.css') }}">
+
+    <link href="{{ url('public/css/dashboard/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url('public/css/dashboard/themify-icons.css') }}" rel="stylesheet">
+    <link href="{{ url('public/css/dashboard/materialdesignicons.min.css') }}" rel="stylesheet">
+    <link href="{{ url('public/css/dashboard/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url('public/css/dashboard/app.css') }}" rel="stylesheet">
+    <link href="{{ url('public/css/custom.css') }}" rel="stylesheet">
 </head>
-<body class="stretched">
-<div id="wrapper" class="clearfix">
-    @include('shared.navbar')
-    @yield('content')
-    <script src="{{ url('public/js/jquery.js') }}"></script>
-    <script src="{{ url('public/js/plugins.js') }}"></script>
-    <script src="{{ url('public/js/functions.js') }}"></script>
+<body>
+    <div class="app header-info">
+        <div class="layout">
+            @include('shared.dashboard-navbar')
+            @include('shared.side-menu')
+            @yield('content')
+        </div>
+    </div>
     <script src="{{ url('public/js/master.js') }}"></script>
-</div>
+    <script src="{{ url('public/js/dashboard/vendor.js') }}"></script>
+    <script src="{{ url('public/js/dashboard/app.min.js')}}"></script>
+    <script src="{{ url('public/js/dashboard/Chart.min.js') }}"></script>
+    <script src="{{ url('public/js/dashboard/analytical.js') }}"></script>
+    <script src="{{ url('public/js/dashboard/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ url('public/js/dashboard/jquery.dataTables.js') }}"></script>
 </body>
 </html>

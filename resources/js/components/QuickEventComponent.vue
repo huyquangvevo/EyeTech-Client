@@ -5,7 +5,7 @@
             <div class="card-toolbar">
                 <ul>
                     <li>
-                        <a class="text-gray" href="#">
+                        <a class="text-gray" v-bind:href="events_route">
                             <h5>Show Detail</h5>
                         </a>
                     </li>
@@ -58,7 +58,10 @@
 <script>
     export default {
         name: "QuickEventComponent",
-        props: ['id'],
+        props: {
+          id_branch: '',
+          events_route: '',
+        },
         data() {
             return {
                 events: [],
@@ -77,7 +80,7 @@
                     url: 'http://202.191.56.249/eyetech/api/v1/quick-events-format',
                     method: 'post',
                     data: {
-                        branch_id: this.id,
+                        branch_id: this.id_branch,
                         number_field: this.quantity,
                     }
                 })

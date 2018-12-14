@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $id = Auth::user()->branch_id;
-        return view('home-test', compact('id'));
+        $events_route = route('events.index');
+        $branch_id = Auth::user()->branch_id;
+        return view('home', compact('branch_id', 'events_route'));
     }
 }

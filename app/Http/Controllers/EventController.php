@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class CustomerController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,6 +19,9 @@ class CustomerController extends Controller
 
     public function index()
     {
+        $branch_id = Auth::user()->branch_id;
+        $route_header = route('customers.index');
+        return view('events.index', compact('branch_id', 'route_header'));
     }
 
     /**
@@ -49,7 +53,7 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        return view('customers.profile', compact('id'));
+        //
     }
 
     /**
@@ -60,7 +64,7 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        return view('customers.edit', compact('id'));
+        //
     }
 
     /**

@@ -1,218 +1,300 @@
-<header class="site-header">
-    <div class="container-fluid">
-        <a href="#" class="site-logo">
-            <img class="hidden-md-down" src="{{ url('public/img/logo-22.png') }}" alt="">
-            <img class="hidden-lg-down" src="{{ url('public/img/logo-22.png') }}" alt="">
-        </a>
-
-        <button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
-            <span>toggle menu</span>
-        </button>
-
-        <button class="hamburger hamburger--htla">
-            <span>toggle menu</span>
-        </button>
-        <div class="site-header-content">
-            <div class="site-header-content-in">
-                <div class="site-header-shown">
-                    <div class="dropdown dropdown-notification notif">
-                        <a href="#"
-                           class="header-alarm dropdown-toggle active"
-                           id="dd-notification"
-                           data-toggle="dropdown"
-                           aria-haspopup="true"
-                           aria-expanded="false">
-                            <i class="font-icon-alarm"></i>
+<div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+            <a href="index.html">
+                <div class="logo logo-dark"></div>
+                <div class="logo logo-white"></div>
+            </a>
+        </div>
+        <ul class="nav-left">
+            <li>
+                <a class="sidenav-fold-toggler" href="javascript:void(0);">
+                    <i class="mdi mdi-menu"></i>
+                </a>
+                <a class="sidenav-expand-toggler" href="javascript:void(0);">
+                    <i class="mdi mdi-menu"></i>
+                </a>
+            </li>
+            <li class="search-box">
+                <a class="search-toggle" href="javascript:void(0);">
+                    <i class="search-icon mdi mdi-magnify"></i>
+                    <i class="search-icon-close mdi mdi-close-circle-outline"></i>
+                </a>
+            </li>
+            <li class="search-input">
+                <input class="form-control" type="text" placeholder="Type to search...">
+                <div class="search-predict">
+                    <div class="search-wrapper scrollable">
+                        <div class="p-v-10">
+                                        <span class="display-block m-v-5 p-h-20 text-gray">
+                                            <i class="ti-file p-r-5"></i>
+                                            <span>Files</span>
+                                        </span>
+                            <ul class="list-media">
+                                <li class="list-item">
+                                    <a href="javascript:void(0);" class="media-hover p-h-20">
+                                        <div class="media-img">
+                                            <div class="icon-avatar bg-success">
+                                                <i class="mdi mdi-file-outline"></i>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <span class="title p-t-10">Document.xls</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="javascript:void(0);" class="media-hover p-h-20">
+                                        <div class="media-img">
+                                            <div class="icon-avatar bg-info">
+                                                <i class="mdi mdi-file-outline"></i>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <span class="title p-t-10">Mockup.doc</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="javascript:void(0);" class="media-hover p-h-20">
+                                        <div class="media-img">
+                                            <div class="icon-avatar bg-danger">
+                                                <i class="mdi mdi-file-outline"></i>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <span class="title p-t-10">Document.pdf</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="m-h-20 border top"></div>
+                        <div class="p-v-10">
+                                        <span class="display-block m-v-5 p-h-20 text-gray">
+                                            <i class="ti-user p-r-5"></i>
+                                            <span>Members</span>
+                                        </span>
+                            <ul class="list-media">
+                                <li class="list-item">
+                                    <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                        <div class="media-img">
+                                            <img src="{{ url('public/css/dashboard/avatars/thumb-5.jpg') }}" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <span class="title p-t-10">Debra Stewart</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                        <div class="media-img">
+                                            <img src="{{ url('public/css/dashboard/avatars/thumb-5.jpg') }}" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <span class="title p-t-10">Jane Hunt</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search-footer">
+                        <span>You are Searching for '<b class="text-dark"><span class="serach-text-bind"></span></b>'</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="nav-right">
+            <li class="dropdown dropdown-animated scale-left">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="mdi mdi-apps"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-grid col-3 dropdown-lg">
+                    <li>
+                        <a href="#">
+                            <div class="text-center">
+                                <i class="mdi mdi-email-outline font-size-30 icon-gradient-success"></i>
+                                <p class="m-b-0">Email</p>
+                            </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
-                            <div class="dropdown-menu-notif-header">
-                                Notifications
-                                <span class="label label-pill label-danger">4</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="text-center">
+                                <i class="mdi mdi-folder-outline font-size-30 icon-gradient-success"></i>
+                                <p class="m-b-0">Files</p>
                             </div>
-                            <div class="dropdown-menu-notif-list">
-                                <div class="dropdown-menu-notif-item">
-                                    <div class="photo">
-                                        <img src="public/img/photo-64-1.jpg" alt="">
-                                    </div>
-                                    <div class="dot"></div>
-                                    <a href="#">Morgan</a> was bothering about something
-                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-                                </div>
-                                <div class="dropdown-menu-notif-item">
-                                    <div class="photo">
-                                        <img src="public/img/photo-64-2.jpg" alt="">
-                                    </div>
-                                    <div class="dot"></div>
-                                    <a href="#">Lioneli</a> had commented on this <a href="#">Super Important Thing</a>
-                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-                                </div>
-                                <div class="dropdown-menu-notif-item">
-                                    <div class="photo">
-                                        <img src="public/img/photo-64-3.jpg" alt="">
-                                    </div>
-                                    <div class="dot"></div>
-                                    <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
-                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-                                </div>
-                                <div class="dropdown-menu-notif-item">
-                                    <div class="photo">
-                                        <img src="{{ url('public/img/photo-64-4.jpg') }}" alt="">
-                                    </div>
-                                    <a href="#">Lionely</a> wants to go to <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
-                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-                                </div>
-                            </div>
-                            <div class="dropdown-menu-notif-more">
-                                <a href="#">See more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="dropdown dropdown-notification messages">
-                        <a href="#"
-                           class="header-alarm dropdown-toggle active"
-                           id="dd-messages"
-                           data-toggle="dropdown"
-                           aria-haspopup="true"
-                           aria-expanded="false">
-                            <i class="font-icon-mail"></i>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-messages" aria-labelledby="dd-messages">
-                            <div class="dropdown-menu-messages-header">
-                                <ul class="nav" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active"
-                                           data-toggle="tab"
-                                           href="#tab-incoming"
-                                           role="tab">
-                                            Inbox
-                                            <span class="label label-pill label-danger">8</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           data-toggle="tab"
-                                           href="#tab-outgoing"
-                                           role="tab">Outbox</a>
-                                    </li>
-                                </ul>
-                                <!--<button type="button" class="create">
-                                    <i class="font-icon font-icon-pen-square"></i>
-                                </button>-->
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="text-center">
+                                <i class="mdi mdi mdi-gauge font-size-30 icon-gradient-success"></i>
+                                <p class="m-b-0">Dashboard</p>
                             </div>
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="tab-incoming" role="tabpanel">
-                                    <div class="dropdown-menu-messages-list">
-                                        <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="{{ url('public/img/photo-64-2.jpg') }}" alt=""></span>
-                                            <span class="mess-item-name">Tim Collins</span>
-                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-                                        </a>
-                                        <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="{{ url('public/img/avatar-2-64.png') }}" alt=""></span>
-                                            <span class="mess-item-name">Christian Burton</span>
-                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
-                                        </a>
-                                        <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="{{ url('public/img/photo-64-2.jpg') }}" alt=""></span>
-                                            <span class="mess-item-name">Tim Collins</span>
-                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-                                        </a>
-                                        <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="{{ url('public/img/avatar-2-64.png') }}" alt=""></span>
-                                            <span class="mess-item-name">Christian Burton</span>
-                                            <span class="mess-item-txt">Morgan was bothering about something...</span>
-                                        </a>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="text-center">
+                                <i class="mdi mdi-play-circle-outline font-size-30 icon-gradient-success"></i>
+                                <p class="m-b-0">Video</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="text-center">
+                                <i class="mdi mdi-image-filter font-size-30 icon-gradient-success"></i>
+                                <p class="m-b-0">Images</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="text-center">
+                                <i class="mdi mdi-image-filter-drama font-size-30 icon-gradient-success"></i>
+                                <p class="m-b-0">Cloud</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="notifications dropdown dropdown-animated scale-left">
+                <span class="counter">2</span>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="mdi mdi-bell-ring-outline"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-lg p-v-0">
+                    <li class="p-v-15 p-h-20 border bottom text-dark">
+                        <h5 class="m-b-0">
+                            <i class="mdi mdi-bell-ring-outline p-r-10"></i>
+                            <span>Notifications</span>
+                        </h5>
+                    </li>
+                    <li>
+                        <ul class="list-media overflow-y-auto relative scrollable" style="max-height: 300px">
+                            <li class="list-item border bottom">
+                                <a href="javascript:void(0);" class="media-hover p-15">
+                                    <div class="media-img">
+                                        <div class="icon-avatar bg-primary">
+                                            <i class="ti-settings"></i>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="tab-pane" id="tab-outgoing" role="tabpanel">
-                                    <div class="dropdown-menu-messages-list">
-                                        <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="{{ url('public/img/avatar-2-64.png') }}" alt=""></span>
-                                            <span class="mess-item-name">Christian Burton</span>
-                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something...</span>
-                                        </a>
-                                        <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="{{ url('public/img/photo-64-2.jpg') }}" alt=""></span>
-                                            <span class="mess-item-name">Tim Collins</span>
-                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
-                                        </a>
-                                        <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="{{ url('public/img/photo-64-2.jpg') }}" alt=""></span>
-                                            <span class="mess-item-name">Christian Burtons</span>
-                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-                                        </a>
-                                        <a href="#" class="mess-item">
-                                            <span class="avatar-preview avatar-preview-32"><img src="{{ url('public/img/photo-64-2.jpg') }}" alt=""></span>
-                                            <span class="mess-item-name">Tim Collins</span>
-                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-                                        </a>
+                                    <div class="info">
+                                                    <span class="title">
+                                                        System shutdown
+                                                    </span>
+                                        <span class="sub-title">8 min ago</span>
                                     </div>
+                                </a>
+                            </li>
+                            <li class="list-item border bottom">
+                                <a href="javascript:void(0);" class="media-hover p-15">
+                                    <div class="media-img">
+                                        <div class="icon-avatar bg-success">
+                                            <i class="ti-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                                    <span class="title">
+                                                        New User Registered
+                                                    </span>
+                                        <span class="sub-title">12 min ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item border bottom">
+                                <a href="javascript:void(0);" class="media-hover p-15">
+                                    <div class="media-img">
+                                        <div class="icon-avatar bg-warning">
+                                            <i class="ti-file"></i>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                                    <span class="title">
+                                                        New Attacthemnet
+                                                    </span>
+                                        <span class="sub-title">12 min ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-item border bottom">
+                                <a href="javascript:void(0);" class="media-hover p-15">
+                                    <div class="media-img">
+                                        <div class="icon-avatar bg-info">
+                                            <i class="ti-shopping-cart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                                    <span class="title">
+                                                        New Order Received
+                                                    </span>
+                                        <span class="sub-title">12 min ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-v-15 p-h-20 text-center">
+                                    <span>
+                                        <a href="#" class="text-gray">Check all notifications <i class="ei-right-chevron p-l-5 font-size-10"></i></a>
+                                    </span>
+                    </li>
+                </ul>
+            </li>
+            <li class="user-profile dropdown dropdown-animated scale-left">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img class="profile-img img-fluid" src="{{ url('public/css/dashboard/avatars/thumb-13.jpg') }}" alt="">
+                </a>
+                <ul class="dropdown-menu dropdown-md p-v-0">
+                    <li>
+                        <ul class="list-media">
+                            <li class="list-item p-15">
+                                <div class="media-img">
+                                    <img src="{{ url('public/css/dashboard/avatars/thumb-13.jpg') }}" alt="">
                                 </div>
-                            </div>
-                            <div class="dropdown-menu-notif-more">
-                                <a href="#">See more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="dropdown dropdown-lang">
-                        <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="flag-icon flag-icon-us"></span>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-menu-col">
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-ru"></span>Русский</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-de"></span>Deutsch</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-it"></span>Italiano</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span>Español</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-pl"></span>Polski</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-li"></span>Lietuviu</a>
-                            </div>
-                            <div class="dropdown-menu-col">
-                                <a class="dropdown-item current" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>Français</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-by"></span>Беларускi</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-ua"></span>Українська</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-cz"></span>Česky</a>
-                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-ch"></span>中國</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="dropdown user-menu">
-                        <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="{{ url('public/img/avatar-2-64.png') }}" alt="">
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
-                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
-                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
-                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Help</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
-                        </div>
-                    </div>
-
-                    <button type="button" class="burger-right">
-                        <i class="font-icon-menu-addl"></i>
-                    </button>
-                </div><!--.site-header-shown-->
-
-                <div class="mobile-menu-right-overlay"></div>
-                <div class="site-header-collapsed">
-                    <div class="site-header-collapsed-in">
-                        <div class="site-header-search-container">
-                            <form class="site-header-search closed">
-                                <input type="text" placeholder="Search"/>
-                                <button type="submit">
-                                    <span class="font-icon-search"></span>
-                                </button>
-                                <div class="overlay"></div>
-                            </form>
-                        </div>
-                    </div><!--.site-header-collapsed-in-->
-                </div><!--.site-header-collapsed-->
-            </div><!--site-header-content-in-->
-        </div><!--.site-header-content-->
-    </div><!--.container-fluid-->
-</header>
+                                <div class="info">
+                                    <span class="title text-semibold">Marshall Nichols</span>
+                                    <span class="sub-title">UI/UX Desinger</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <i class="ti-settings p-r-10"></i>
+                            <span>Setting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ti-user p-r-10"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ti-email p-r-10"></i>
+                            <span>Inbox</span>
+                            <span class="badge badge-pill badge-success pull-right">2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ti-power-off p-r-10"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-r-10">
+                <a class="quick-view-toggler" href="javascript:void(0);">
+                    <i class="mdi mdi-format-indent-decrease"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

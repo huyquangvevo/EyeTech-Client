@@ -16,3 +16,6 @@
 .recent-event-body tr{
     height: 100px;
 }
+.VuePagination {
+    text-align: center;
+}

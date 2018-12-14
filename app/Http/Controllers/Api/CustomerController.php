@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\CustomerEditRouteFormRequest;
 
 class CustomerController extends Controller
 {
@@ -11,21 +12,7 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
-    {
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
     {
         //
     }
@@ -49,18 +36,7 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        return view('customers.profile', compact('id'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        return view('customers.edit', compact('id'));
+        //
     }
 
     /**
@@ -84,5 +60,17 @@ class CustomerController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getCustomerEditRoute(CustomerEditRouteFormRequest $request)
+    {
+        $data = $request->all();
+        $route = route('customers.edit', ['id'=>$data['customer_id']]);
+        $response = [
+            'message' => 'Route to customer edit view',
+            'route' => $route,
+        ];
+
+        return response()->json($response, 200);
     }
 }
