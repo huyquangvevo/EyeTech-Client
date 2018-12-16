@@ -51,7 +51,7 @@
                         </td>
                         <td>{{ event.time_in }}</td>
                         <td class="text-center font-size-18">
-                            <a v-bind:href="event.customer_edit_url" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
+                            <a v-bind:href="event.customer_profile_url" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
                             <a href="#" class="text-gray"><i class="ti-bookmark"></i></a>
                         </td>
                     </tr>

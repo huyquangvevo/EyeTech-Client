@@ -7,13 +7,24 @@ window.VueRouter = require('vue-router');
 window.VueResource = require('vue-resource');
 
 import {ClientTable} from 'vue-tables-2';
+import BootstrapVue from 'bootstrap-vue';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 Vue.use(ClientTable);
+Vue.use(BootstrapVue);
+
 
 Vue.component('v-select', VueSelect.VueSelect);
 Vue.component('customer-update-component', require('./components/CustomerUpdateComponent.vue'));
 Vue.component('quick-event-component', require('./components/QuickEventComponent.vue'));
 Vue.component('detail-event-component', require('./components/DetailEventComponent.vue'));
 Vue.component('customer-edit-component', require('./components/CustomerEditComponent.vue'));
+Vue.component('customer-quick-info-component', require('./components/CustomerQuickInfoComponent.vue'));
+Vue.component('customer-info-component', require('./components/CustomerInfoComponent.vue'));
+Vue.component('customer-message-component', require('./components/CustomerMessageComponent.vue'));
+Vue.component('customer-profile-action-component', require('./components/CustomerProfileActionComponent.vue'));
+Vue.component('nav-right-noti-component', require('./components/NavRightNotiComponent.vue'));
+Vue.component('nav-right-profile-component', require('./components/NavRightProfileComponent.vue'));
+Vue.component('register-component', require('./components/RegisterComponent.vue'));
 
 const vue = new Vue({
     el: '#vue',

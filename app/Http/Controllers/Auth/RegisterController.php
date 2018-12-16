@@ -42,7 +42,9 @@ class RegisterController extends Controller
     }
     protected function showRegistrationForm()
     {
-        return view('auth.register');
+        $registerApiRouter = route('register.store');
+        $loginFormRoute = route('login');
+        return view('auth.register', compact('registerApiRouter', 'loginFormRoute'));
     }
 
     protected function register(Request $request)

@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="{{ url('public/css/dashboard/pace-theme-minimal.css') }}" />
     <link rel="stylesheet" href="{{ url('public/css/dashboard/perfect-scrollbar.min.css') }}" />
 
-    <link rel="stylesheet" href="{{ url('public/css/dashboard/dataTables.bootstrap4.min.css') }}">
-
     <link href="{{ url('public/bower_components/Font-Awesome/web-fonts-with-css/css/fontawesome-all.min.css') }}" rel="stylesheet">
     <link href="{{ url('public/css/dashboard/themify-icons.css') }}" rel="stylesheet">
     <link href="{{ url('public/css/dashboard/materialdesignicons.min.css') }}" rel="stylesheet">
@@ -22,19 +20,13 @@
     <link href="{{ url('public/css/custom.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="app side-nav-dark header-info-gradient">
-        <div class="layout" id="vue">
-            @include('shared.dashboard-navbar')
-            @include('shared.side-menu')
-            @yield('content')
-        </div>
+<div class="app side-nav-dark header-info-gradient">
+    <div class="layout" id="vue">
+        @include('shared.dashboard-navbar')
+        @yield('content')
     </div>
-    <script src="{{ url('public/js/master.js') }}"></script>
-    <script src="{{ url('public/js/dashboard/vendor.js') }}"></script>
-    <script src="{{ url('public/js/dashboard/app.min.js')}}"></script>
-    <script src="{{ url('public/js/dashboard/Chart.min.js') }}"></script>
-    <script src="{{ url('public/js/dashboard/analytical.js') }}"></script>
-    <script src="{{ url('public/js/dashboard/dataTables.bootstrap4.min.js') }}"></script>
-    <script src="{{ url('public/js/dashboard/jquery.dataTables.js') }}"></script>
+</div>
+<script src="{{ url('public/js/master.js') }}"></script>
+<script src="{{ url('public/js/dashboard/app.min.js')}}"></script>
 </body>
 </html>

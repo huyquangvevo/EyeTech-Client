@@ -1,11 +1,11 @@
 +function($, window){
-	
+
 	var analyticalDashboard = {};
 
 	analyticalDashboard.init = function() {
 
 		//Segment Chart
-		var segmentCtx = document.getElementById('segment-chart').getContext('2d');		
+		var segmentCtx = document.getElementById('segment-chart').getContext('2d');
 		var segmentChart = new Chart(segmentCtx, {
 			type: 'line',
 			data: {
@@ -69,10 +69,10 @@
 						gridLines: { color: app.colors.transparent }
 					}],
 					yAxes: [{display: false}]
-				}	
+				}
 			}
 		});
-	};	
+	};
 
 	window.analyticalDashboard = analyticalDashboard;
 
@@ -80,6 +80,5 @@
 
 // initialize app
 +function($) {
-	analyticalDashboard.init();		
+	analyticalDashboard.init();
 }(jQuery);
-	

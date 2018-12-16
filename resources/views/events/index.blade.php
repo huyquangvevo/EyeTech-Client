@@ -1,7 +1,7 @@
 @extends('layouts.events-master')
 @section('title', 'Events')
 @section('content')
-    <div class="page-container">
+    <div class="page-container custom-page-container">
         @include('shared.quick-view')
         <div class="main-content" id="vue">
             <div class="container-fluid">

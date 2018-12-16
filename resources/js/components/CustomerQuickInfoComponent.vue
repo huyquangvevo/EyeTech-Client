@@ -1,0 +1,64 @@
+<template>
+    <div class="col-md-3">
+        <div class="card">
+            <img class="card-img-top" v-bind:src="avatar" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title quick-info-name">{{ name }}</h5>
+                <p class="card-text quick-info-address">{{ address}}</p>
+                <h5 class="card-title quick-info-type">{{ type }}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="#">Library Image</a></li>
+                <li class="list-group-item"><a href="#">Statistical Visted</a></li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "CustomerQuickInfoComponent",
+        props: {
+            id_customer: ''
+        },
+        data() {
+            return {
+                avatar: '',
+                name: '',
+                type: '',
+                address: '',
+                country: '',
+                city: '',
+                location: '',
+            }
+        },
+        created() {
+            this.fetchCustomerQuickInfo();
+        },
+        methods: {
+            fetchCustomerQuickInfo() {
+                axios({
+                    method: 'get',
+                    url: 'http://202.191.56.249/eyetech/api/v1/customers/' + this.id_customer,
+                })
+                    .then(response => {
+                        console.log(response);
+                        this.avatar = response.data.avatar_url;
+                        this.name = response.data.data.name;
+                        this.type = response.data.data.type;
+                        this.country = response.data.data.address.country;
+                        this.city = response.data.data.address.city;
+                        this.location = response.data.data.address.location;
+                        this.address = this.location + ', ' + this.city + ', ' + this.country;
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+            },
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>

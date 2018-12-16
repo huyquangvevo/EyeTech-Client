@@ -49,7 +49,8 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        return view('customers.profile', compact('id'));
+        $home_route = route('home');
+        return view('customers.profile', compact('id', 'home_route'));
     }
 
     /**

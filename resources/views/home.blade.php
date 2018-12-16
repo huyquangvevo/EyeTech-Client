@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Home test')
 @section('content')
-    <div class="page-container" id="vue">
+    <div class="page-container custom-page-container">
         @include('shared.quick-view')
         <div class="main-content">
             <div class="container-fluid">
@@ -137,7 +137,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-8">
-                        <quick-event-component id_branch="{{ $branch_id }}" events_route="{{ $events_route }}">
+                        <quick-event-component id_branch="{{ $branch_id }}" events_route="{{ $events_route }}" header_route="{{ $route_header }}">
                         </quick-event-component>
                     </div>
                     <div class="col-sm-4">

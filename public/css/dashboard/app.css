@@ -65,7 +65,7 @@ Author: Theme_Nate
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 html, html a, body { -webkit-font-smoothing: antialiased; }
 
-body { font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-size: 14px; background-color: #f7fbff; color: #8a8a8a; line-height: 1.5; overflow-x: hidden; }
+body { font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-size: 20px; background-color: #f7fbff; color: #8a8a8a; line-height: 1.5; overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6 { color: #515365; font-weight: normal; line-height: 1.5; }
 
@@ -2116,7 +2116,7 @@ button:active:focus { outline: none; box-shadow: none; }
 
 button.disabled, button:disabled { opacity: 0.5; cursor: not-allowed; }
 
-.btn { cursor: pointer; font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-size: 14px; padding: 7px 20px; margin-right: 5px; margin-bottom: 10px; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
+.btn { cursor: pointer; font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-size: 17px; padding: 7px 20px; margin-right: 5px; margin-bottom: 10px; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; }
 
 .btn.dropdown-toggle { margin-bottom: 0px; }
 
@@ -2841,7 +2841,7 @@ a.card:hover, a.card:focus { -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.075)
 /*----------------------------------------
   21. Breadcrumb
 ----------------------------------------*/
-.breadcrumb { padding: 0px; margin-bottom: 0px; list-style: none; background-color: transparent; border-radius: 0px; font-size: 13px; display: inline-block; vertical-align: text-bottom; }
+.breadcrumb { padding: 0px; margin-bottom: 0px; list-style: none; background-color: transparent; border-radius: 0px; font-size: 17px; display: inline-block; vertical-align: text-bottom; }
 
 .breadcrumb a.breadcrumb-item { color: #8a8a8a; }
 
@@ -3267,7 +3267,7 @@ a.card:hover, a.card:focus { -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.075)
 
 .form-group label.col-form-label { margin-bottom: 0; line-height: 1.5; padding-top: calc(.75rem + 1px); padding-bottom: calc(.75rem + 1px); }
 
-.form-control { border: 1px solid #e4e5e7; border-radius: 5px; box-shadow: none; line-height: 2.2; font-size: 14px; color: #8a8a8a; transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; -ms-transition: all 0.2s ease-in; }
+.form-control { border: 1px solid #e4e5e7; border-radius: 5px; box-shadow: none; line-height: 2.2; font-size: 17px; color: #8a8a8a; transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; -moz-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; -ms-transition: all 0.2s ease-in; }
 
 .form-control::-webkit-input-placeholder { color: #bdbdbd; }
 

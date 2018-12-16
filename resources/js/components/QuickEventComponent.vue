@@ -23,7 +23,7 @@
                 </tr>
                 </thead>
                 <tbody class="recent-event-body">
-                <tr v-for="event in events">
+                <tr v-for="event in events" v-on:click="redirectCustomerProfile(event.customer_profile_url)">
                     <td>
                         <div class="list-media">
                             <div class="list-item">
@@ -59,8 +59,9 @@
     export default {
         name: "QuickEventComponent",
         props: {
-          id_branch: '',
-          events_route: '',
+            id_branch: '',
+            events_route: '',
+            header_route: ''
         },
         data() {
             return {
@@ -81,6 +82,7 @@
                     method: 'post',
                     data: {
                         branch_id: this.id_branch,
+                        route_header: this.header_route,
                         number_field: this.quantity,
                     }
                 })
@@ -95,6 +97,9 @@
             cancelAutoUpdate() {
                 clearInterval(this.timer);
             },
+            redirectCustomerProfile: function (route) {
+                window.location = route;
+            }
         },
         beforeDestroy() {
             this.cancelAutoUpdate();

@@ -16,6 +16,125 @@
 .recent-event-body tr{
     height: 100px;
 }
+.recent-event-body tr:hover{
+    background-color: #f5f7fa;
+    cursor: pointer;
+}
 .VuePagination {
     text-align: center;
+}
+.custom-page-container {
+    background-color: #eaeeef;
+}
+.custom-btn-message {
+    float: right;
+    background-color: white;
+    color: #0084ff;
+    font-weight: bold;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+}
+.custom-btn-delete {
+    float: left;
+    background-color: white;
+    color: darkgray;
+    font-weight: bold;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+}
+.profile-title {
+    font-size: 17px;
+    color: #8a8a8a;
+    margin-top: 20px;
+}
+.profile-title span {
+    margin-left: 10px;
+}
+.profile-content {
+    font-size: 22px;
+    color: #515365;
+}
+#selectGender {
+    width: 100%;
+    font-size: 17px;
+}
+#selectType {
+    width: 100%;
+    font-size: 17px;
+}
+#selectCountry {
+    width: 100%;
+    font-size: 17px;
+}
+#selectCity {
+    width: 100%;
+    font-size: 17px;
+}
+#selectGender span{
+    color: #8a8a8a;
+    height: 40px;
+}
+#selectType span{
+    color: #8a8a8a;
+    height: 40px;
+}
+#selectCountry span{
+    color: #8a8a8a;
+    height: 40px;
+}
+#selectCity span{
+    color: #8a8a8a;
+    height: 40px;
+}
+.custom-btn-update {
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.customer-info {
+    background-color: white;
+}
+.customer-profile-card {
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.quick-info-name {
+    font-size: 22px;
+}
+.quick-info-address {
+    font-size: 20px;
+}
+.quick-info-type {
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav-right li {
+    margin-right: 12px;
+    display: flex;
+}
+.nav-right li a {
+    margin: auto;
+}
+.nav-right li .nav-right-profile {
+    margin: auto;
+}
+.line-vertical {
+    position: absolute;
+    border: 2px solid #f5f7fa;
+    border-radius: 2px;
+    height: auto;
+    top: 10px;
+    bottom: 10px;
+}
+.auth-container {
+    background-color: #eaeeef;
+    width: 100%;
+    height: 100%;
+}
+.auth-container .card {
+    margin-top: 100px;
+}
+.auth-background {
+    background-image: url('../images/dashbroad/auth-bg.jpg');
 }

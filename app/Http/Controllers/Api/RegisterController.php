@@ -30,6 +30,7 @@ class RegisterController extends Controller
             'user' => $user,
             'redirect' => route('login')
         ];
+
         return response()->json($response,200);
     }
 
