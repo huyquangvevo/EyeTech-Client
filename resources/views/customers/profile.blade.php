@@ -1,102 +1,46 @@
-@extends('layouts.dashbroad')
+@extends('layouts.master')
 @section('title', 'Customer Profile')
 @section('content')
-    <div class="page-content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3 col-lg-pull-6 col-md-6 col-sm-6">
-                    <section class="box-typical">
-                        <div class="profile-card">
-                            <div class="profile-card-photo">
-                                <img src="{{ url('public/img/photo-220-1.jpg') }}" alt=""/>
-                            </div>
-                            <div class="profile-card-name">Nguyen Thanh Tung</div>
-                            <div class="profile-card-status">VIP</div>
-                            <div class="profile-card-location">Hoang Mai, Ha Noi</div>
-                            <button type="button" class="btn btn-rounded">Edit</button>
-                            <button type="button" class="btn btn-rounded">Send Message</button>
-                        </div><!--.profile-card-->
-
-                        <div class="profile-statistic tbl">
-                            <div class="tbl-row">
-                                <div class="tbl-cell">
-                                    <b>20</b>
-                                    Image
-                                </div>
-                                <div class="tbl-cell">
-                                    <b>2</b>
-                                    Visit
-                                </div>
-                            </div>
+    <div class="page-container custom-page-container">
+        @include('shared.quick-view')
+        <div class="main-content" id="vue">
+            <div class="container-fluid">
+                <div class="row page-header">
+                    <div class="col-md-9">
+                        <h2 class="header-title">Customer Profile</h2>
+                        <div class="header-sub-title">
+                            <nav class="breadcrumb breadcrumb-dash">
+                                <a href="{{ route('home') }}" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
+                                <a class="breadcrumb-item" href="{{ route('events.index') }}">Events</a>
+                                <span class="breadcrumb-item active">Customer</span>
+                            </nav>
                         </div>
-
-                        <ul class="profile-links-list">
-                            <li class="nowrap">
-                                <i class="font-icon font-icon-pin-2"></i>
-                                Address: Hoang Mai, Ha Noi
-                            </li>
-                            <li class="nowrap">
-                                <i class="font-icon font-icon-users-two"></i>
-                                Age: 20
-                            </li>
-                            <li class="nowrap">
-                                <i class="font-icon font-icon-users-two"></i>
-                                Gender: Male
-                            </li>
-                            <li class="nowrap">
-                                <i class="font-icon font-icon-users-two"></i>
-                                Telephone:
-                            </li>
-                            <li class="nowrap">
-                                <i class="font-icon font-icon-fb-fill"></i>
-                                <a href="#">facebook.com/example</a>
-                            </li>
-                        </ul>
-
-                    </section><!--.box-typical-->
-                    <section class="box-typical">
-                        <header class="box-typical-header-sm bordered">Favouries</header>
-                        <div class="box-typical-inner">
-                            <p></p>
-                        </div>
-                    </section>
-                </div><!--.col- -->
-                <div class="col-lg-6 col-lg-push-3 col-md-12">
-                    <section class="box-typical">
-                        <header class="box-typical-header-sm">
-                            Image Library
-                            <div class="slider-arrs">
-                                <button type="button" class="posts-slider-prev">
-                                    <i class="font-icon font-icon-arrow-left"></i>
-                                </button>
-                                <button type="button" class="posts-slider-next">
-                                    <i class="font-icon font-icon-arrow-right"></i>
-                                </button>
-                            </div>
-                        </header>
-                        <div class="posts-slider">
-                            <div class="slide">
-                                <article class="post-announce">
-                                    <div class="post-announce-pic">
-                                        <a href="#">
-                                            <img src="{{ url('public/img/post-1.jpeg') }}" alt="">
-                                        </a>
-                                    </div>
-                                </article>
-                            </div><!--.slide-->
-                            <div class="slide">
-                                <article class="post-announce">
-                                    <div class="post-announce-pic">
-                                        <a href="#">
-                                            <img src="{{ url('public/img/post-2.jpg') }}" alt="">
-                                        </a>
-                                    </div>
-                                </article>
-                            </div><!--.slide-->
-                        </div><!--.posts-slider-->
-                    </section><!--.box-typical-->
+                    </div>
+                    <customer-profile-action-component id_customer="{{ $id }}" route_home="{{ $home_route }}"></customer-profile-action-component>
                 </div>
-            </div><!--.row-->
-        </div><!--.container-fluid-->
+                <div class="row my-2">
+                    <customer-quick-info-component id_customer="{{ $id }}"></customer-quick-info-component>
+                    <div class="col-md-9 customer-info customer-profile-card">
+                        <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" data-target="#messages" data-toggle="tab" class="nav-link">Messages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
+                                </li>
+                            </ul>
+                        <div class="tab-content py-4">
+                            <customer-info-component id_customer="{{ $id }}"></customer-info-component>
+                            <customer-message-component></customer-message-component>
+                            <customer-edit-component id_customer="{{ $id }}"></customer-edit-component>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @include('shared.footer')
     </div>
 @endsection

@@ -1,123 +1,173 @@
-@extends('layouts.dashbroad')
-@section('title', 'Eyetech Home')
+@extends('layouts.master')
+@section('title', 'Home test')
 @section('content')
-    <div class="page-content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="chart-statistic-box">
-                        <div class="chart-txt">
-                            <div class="chart-txt-top">
-                                <p><span class="unit">$</span><span class="number">1540</span></p>
-                                <p class="caption">Week income</p>
-                            </div>
-                            <table class="tbl-data">
-                                <tr>
-                                    <td class="price color-purple">120$</td>
-                                    <td>Orders</td>
-                                </tr>
-                                <tr>
-                                    <td class="price color-yellow">15$</td>
-                                    <td>Investments</td>
-                                </tr>
-                                <tr>
-                                    <td class="price color-lime">55$</td>
-                                    <td>Others</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="chart-container">
-                            <div class="chart-container-in">
-                                <div id="chart_div"></div>
-                                <header class="chart-container-title">Income</header>
-                                <div class="chart-container-x">
-                                    <div class="item"></div>
-                                    <div class="item">tue</div>
-                                    <div class="item">wed</div>
-                                    <div class="item">thu</div>
-                                    <div class="item">fri</div>
-                                    <div class="item">sat</div>
-                                    <div class="item">sun</div>
-                                    <div class="item">mon</div>
-                                    <div class="item"></div>
-                                </div>
-                                <div class="chart-container-y">
-                                    <div class="item">300</div>
-                                    <div class="item"></div>
-                                    <div class="item">250</div>
-                                    <div class="item"></div>
-                                    <div class="item">200</div>
-                                    <div class="item"></div>
-                                    <div class="item">150</div>
-                                    <div class="item"></div>
-                                    <div class="item">100</div>
-                                    <div class="item"></div>
-                                    <div class="item">50</div>
-                                    <div class="item"></div>
+    <div class="page-container custom-page-container">
+        @include('shared.quick-view')
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Monthly Revenue</h4>
+                                <div class="card-toolbar">
+                                    <ul>
+                                        <li>
+                                            <a class="text-gray" href="javascript:void(0)">
+                                                <i class="mdi mdi-dots-vertical font-size-20"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h2 class="font-size-30 m-b-0 text-success m-t-15">38.6%</h2>
+                                        <h5 class="m-b-0 font-size-16 text-semibold">Profit Margin</h5>
+                                        <p>from sales in this segment</p>
+                                        <div class="m-t-30">
+                                            <p class="width-85">European minnow priapumfish mosshead warbonnet shrimpfish bigscale. Cutlassfish porbeagle shark ricefish walking catfish glassfish Black swallower.</p>
+                                            <p class="width-85">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar.</p>
+                                            <button class="btn btn-default m-t-30">Download Report <i class="ti-angle-right font-size-10 p-l-5"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="text-right">
+                                            <ul class="list-inline">
+                                                <li class="m-r-20">
+                                                    <a href="#" class="text-semibold text-gray">Today</a>
+                                                </li>
+                                                <li class="m-r-20">
+                                                    <a href="#" class="text-semibold text-gray">7 days</a>
+                                                </li>
+                                                <li class="m-r-20">
+                                                    <a href="#" class="text-semibold text-gray">14 days</a>
+                                                </li>
+                                                <li class="m-r-20">
+                                                    <a href="#" class="text-semibold text-gray active">1 Month</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="m-t-30">
+                                            <canvas class="chart" id="segment-chart" style="height: 320px"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div><!--.chart-statistic-box-->
-                </div><!--.col-->
-                <div class="col-xl-6">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <article class="statistic-box red">
-                                <div>
-                                    <div class="number">26</div>
-                                    <div class="caption"><div>Open tickets</div></div>
-                                    <div class="percent">
-                                        <div class="arrow up"></div>
-                                        <p>15%</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="media justify-content-between">
+                                    <div>
+                                        <p class="">Total Revenue</p>
+                                        <h2 class="font-size-28 font-weight-light">$23,495</h2>
+                                        <span class="text-semibold text-success font-size-15">
+                                                    <i class="ti-arrow-up font-size-11"></i>
+                                                    <span>12%</span>
+                                                </span>
+                                    </div>
+                                    <div class="align-self-end">
+                                        <i class="ti-credit-card font-size-70 text-success opacity-01"></i>
                                     </div>
                                 </div>
-                            </article>
-                        </div><!--.col-->
-                        <div class="col-sm-6">
-                            <article class="statistic-box purple">
-                                <div>
-                                    <div class="number">12</div>
-                                    <div class="caption"><div>Closes tickets</div></div>
-                                    <div class="percent">
-                                        <div class="arrow down"></div>
-                                        <p>11%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="media justify-content-between">
+                                    <div>
+                                        <p class="">Daily Product</p>
+                                        <h2 class="font-size-28 font-weight-light">3,758</h2>
+                                        <span class="text-semibold text-danger font-size-15">
+                                                    <i class="ti-arrow-down font-size-11"></i>
+                                                    <span>7%</span>
+                                                </span>
+                                    </div>
+                                    <div class="align-self-end">
+                                        <i class="ti-pie-chart font-size-70 text-info opacity-01"></i>
                                     </div>
                                 </div>
-                            </article>
-                        </div><!--.col-->
-                        <div class="col-sm-6">
-                            <article class="statistic-box yellow">
-                                <div>
-                                    <div class="number">104</div>
-                                    <div class="caption"><div>New clients</div></div>
-                                    <div class="percent">
-                                        <div class="arrow down"></div>
-                                        <p>5%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="media justify-content-between">
+                                    <div>
+                                        <p class="">Growth Rate</p>
+                                        <h2 class="font-size-28 font-weight-light">28%</h2>
+                                        <span class=" font-size-13 opacity-04">
+                                                    from last month
+                                                </span>
+                                    </div>
+                                    <div class="align-self-end">
+                                        <i class="ti-bar-chart font-size-70 text-danger opacity-01"></i>
                                     </div>
                                 </div>
-                            </article>
-                        </div><!--.col-->
-                        <div class="col-sm-6">
-                            <article class="statistic-box green">
-                                <div>
-                                    <div class="number">29</div>
-                                    <div class="caption"><div>Here is an example of a long name</div></div>
-                                    <div class="percent">
-                                        <div class="arrow up"></div>
-                                        <p>84%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="media justify-content-between">
+                                    <div>
+                                        <p class="">New Customers</p>
+                                        <h2 class="font-size-28 font-weight-light">178</h2>
+                                        <span class="text-semibold text-success font-size-15">
+                                                    <i class="ti-arrow-up font-size-11"></i>
+                                                    <span>18%</span>
+                                                </span>
+                                    </div>
+                                    <div class="align-self-end">
+                                        <i class="ti-user font-size-70 text-primary opacity-01"></i>
                                     </div>
                                 </div>
-                            </article>
-                        </div><!--.col-->
-                    </div><!--.row-->
-                </div><!--.col-->
-            </div><!--.row-->
-
-            <div id="custom-vue" class="row">
-                <div class="col-xl-12 dahsboard-column">
-                    <event-component></event-component>
-                </div><!--.col-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <quick-event-component id_branch="{{ $branch_id }}" events_route="{{ $events_route }}" header_route="{{ $route_header }}">
+                        </quick-event-component>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Products Statistic</h4>
+                                <div class="card-toolbar">
+                                    <ul>
+                                        <li>
+                                            <a class="text-gray" href="javascript:void(0)">
+                                                <i class="mdi mdi-dots-vertical font-size-20"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="text-center m-t-20">
+                                    <h2 class="font-weight-light font-size-30 m-b-0">23,178</h2>
+                                    <p class="opacity-07">Total Products</p>
+                                </div>
+                                <div class="m-t-60">
+                                    <canvas class="chart" id="statistic-chart" style="height: 320px"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div><!--.container-fluid-->
+        </div>
+        @include('shared.footer')
     </div>
 @endsection

@@ -11,6 +11,11 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
     }
@@ -44,7 +49,9 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        return view('customers.profile', compact('id'));
+        $logout_route = route('custom-logout');
+        $home_route = route('home');
+        return view('customers.profile', compact('id', 'home_route', 'logout_route'));
     }
 
     /**
@@ -55,7 +62,7 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        return view('customers.edit', compact('id'));
+        //
     }
 
     /**
