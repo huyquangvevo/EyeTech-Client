@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="table-overflow">
-            <table class="table table-lg">
+            <table class="table table-lg quick-events">
                 <thead>
                 <tr>
                     <td class="text-dark text-semibold" >Customer</td>
@@ -45,8 +45,24 @@
                         </div>
                     </td>
                     <td>
-                        <span class="status success"></span>
-                        <span class="text-success text-semibold m-l-5">{{ event.type }}</span>
+                        <span v-if="event.type === 'New'" class="badge badge-pill badge-gradient-success">
+                            {{ event.type }}
+                        </span>
+                        <span v-else-if="event.type === 'Visted'" class="badge badge-pill badge-warning">
+                            {{ event.type }}
+                        </span>
+                        <span v-else-if="event.type === 'Vip'" class="badge badge-pill badge-gradient-danger">
+                            {{ event.type }}
+                        </span>
+                        <span v-else-if="event.type === 'Blacklist'" class="badge badge-pill badge-secondary">
+                            {{ event.type }}
+                        </span>
+                        <span v-else-if="event.type === 'Staff'" class="badge badge-pill badge-light">
+                            {{ event.type }}
+                        </span>
+                        <span v-else class="badge badge-pill badge-primary">
+                            {{ event.type }}
+                        </span>
                     </td>
                 </tr>
                 </tbody>

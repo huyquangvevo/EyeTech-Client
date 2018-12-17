@@ -19,9 +19,10 @@ class EventController extends Controller
 
     public function index()
     {
+        $logout_route = route('custom-logout');
         $branch_id = Auth::user()->branch_id;
         $route_header = route('customers.index');
-        return view('events.index', compact('branch_id', 'route_header'));
+        return view('events.index', compact('branch_id', 'route_header', 'logout_route'));
     }
 
     /**

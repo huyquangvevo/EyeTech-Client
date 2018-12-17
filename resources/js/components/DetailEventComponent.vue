@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
             <div class="table-overflow">
-                <table id="dt-opt-1" class="table table-hover table-xl">
+                <table id="dt-opt-1" class="table table-hover table-xl detail-events">
                     <thead>
                     <tr>
                         <th>Customer</th>
@@ -30,7 +30,22 @@
                             </div>
                         </td>
                         <td>
-                            <span class="badge badge-pill badge-gradient-success">
+                            <span v-if="event.type === 'New'" class="badge badge-pill badge-gradient-success">
+                                {{ event.type }}
+                            </span>
+                            <span v-else-if="event.type === 'Visted'" class="badge badge-pill badge-warning">
+                                {{ event.type }}
+                            </span>
+                            <span v-else-if="event.type === 'Vip'" class="badge badge-pill badge-gradient-danger">
+                                {{ event.type }}
+                            </span>
+                            <span v-else-if="event.type === 'Blacklist'" class="badge badge-pill badge-secondary">
+                                {{ event.type }}
+                            </span>
+                            <span v-else-if="event.type === 'Staff'" class="badge badge-pill badge-light">
+                                {{ event.type }}
+                            </span>
+                            <span v-else class="badge badge-pill badge-primary">
                                 {{ event.type }}
                             </span>
                         </td>

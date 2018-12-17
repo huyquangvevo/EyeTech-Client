@@ -14,7 +14,6 @@ Vue.use(BootstrapVue);
 
 
 Vue.component('v-select', VueSelect.VueSelect);
-Vue.component('customer-update-component', require('./components/CustomerUpdateComponent.vue'));
 Vue.component('quick-event-component', require('./components/QuickEventComponent.vue'));
 Vue.component('detail-event-component', require('./components/DetailEventComponent.vue'));
 Vue.component('customer-edit-component', require('./components/CustomerEditComponent.vue'));

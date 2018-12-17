@@ -103,10 +103,10 @@
                 favorites: '',
                 note: '',
                 types: [
-                    "VIP",
-                    "BlackList",
-                    "Visted",
                     "New",
+                    "Visted",
+                    "Vip",
+                    "Blacklist",
                     "Staff",
                 ],
                 cities: [

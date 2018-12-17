@@ -138,3 +138,9 @@
 .auth-background {
     background-image: url('../images/dashbroad/auth-bg.jpg');
 }
+.quick-events {
+    font-size: 20px;
+}
+.detail-events {
+    font-size: 20px;
+}

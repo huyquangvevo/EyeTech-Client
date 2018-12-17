@@ -1,8 +1,7 @@
 @extends('layouts.master-auth')
-@section('title', 'Register')
+@section('title', 'Login')
 @section('content')
     <div class="auth-container">
-        @include('shared.quick-view')
         <div class="main-content" id="vue">
             <div class="layout bg-white full-height">
                 <div class="row no-gutters">

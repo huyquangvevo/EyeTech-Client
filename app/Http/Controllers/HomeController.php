@@ -26,7 +26,8 @@ class HomeController extends Controller
     {
         $route_header = route('customers.index');
         $events_route = route('events.index');
+        $logout_route = route('custom-logout');
         $branch_id = Auth::user()->branch_id;
-        return view('home', compact('branch_id', 'events_route', 'route_header'));
+        return view('home', compact('branch_id', 'events_route', 'route_header', 'logout_route'));
     }
 }

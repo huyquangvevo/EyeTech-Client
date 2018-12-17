@@ -50,7 +50,7 @@
                 <b-dropdown-item href="#">Profile</b-dropdown-item>
                 <b-dropdown-item href="#">Setting</b-dropdown-item>
                 <b-dropdown-divider></b-dropdown-divider>
-                <b-dropdown-item href="#">Logout</b-dropdown-item>
+                <b-dropdown-item v-bind:href="route_logout">Logout</b-dropdown-item>
             </b-dropdown>
         </div>
     </li>
@@ -59,6 +59,9 @@
 <script>
     export default {
         name: "NavRightProfileComponent",
+        props: {
+            route_logout: '',
+        }
     }
 </script>
 

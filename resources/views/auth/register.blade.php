@@ -2,7 +2,6 @@
 @section('title', 'Register')
 @section('content')
     <div class="auth-container">
-        @include('shared.quick-view')
         <div class="main-content" id="vue">
             <register-component register_api_route="{{ $registerApiRouter }}" login_form_route="{{ $loginFormRoute }}"></register-component>
         </div>

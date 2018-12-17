@@ -5,7 +5,24 @@
             <div class="card-body">
                 <h5 class="card-title quick-info-name">{{ name }}</h5>
                 <p class="card-text quick-info-address">{{ address}}</p>
-                <h5 class="card-title quick-info-type">{{ type }}</h5>
+                <span v-if="type === 'New'" class="badge badge-pill badge-gradient-success">
+                    {{ type }}
+                </span>
+                <span v-else-if="type === 'Visted'" class="badge badge-pill badge-warning">
+                    {{ type }}
+                </span>
+                <span v-else-if="type === 'Vip'" class="badge badge-pill badge-gradient-danger">
+                    {{ type }}
+                </span>
+                <span v-else-if="type === 'Blacklist'" class="badge badge-pill badge-secondary">
+                    {{ type }}
+                </span>
+                <span v-else-if="type === 'Staff'" class="badge badge-pill badge-light">
+                    {{ type }}
+                </span>
+                <span v-else class="badge badge-pill badge-primary">
+                    {{ type }}
+                </span>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><a href="#">Library Image</a></li>
