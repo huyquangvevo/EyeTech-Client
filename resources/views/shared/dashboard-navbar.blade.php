@@ -89,7 +89,7 @@
         <ul class="nav-right row">
             @if(Auth::guest())
                 <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ route('register') }}">Register</a></li>
+                <li><a href="{{ route('register') }}" style="margin-right: 50px;">Register</a></li>
             @else
                 {{--<nav-right-noti-component></nav-right-noti-component>--}}
                 <nav-right-profile-component route_logout="{{ $logout_route }}"></nav-right-profile-component>

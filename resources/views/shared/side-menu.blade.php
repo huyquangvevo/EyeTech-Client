@@ -66,7 +66,7 @@
                         <a href="#">Customers</a>
                     </li>
                     <li>
-                        <a href="#">Feedbacks</a>
+                        <a href="{{ route('feedbacks.index') }}">Feedbacks</a>
                     </li>
                 </ul>
             </li>

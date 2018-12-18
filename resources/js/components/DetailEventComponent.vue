@@ -66,9 +66,31 @@
                         </td>
                         <td>{{ event.time_in }}</td>
                         <td class="text-center font-size-18">
-                            <a v-bind:href="event.customer_profile_url" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                            <a href="#" class="text-gray"><i class="ti-bookmark"></i></a>
+                            <a v-bind:href="event.customer_profile_url" class="text-gray m-r-15" data-toggle="tooltip" title="Profile">
+                                <i class="ti-pencil"></i>
+                            </a>
+                            <a @click="showModalFeedback(event.event_id, event.branch_id, event.camera)" class="text-gray" data-toggle="tooltip" title="Feedback">
+                                <i class="ti-bookmark"></i>
+                            </a>
                         </td>
+                        <b-modal v-model="modalFeedbackShow" hide-footer title="Are you absolutely sure?">
+                            <div class="d-block text-center">
+                                <h3>
+                                    Detection of
+                                    <span class="text-primary"> {{ event.name }} </span>
+                                    has problem!
+                                </h3>
+                                <h3 class="text-danger">{{ modalFeedbackMessage }}</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <b-btn class="mt-3" variant="outline-secondary" block @click="hideModalFeedback">Close</b-btn>
+                                </div>
+                                <div class="col-sm">
+                                    <b-btn class="mt-3" variant="outline-success" block @click="createFeedback">Create Feedback</b-btn>
+                                </div>
+                            </div>
+                        </b-modal>
                     </tr>
                     </tbody>
                 </table>
@@ -89,6 +111,11 @@
                 events: [],
                 timer: '',
                 delayTime: 10000,
+                modalFeedbackShow: false,
+                modalFeedbackMessage: '',
+                event_id: '',
+                branch_id: '',
+                camera_name: '',
             }
         },
         created() {
@@ -115,6 +142,38 @@
             },
             cancelAutoUpdate() {
                 clearInterval(this.timer);
+            },
+            showModalFeedback: function(event_id, branch_id, camera_name) {
+                this.modalFeedbackShow = true;
+                this.modalFeedbackMessage = '';
+                this.event_id = event_id;
+                this.branch_id = branch_id;
+                this.camera_name = camera_name;
+            },
+            hideModalFeedback() {
+                this.modalFeedbackShow = false;
+            },
+            createFeedback() {
+                axios({
+                    url: 'http://202.191.56.249/eyetech/api/v1/feedbacks',
+                    method: 'post',
+                    data: {
+                        branch_id: this.branch_id,
+                        camera_name: this.camera_name,
+                        event_id: this.event_id,
+                        status: 'Created',
+                    }
+                })
+                    .then(response => {
+                        console.log(response);
+                        this.modalFeedbackShow = false;
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        if (error.response.status === 400) {
+                            this.modalFeedbackMessage = 'This event already exist in feedback!'
+                        }
+                    })
             }
         },
         beforeDestroy() {
@@ -122,7 +181,6 @@
         }
     }
 </script>
-
 <style scoped>
 
 </style>

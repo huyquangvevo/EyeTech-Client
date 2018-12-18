@@ -144,3 +144,6 @@
 .detail-events {
     font-size: 20px;
 }
+.feedback-delete {
+    cursor: pointer;
+}
