@@ -147,3 +147,42 @@
 .feedback-delete {
     cursor: pointer;
 }
+.gallery-title {
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.port-image {
+    width: 100%;
+}
+.gallery_product {
+    margin-bottom: 30px;
+}
+.gallery-image {
+    overflow: hidden;
+    width: 80%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.gallery-bg {
+    background-color: white;
+}
+.remove-image {
+    font-size: 30px;
+    cursor: pointer;
+}
+.btn-upload {
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -12,6 +12,11 @@ class FeedbackController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $branch_id = Auth::user()->branch_id;

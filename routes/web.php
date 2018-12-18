@@ -18,6 +18,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('customers', 'CustomerController');
+Route::resource('galleries', 'GalleryController');
 Route::resource('events', 'EventController');
 Route::resource('feedbacks', 'FeedbackController')->only([
     'index'

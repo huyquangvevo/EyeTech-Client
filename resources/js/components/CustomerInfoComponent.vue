@@ -97,7 +97,9 @@
                 <a href="#" class="badge badge-dark badge-pill">Tea</a>
                 <a href="#" class="badge badge-dark badge-pill">Cacao</a>
                 <hr>
-                <span class="badge badge-primary"><i class="fa fa-user"></i> 10 visted</span>
+                <span class="badge badge-primary"><i class="fa fa-user"></i>
+                    10 visted
+                </span>
                 <span class="badge badge-success"><i class="fa fa-cog"></i> 100 hour</span>
             </div>
             <div class="col-md-12" style="margin-top: 50px">
@@ -163,6 +165,7 @@
         },
         created() {
             this.fetchCustomerInfo();
+            this.fetchNumberVisted();
         },
         methods: {
             fetchCustomerInfo() {

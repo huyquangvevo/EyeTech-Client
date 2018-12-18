@@ -66,10 +66,10 @@
                         </td>
                         <td>{{ event.time_in }}</td>
                         <td class="text-center font-size-18">
-                            <a v-bind:href="event.customer_profile_url" class="text-gray m-r-15" data-toggle="tooltip" title="Profile">
+                            <a v-bind:href="event.customer_profile_url" class="text-gray m-r-15 font-size-30" data-toggle="tooltip" title="Profile">
                                 <i class="ti-pencil"></i>
                             </a>
-                            <a @click="showModalFeedback(event.event_id, event.branch_id, event.camera)" class="text-gray" data-toggle="tooltip" title="Feedback">
+                            <a @click="showModalFeedback(event.event_id, event.branch_id, event.camera)" class="text-gray font-size-30" data-toggle="tooltip" title="Feedback">
                                 <i class="ti-bookmark"></i>
                             </a>
                         </td>
@@ -180,6 +180,9 @@
             this.cancelAutoUpdate();
         }
     }
+    $(document).ready(function(){
+        $('[data-toggle="tooltipProfile"]').tooltip();
+    });
 </script>
 <style scoped>
 

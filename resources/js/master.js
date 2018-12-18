@@ -25,6 +25,7 @@ Vue.component('nav-right-noti-component', require('./components/NavRightNotiComp
 Vue.component('nav-right-profile-component', require('./components/NavRightProfileComponent.vue'));
 Vue.component('register-component', require('./components/RegisterComponent.vue'));
 Vue.component('feedback-component', require('./components/FeedbackComponent.vue'));
+Vue.component('gallery-component', require('./components/GalleryComponent.vue'));
 
 const vue = new Vue({
     el: '#vue',

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CustomerController extends Controller
+class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -50,9 +50,8 @@ class CustomerController extends Controller
     public function show($id)
     {
         $logout_route = route('custom-logout');
-        $home_route = route('home');
-        $gallery_route = route('galleries.index');
-        return view('customers.profile', compact('id', 'home_route', 'logout_route', 'gallery_route'));
+        $profile_route = route('customers.index') . '/' . $id;
+        return view('customers.gallery', compact('logout_route', 'id', 'profile_route'));
     }
 
     /**
