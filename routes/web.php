@@ -1,21 +1,24 @@
 <?php
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 Auth::routes();
+Route::get('user/logout', function () {
+    if (Auth::check()) {
+        Auth::logout();
+        Session::flush(); // clear all section
+        return Redirect::route('login');
+    } else {
+        return Redirect::route('register');
+    }
+})->name('custom-logout');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/customers/profile', 'CustomerController@index');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::resource('customers', 'CustomerController');
+Route::resource('events', 'EventController');
+Route::resource('feedbacks', 'FeedbackController')->only([
+    'index'
+]);

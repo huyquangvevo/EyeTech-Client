@@ -7,6 +7,9 @@ use App\User;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -19,22 +22,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function getWebserviceToken($branch_id)
-    {
-        $client = new \GuzzleHttp\Client();
-        try {
-            $res = $client->request('POST', 'http://localhost/eyetech/api/v1/users/client-login', [
-                'form_params' => [
-                    'branch_id' => $branch_id,
-                ]
-            ]);
-        } catch (GuzzleException $e) {
-            //
-        }
-        $data = json_decode($res->getBody()->getContents());
-
-        return $data->webservice_token;
-    }
     protected function login(Request $request)
     {
         $this->validateLogin($request);
@@ -62,5 +49,22 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    public function getWebserviceToken($branch_id)
+    {
+        $client = new \GuzzleHttp\Client();
+        try {
+            $res = $client->request('POST', 'http://202.191.56.249/eyetech/api/v1/users/client-login', [
+                'form_params' => [
+                    'branch_id' => $branch_id,
+                ]
+            ]);
+        } catch (GuzzleException $e) {
+            //
+        }
+        $data = json_decode($res->getBody()->getContents());
+
+        return $data->webservice_token;
     }
 }

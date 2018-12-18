@@ -17,4 +17,7 @@ Route::group(['prefix' => 'v1'], function() {
     Route::apiResource('register', 'Api\RegisterController')->only([
         'store'
     ]);
+
+
+    Route::get('customer-edit-route', 'Api\CustomerController@getCustomerEditRoute');
 });
