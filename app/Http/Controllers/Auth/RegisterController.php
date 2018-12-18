@@ -19,14 +19,6 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-
-//        $client = new GuzzleHttp\Client();
-//        $request = $client->request('GET', 'http://202.191.56.249/eyetech/api/v1/list-stores-id');
-//        $res = json_decode($request->getBody());
-//        $storeArrJson = $res->stores_id;
-//        foreach ($storeArrJson as $store) {
-//            array_push($this->storeArr, $store->id);
-//        }
     }
 
     protected function validator(array $data)
@@ -47,6 +39,12 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+    protected function showRegistrationForm()
+    {
+        $registerApiRouter = route('register.store');
+        $loginFormRoute = route('login');
+        return view('auth.register', compact('registerApiRouter', 'loginFormRoute'));
     }
 
     protected function register(Request $request)
