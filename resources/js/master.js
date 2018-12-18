@@ -24,6 +24,7 @@ Vue.component('customer-profile-action-component', require('./components/Custome
 Vue.component('nav-right-noti-component', require('./components/NavRightNotiComponent.vue'));
 Vue.component('nav-right-profile-component', require('./components/NavRightProfileComponent.vue'));
 Vue.component('register-component', require('./components/RegisterComponent.vue'));
+Vue.component('feedback-component', require('./components/FeedbackComponent.vue'));
 
 const vue = new Vue({
     el: '#vue',

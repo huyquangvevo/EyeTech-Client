@@ -19,3 +19,6 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('customers', 'CustomerController');
 Route::resource('events', 'EventController');
+Route::resource('feedbacks', 'FeedbackController')->only([
+    'index'
+]);

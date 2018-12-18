@@ -1,11 +1,11 @@
 <template>
     <div class="col-md-3 row">
-            <div class="col-md-6">
-                <button class="btn btn-default btn-rounded custom-btn-message">Message</button>
-            </div>
-            <div class="col-md-6">
-                <button v-on:click="showModalDestroy" class="btn btn-default btn-rounded custom-btn-delete">Destroy</button>
-            </div>
+        <div class="col-md-6">
+            <button class="btn btn-default btn-rounded custom-btn-message">Message</button>
+        </div>
+        <div class="col-md-6">
+            <button v-on:click="showModalDestroy" class="btn btn-default btn-rounded custom-btn-delete">Destroy</button>
+        </div>
         <b-modal ref="modalDestroyRef" hide-footer title="Are you absolutely sure?">
             <div class="d-block text-center">
                 <h3>
@@ -67,12 +67,12 @@
                         console.log(error);
                     })
             },
-            showModalDestroy () {
+            showModalDestroy() {
                 this.$refs.modalDestroyRef.show()
             },
-            hideModalDestroy () {
+            hideModalDestroy() {
                 this.$refs.modalDestroyRef.hide()
-            }
+            },
         }
     }
 </script>
