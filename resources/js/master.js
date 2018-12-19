@@ -9,10 +9,13 @@ window.VueResource = require('vue-resource');
 import {ClientTable} from 'vue-tables-2';
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import vueDropzone from 'vue2-dropzone';
+
 Vue.use(ClientTable);
 Vue.use(BootstrapVue);
+Vue.use(vueDropzone);
 
-
+Vue.component('vue-dropzone', vueDropzone);
 Vue.component('v-select', VueSelect.VueSelect);
 Vue.component('quick-event-component', require('./components/QuickEventComponent.vue'));
 Vue.component('detail-event-component', require('./components/DetailEventComponent.vue'));
@@ -26,6 +29,7 @@ Vue.component('nav-right-profile-component', require('./components/NavRightProfi
 Vue.component('register-component', require('./components/RegisterComponent.vue'));
 Vue.component('feedback-component', require('./components/FeedbackComponent.vue'));
 Vue.component('gallery-component', require('./components/GalleryComponent.vue'));
+Vue.component('gallery-upload-component', require('./components/GalleryUploadComponent.vue'));
 
 const vue = new Vue({
     el: '#vue',

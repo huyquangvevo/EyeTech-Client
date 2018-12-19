@@ -11,17 +11,15 @@
                         <div class="header-sub-title">
                             <nav class="breadcrumb breadcrumb-dash">
                                 <a href="{{ route('home') }}" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
-                                <a class="breadcrumb-item" href="{{ $profile_route }}">Profile</a>
-                                <span class="breadcrumb-item active">Galleries</span>
+                                <a class="breadcrumb-item" href="{{ $gallery_route }}">Library</a>
+                                <span class="breadcrumb-item active">Upload</span>
                             </nav>
                         </div>
                     </div>
                     <div class="col-md-3">
                     </div>
                 </div>
-                <div>
-                    <gallery-component id_customer="{{ $id }}" route_upload="{{ $upload_route }}"></gallery-component>
-                </div>
+                <gallery-upload-component id_customer="{{ $customer_id }}"></gallery-upload-component>
             </div>
         </div>
     </div>

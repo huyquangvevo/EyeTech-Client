@@ -50,8 +50,9 @@ class GalleryController extends Controller
     public function show($id)
     {
         $logout_route = route('custom-logout');
+        $upload_route = route('galleries.index') . '/' . $id . '/upload';
         $profile_route = route('customers.index') . '/' . $id;
-        return view('customers.gallery', compact('logout_route', 'id', 'profile_route'));
+        return view('customers.gallery', compact('logout_route', 'id', 'profile_route', 'upload_route'));
     }
 
     /**
@@ -86,5 +87,12 @@ class GalleryController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function showFormUpload($customer_id)
+    {
+        $logout_route = route('custom-logout');
+        $gallery_route = route('galleries.index') . '/' . $customer_id;
+        return view('customers.upload', compact('logout_route', 'customer_id', 'gallery_route'));
     }
 }

@@ -10,7 +10,7 @@
                                 <span class="font-weight-bold">{{ quantily }}</span>
                             </div>
                             <div class="col-md-2">
-                                <button class="btn btn-gradient-info btn-upload">Upload</button>
+                                <button @click="showFormUpload" class="btn btn-gradient-info btn-upload">Upload</button>
                             </div>
                         </div>
                     </div>
@@ -37,10 +37,12 @@
         $('[data-toggle="tooltip"]').tooltip();
     });
 
+
     export default {
         name: "GalleryComponent",
         props: {
             id_customer: '',
+            route_upload: '',
         },
         data() {
             return {
@@ -82,6 +84,9 @@
                     .catch(error => {
                         console.log(error);
                     })
+            },
+            showFormUpload() {
+                window.location = this.route_upload;
             }
         }
     }
