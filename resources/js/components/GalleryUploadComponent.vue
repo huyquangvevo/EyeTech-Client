@@ -12,7 +12,7 @@
                     ref="uploadDropzone"
                     id="upload"
                     :options="config"
-                    acceptedFileTypes='.jpg'
+                    acceptedFileTypes='.jpg,.jpeg,.png'
                     @vdropzone-sending="sendingEvent"
                     @vdropzone-complete="afterComplete"
                 >
@@ -33,13 +33,13 @@
                 message_success: '',
                 config: {
                     url: 'http://202.191.56.249/eyetech/api/v1/galleries/images/upload',
+                    // url: 'http://localhost/eyetech/api/v1/galleries/images/upload',
                     // url: 'http://localhost/eyetech/api/v1/galleries/image/test',
                     autoProcessQueue: false,
                     addRemoveLinks: true,
-                    destroyDropzone: false,
+                    maxFilesize: 10000000000000000000, // MB
                     maxFiles: 15,
-                    maxFilesize: 5,
-                    thumbnailWidth: 200,
+                    thumbnailWidth: 200, // px
                     thumbnailHeight: 200,
                 }
             }

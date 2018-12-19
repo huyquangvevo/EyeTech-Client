@@ -87156,13 +87156,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             message_success: '',
             config: {
                 url: 'http://202.191.56.249/eyetech/api/v1/galleries/images/upload',
+                // url: 'http://localhost/eyetech/api/v1/galleries/images/upload',
                 // url: 'http://localhost/eyetech/api/v1/galleries/image/test',
                 autoProcessQueue: false,
                 addRemoveLinks: true,
-                destroyDropzone: false,
+                maxFilesize: 10000000000000000000, // MB
                 maxFiles: 15,
-                maxFilesize: 5,
-                thumbnailWidth: 200,
+                thumbnailWidth: 200, // px
                 thumbnailHeight: 200
             }
         };
@@ -87222,7 +87222,7 @@ var render = function() {
             attrs: {
               id: "upload",
               options: _vm.config,
-              acceptedFileTypes: ".jpg"
+              acceptedFileTypes: ".jpg,.jpeg,.png"
             },
             on: {
               "vdropzone-sending": _vm.sendingEvent,
