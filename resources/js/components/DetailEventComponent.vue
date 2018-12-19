@@ -69,33 +69,26 @@
                             <a v-bind:href="event.customer_profile_url" class="text-gray m-r-15 font-size-30" data-toggle="tooltip" title="Profile">
                                 <i class="ti-pencil"></i>
                             </a>
-                            <a @click="showModalFeedback(event.event_id, event.branch_id, event.camera)" class="text-gray font-size-30" data-toggle="tooltip" title="Feedback">
+                            <a @click="createFeedback(event.event_id, event.branch_id, event.camera)" class="text-gray font-size-30" data-toggle="tooltip" title="Feedback">
                                 <i class="ti-bookmark"></i>
                             </a>
                         </td>
-                        <b-modal v-model="modalFeedbackShow" hide-footer title="Are you absolutely sure?">
-                            <div class="d-block text-center">
-                                <h3>
-                                    Detection of
-                                    <span class="text-primary"> {{ event.name }} </span>
-                                    has problem!
-                                </h3>
-                                <h3 class="text-danger">{{ modalFeedbackMessage }}</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm">
-                                    <b-btn class="mt-3" variant="outline-secondary" block @click="hideModalFeedback">Close</b-btn>
-                                </div>
-                                <div class="col-sm">
-                                    <b-btn class="mt-3" variant="outline-success" block @click="createFeedback">Create Feedback</b-btn>
-                                </div>
-                            </div>
-                        </b-modal>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+        <b-modal v-model="modalFeedbackShow" hide-footer title="Are you absolutely sure?">
+            <div class="d-block text-center">
+                <h3 class="text-success"> {{ modalFeedbackMessage }} </h3>
+                <h3 class="text-danger"> {{ modalFeedbackError }} </h3>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <b-btn class="mt-3" variant="outline-secondary" block @click="hideModalFeedback">Close</b-btn>
+                </div>
+            </div>
+        </b-modal>
     </div>
 </template>
 
@@ -113,6 +106,7 @@
                 delayTime: 10000,
                 modalFeedbackShow: false,
                 modalFeedbackMessage: '',
+                modalFeedbackError: '',
                 event_id: '',
                 branch_id: '',
                 camera_name: '',
@@ -143,35 +137,32 @@
             cancelAutoUpdate() {
                 clearInterval(this.timer);
             },
-            showModalFeedback: function(event_id, branch_id, camera_name) {
-                this.modalFeedbackShow = true;
-                this.modalFeedbackMessage = '';
-                this.event_id = event_id;
-                this.branch_id = branch_id;
-                this.camera_name = camera_name;
-            },
             hideModalFeedback() {
                 this.modalFeedbackShow = false;
             },
-            createFeedback() {
+            createFeedback: function(event_id, branch_id, camera_name) {
                 axios({
                     url: 'http://202.191.56.249/eyetech/api/v1/feedbacks',
                     method: 'post',
                     data: {
-                        branch_id: this.branch_id,
-                        camera_name: this.camera_name,
-                        event_id: this.event_id,
+                        branch_id: branch_id,
+                        camera_name: camera_name,
+                        event_id: event_id,
                         status: 'Created',
                     }
                 })
                     .then(response => {
                         console.log(response);
-                        this.modalFeedbackShow = false;
+                        this.modalFeedbackMessage = 'Create feedback successfully!';
+                        this.modalFeedbackError = '';
+                        this.modalFeedbackShow = true;
                     })
                     .catch(error => {
                         console.log(error);
                         if (error.response.status === 400) {
-                            this.modalFeedbackMessage = 'This event already exist in feedback!'
+                            this.modalFeedbackMessage = '';
+                            this.modalFeedbackError = 'Fail: This event already exist in feedback!';
+                            this.modalFeedbackShow = true;
                         }
                     })
             }

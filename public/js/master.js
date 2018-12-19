@@ -81970,7 +81970,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -81981,13 +81981,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -82096,6 +82089,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             delayTime: 10000,
             modalFeedbackShow: false,
             modalFeedbackMessage: '',
+            modalFeedbackError: '',
             event_id: '',
             branch_id: '',
             camera_name: ''
@@ -82127,36 +82121,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         cancelAutoUpdate: function cancelAutoUpdate() {
             clearInterval(this.timer);
         },
-
-        showModalFeedback: function showModalFeedback(event_id, branch_id, camera_name) {
-            this.modalFeedbackShow = true;
-            this.modalFeedbackMessage = '';
-            this.event_id = event_id;
-            this.branch_id = branch_id;
-            this.camera_name = camera_name;
-        },
         hideModalFeedback: function hideModalFeedback() {
             this.modalFeedbackShow = false;
         },
-        createFeedback: function createFeedback() {
+
+        createFeedback: function createFeedback(event_id, branch_id, camera_name) {
             var _this2 = this;
 
             axios({
                 url: 'http://202.191.56.249/eyetech/api/v1/feedbacks',
                 method: 'post',
                 data: {
-                    branch_id: this.branch_id,
-                    camera_name: this.camera_name,
-                    event_id: this.event_id,
+                    branch_id: branch_id,
+                    camera_name: camera_name,
+                    event_id: event_id,
                     status: 'Created'
                 }
             }).then(function (response) {
                 console.log(response);
-                _this2.modalFeedbackShow = false;
+                _this2.modalFeedbackMessage = 'Create feedback successfully!';
+                _this2.modalFeedbackError = '';
+                _this2.modalFeedbackShow = true;
             }).catch(function (error) {
                 console.log(error);
                 if (error.response.status === 400) {
-                    _this2.modalFeedbackMessage = 'This event already exist in feedback!';
+                    _this2.modalFeedbackMessage = '';
+                    _this2.modalFeedbackError = 'Fail: This event already exist in feedback!';
+                    _this2.modalFeedbackShow = true;
                 }
             });
         }
@@ -82177,25 +82168,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card" }, [
-    _c("div", { staticClass: "card-body" }, [
-      _c("div", { staticClass: "table-overflow" }, [
-        _c(
-          "table",
-          {
-            staticClass: "table table-hover table-xl detail-events",
-            attrs: { id: "dt-opt-1" }
-          },
-          [
-            _vm._m(0),
-            _vm._v(" "),
-            _c(
-              "tbody",
-              { staticClass: "recent-event-body" },
-              _vm._l(_vm.events, function(event) {
-                return _c(
-                  "tr",
-                  [
+  return _c(
+    "div",
+    { staticClass: "card" },
+    [
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "table-overflow" }, [
+          _c(
+            "table",
+            {
+              staticClass: "table table-hover table-xl detail-events",
+              attrs: { id: "dt-opt-1" }
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                { staticClass: "recent-event-body" },
+                _vm._l(_vm.events, function(event) {
+                  return _c("tr", [
                     _c("td", [
                       _c("div", { staticClass: "list-media" }, [
                         _c("div", { staticClass: "list-item" }, [
@@ -82356,7 +82348,7 @@ var render = function() {
                           },
                           on: {
                             click: function($event) {
-                              _vm.showModalFeedback(
+                              _vm.createFeedback(
                                 event.event_id,
                                 event.branch_id,
                                 event.camera
@@ -82366,95 +82358,61 @@ var render = function() {
                         },
                         [_c("i", { staticClass: "ti-bookmark" })]
                       )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "b-modal",
-                      {
-                        attrs: {
-                          "hide-footer": "",
-                          title: "Are you absolutely sure?"
-                        },
-                        model: {
-                          value: _vm.modalFeedbackShow,
-                          callback: function($$v) {
-                            _vm.modalFeedbackShow = $$v
-                          },
-                          expression: "modalFeedbackShow"
-                        }
-                      },
-                      [
-                        _c("div", { staticClass: "d-block text-center" }, [
-                          _c("h3", [
-                            _vm._v(
-                              "\n                                Detection of\n                                "
-                            ),
-                            _c("span", { staticClass: "text-primary" }, [
-                              _vm._v(" " + _vm._s(event.name) + " ")
-                            ]),
-                            _vm._v(
-                              "\n                                has problem!\n                            "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("h3", { staticClass: "text-danger" }, [
-                            _vm._v(_vm._s(_vm.modalFeedbackMessage))
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c(
-                            "div",
-                            { staticClass: "col-sm" },
-                            [
-                              _c(
-                                "b-btn",
-                                {
-                                  staticClass: "mt-3",
-                                  attrs: {
-                                    variant: "outline-secondary",
-                                    block: ""
-                                  },
-                                  on: { click: _vm.hideModalFeedback }
-                                },
-                                [_vm._v("Close")]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "col-sm" },
-                            [
-                              _c(
-                                "b-btn",
-                                {
-                                  staticClass: "mt-3",
-                                  attrs: {
-                                    variant: "outline-success",
-                                    block: ""
-                                  },
-                                  on: { click: _vm.createFeedback }
-                                },
-                                [_vm._v("Create Feedback")]
-                              )
-                            ],
-                            1
-                          )
-                        ])
-                      ]
-                    )
-                  ],
-                  1
+                    ])
+                  ])
+                })
+              )
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "b-modal",
+        {
+          attrs: { "hide-footer": "", title: "Are you absolutely sure?" },
+          model: {
+            value: _vm.modalFeedbackShow,
+            callback: function($$v) {
+              _vm.modalFeedbackShow = $$v
+            },
+            expression: "modalFeedbackShow"
+          }
+        },
+        [
+          _c("div", { staticClass: "d-block text-center" }, [
+            _c("h3", { staticClass: "text-success" }, [
+              _vm._v(" " + _vm._s(_vm.modalFeedbackMessage) + " ")
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "text-danger" }, [
+              _vm._v(" " + _vm._s(_vm.modalFeedbackError) + " ")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c(
+              "div",
+              { staticClass: "col-sm" },
+              [
+                _c(
+                  "b-btn",
+                  {
+                    staticClass: "mt-3",
+                    attrs: { variant: "outline-secondary", block: "" },
+                    on: { click: _vm.hideModalFeedback }
+                  },
+                  [_vm._v("Close")]
                 )
-              })
+              ],
+              1
             )
-          ]
-        )
-      ])
-    ])
-  ])
+          ])
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
