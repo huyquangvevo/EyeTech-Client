@@ -32,12 +32,12 @@
             return {
                 message_success: '',
                 config: {
-                    url: 'http://202.191.56.249/eyetech/api/v1/galleries/images/upload',
+                    // url: 'http://202.191.56.249/eyetech/api/v1/galleries/images/upload',
                     // url: 'http://localhost/eyetech/api/v1/galleries/images/upload',
-                    // url: 'http://localhost/eyetech/api/v1/galleries/image/test',
+                    url: 'http://202.191.56.249/eyetech/api/v1/galleries/image/test',
                     autoProcessQueue: false,
                     addRemoveLinks: true,
-                    maxFilesize: 10000000000000000000, // MB
+                    maxFilesize: 5, // MB
                     maxFiles: 15,
                     thumbnailWidth: 200, // px
                     thumbnailHeight: 200,
