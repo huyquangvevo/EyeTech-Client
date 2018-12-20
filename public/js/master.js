@@ -87155,9 +87155,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             message_success: '',
             config: {
-                // url: 'http://202.191.56.249/eyetech/api/v1/galleries/images/upload',
+                url: 'http://202.191.56.249/eyetech/api/v1/galleries/images/upload',
                 // url: 'http://localhost/eyetech/api/v1/galleries/images/upload',
-                url: 'http://202.191.56.249/eyetech/api/v1/galleries/image/test',
+                // url: 'http://localhost/eyetech/api/v1/galleries/image/test',
                 autoProcessQueue: false,
                 addRemoveLinks: true,
                 maxFilesize: 5, // MB
