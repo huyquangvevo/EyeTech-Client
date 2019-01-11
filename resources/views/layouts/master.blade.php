@@ -18,6 +18,7 @@
     <link href="{{ url('public/css/dashboard/themify-icons.css') }}" rel="stylesheet">
     <link href="{{ url('public/css/dashboard/materialdesignicons.min.css') }}" rel="stylesheet">
     <link href="{{ url('public/css/dashboard/animate.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('public/css/dashboard/vue2Dropzone.css') }}">
     <link href="{{ url('public/css/dashboard/app.css') }}" rel="stylesheet">
     <link href="{{ url('public/css/custom.css') }}" rel="stylesheet">
 </head>

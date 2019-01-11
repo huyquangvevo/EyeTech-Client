@@ -19,7 +19,7 @@
                     <customer-profile-action-component id_customer="{{ $id }}" route_home="{{ $home_route }}"></customer-profile-action-component>
                 </div>
                 <div class="row my-2">
-                    <customer-quick-info-component id_customer="{{ $id }}"></customer-quick-info-component>
+                    <customer-quick-info-component id_customer="{{ $id }}" route_gallery="{{ $gallery_route }}"></customer-quick-info-component>
                     <div class="col-md-9 customer-info customer-profile-card">
                         <ul class="nav nav-tabs">
                                 <li class="nav-item">

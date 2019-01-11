@@ -25,7 +25,7 @@
                 </span>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="#">Library Image</a></li>
+                <li class="list-group-item"><a v-bind:href="route_gallery">Library Image</a></li>
                 <li class="list-group-item"><a href="#">Statistical Visted</a></li>
             </ul>
         </div>
@@ -36,7 +36,8 @@
     export default {
         name: "CustomerQuickInfoComponent",
         props: {
-            id_customer: ''
+            id_customer: '',
+            route_gallery: '',
         },
         data() {
             return {
@@ -51,8 +52,12 @@
         },
         created() {
             this.fetchCustomerQuickInfo();
+            this.formatGallaryRoute();
         },
         methods: {
+            formatGallaryRoute() {
+                this.route_gallery = this.route_gallery + '/' + this.id_customer;
+            },
             fetchCustomerQuickInfo() {
                 axios({
                     method: 'get',

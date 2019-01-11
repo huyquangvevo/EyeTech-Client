@@ -7,9 +7,6 @@ use App\User;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
