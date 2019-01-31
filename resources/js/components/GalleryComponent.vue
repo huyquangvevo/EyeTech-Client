@@ -6,7 +6,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-10">
-                                Number:
+                                Number Photos:
                                 <span class="font-weight-bold">{{ quantily }}</span>
                             </div>
                             <div class="col-md-2">
