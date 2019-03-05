@@ -1,12 +1,12 @@
 <template>
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Recent Customer</h4>
+            <h4 class="card-title">Khách hàng gần đây</h4>
             <div class="card-toolbar">
                 <ul>
                     <li>
                         <a class="text-gray" v-bind:href="events_route">
-                            <h5>Show Detail</h5>
+                            <h5>Chi tiết</h5>
                         </a>
                     </li>
                 </ul>
@@ -17,9 +17,9 @@
                 <thead>
                 <tr>
                     <td class="text-dark text-semibold" >Customer</td>
-                    <td class="text-dark text-semibold" >Time in</td>
+                    <td class="text-dark text-semibold" >Thời gian</td>
                     <td class="text-dark text-semibold" >Camera</td>
-                    <td class="text-dark text-semibold" >Type</td>
+                    <td class="text-dark text-semibold" >Kiểu</td>
                 </tr>
                 </thead>
                 <tbody class="recent-event-body">

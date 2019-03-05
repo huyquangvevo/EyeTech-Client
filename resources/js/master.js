@@ -31,6 +31,9 @@ Vue.component('feedback-component', require('./components/FeedbackComponent.vue'
 Vue.component('gallery-component', require('./components/GalleryComponent.vue'));
 Vue.component('gallery-upload-component', require('./components/GalleryUploadComponent.vue'));
 
+// new by huy
+Vue.component('manage-employee',require('./components/ManagerEmployee.vue'));
+
 const vue = new Vue({
     el: '#vue',
 });
