@@ -1,8 +1,9 @@
-<div class="side-nav expand-lg">
-    <div class="side-nav-inner">
+<link href="{{ url('/public/css/newstyle.css') }}" rel="stylesheet" type="text/css" >
+<div class="side-nav expand-lg" style="background-color:#051937">
+    <div class="side-nav-inner" >
         <ul class="side-nav-menu scrollable">
             <li class="side-nav-header">
-                <span>Navigation</span>
+                <span class="title-dashboard">EyeTech Media</span>
             </li>
             <li class="nav-item dropdown open">
                 <a class="dropdown-toggle" href="javascript:void(0);">
@@ -87,7 +88,7 @@
                 </ul>
             </li>
             <li class="side-nav-header">
-                <span>Others</span>
+                <span class="title-dashboard">Others</span>
             </li>
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">

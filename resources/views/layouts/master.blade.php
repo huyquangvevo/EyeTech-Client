@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="{{ url('public/css/dashboard/vue2Dropzone.css') }}">
     <link href="{{ url('public/css/dashboard/app.css') }}" rel="stylesheet">
     <link href="{{ url('public/css/custom.css') }}" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="{{ url('public/js/dasboard/jquery-3.3.1.min.js') }}"></script>
 </head>
-<body>
+<body style="font-family:'Roboto';font-size:12pt">
     <div class="app side-nav-dark header-info-gradient">
         <div class="layout" id="vue">
             @include('shared.dashboard-navbar')

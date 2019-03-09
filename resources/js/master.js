@@ -32,7 +32,9 @@ Vue.component('gallery-component', require('./components/GalleryComponent.vue'))
 Vue.component('gallery-upload-component', require('./components/GalleryUploadComponent.vue'));
 
 // new by huy
-Vue.component('manage-employee',require('./components/ManagerEmployee.vue'));
+Vue.component('statistics-store', require('./components/Statistics.vue'));
+Vue.component('employee-info',require('./components/EmployeeInfo.vue'));
+Vue.component('list-customer',require('./components/ListCustomer.vue'));
 
 const vue = new Vue({
     el: '#vue',

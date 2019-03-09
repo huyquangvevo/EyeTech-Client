@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class="card-header">
+        <!-- <div class="card-header">
             <h4 class="card-title">Khách hàng gần đây</h4>
             <div class="card-toolbar">
                 <ul>
@@ -11,12 +11,12 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
         <div class="table-overflow">
             <table class="table table-lg quick-events">
                 <thead>
                 <tr>
-                    <td class="text-dark text-semibold" >Customer</td>
+                    <td class="text-dark text-semibold" >Khách hàng</td>
                     <td class="text-dark text-semibold" >Thời gian</td>
                     <td class="text-dark text-semibold" >Camera</td>
                     <td class="text-dark text-semibold" >Kiểu</td>
