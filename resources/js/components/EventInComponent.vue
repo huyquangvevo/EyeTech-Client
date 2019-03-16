@@ -147,12 +147,15 @@ body.show-menu {
 }
 .card {
   display: inline-block;
-  background-color: #FFF;
+  /* background-color: #FFF; */
+  background: linear-gradient(to right bottom, #9e66c6 , #6027e1);
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
   min-height: 405px;
+  margin: 20pt;
+  
   transition: all 300ms;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -301,7 +304,8 @@ body.show-menu {
   padding: 0 20px;
   text-align: center;
   width: 100%;
-  color: #263238;
+  /* color: #263238; */
+  color:white;
   -webkit-animation: fadedown 1s;
           animation: fadedown 1s;
   -webkit-animation-fill-mode: both;
@@ -311,7 +315,9 @@ body.show-menu {
 }
 .card-face__title {
   font-size: 18px;
-  color: #90a4ae;
+  /* color: #90a4ae; */
+        color: rgba(white, 0.8);
+
   white-space: nowrap;
   display: block;
   overflow: hidden;

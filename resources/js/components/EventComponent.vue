@@ -1,17 +1,26 @@
 <template>
     <div>
-        <h2>Xin chào!</h2>
-        <p>
-          <a data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
-            Live
-          </a>
-        </p>
+        <a href="#" class="modal-trigger" data-modal="modal-name">Modal open!</a> <!-- Trigger Modal. -->
 
-          <div id="morphing-content" class="hidden">
-              <event-in-component></event-in-component> 
+        <!-- Modal -->
+        <div class="modal" id="modal-name">
+          <div class="modal-sandbox"></div>
+          <div class="modal-box">
+            <!-- <div class="modal-header">
+              <div class="close-modal">&#10006;</div> 
+              <h1>Khách mới</h1>
+            </div> -->
+            <div class="modal-body">
+              <div class="close-modal">&#10006;</div> 
+              <event-in-component></event-in-component>
+              <button class="close-modal">Close!</button>
+            </div>
           </div>
-          <!-- <event-in-component></event-in-component>  -->
-    
+        </div>
+
+<!-- Aditional Styles -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
         
     </div>
 </template>
@@ -38,102 +47,134 @@ export default {
 
 <style scoped>
 
-.morphing-btn-wrap {
-  display: inline-block;
-  position: relative;
-  text-align: center;
+.modal,
+.modal-box {
+  z-index: 2000;
+
 }
 
-.morphing-btn {
-  -webkit-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
-  -moz-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
-  -o-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
-  transition: color 0.3s 0.2s, width 0.2s 0s;
-  white-space: nowrap;
-  box-sizing: border-box;
-}
-
-.morphing-btn_circle {
-  color: transparent !important;
-  padding-left: 0;
-  padding-right: 0;
-  width: 35.6px !important;
-
-  /* Override inline style rule */
-  -webkit-transition: color 0.2s 0s, width .3s 0.2s;
-  -moz-transition: color 0.2s 0s, width .3s 0.2s;
-  -o-transition: color 0.2s 0s, width .3s 0.2s;
-  transition: color 0.2s 0s, width .3s 0.2s;
-}
-
-.morphing-btn-clone {
+.modal-sandbox {
   position: fixed;
-  background: #FF6666;
-  border-radius: 50%;
-  z-index: 3;
-  -webkit-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
-  -moz-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
-  -o-transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
-  transition: all 0.5s cubic-bezier(.65, .05, .36, 1);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.morphing-btn-clone_visible {
-  display: block;
-  -webkit-transform: scale(1) !important;
-  -moz-transform: scale(1) !important;
-  -ms-transform: scale(1) !important;
-  -o-transform: scale(1) !important;
-  transform: scale(1) !important;
-}
-
-.fancybox-morphing .fancybox-bg {
-  background: #FF6666;
-  opacity: 1;
-}
-
-.fancybox-morphing .fancybox-toolbar {
-  top: 20px;
-  right: 40px;
-}
-
-.fancybox-morphing .fancybox-button--close {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  color: #fff;
-}
-
-.fancybox-morphing .fancybox-button--close::after, 
-.fancybox-morphing .fancybox-button--close::before {
-    height: 1.55px;
-    width: 22px;
-    left: calc(50% - 11px);
-}
-
-.fancybox-morphing .fancybox-button--close:hover {
-  background: rgba(0, 0, 0, 0.25);
-}
-
-/* Styling for element used in example */
-
-#morphing-content {
-  margin: 0;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background: transparent;
-  color: #fff;
-  padding: 6em 10vw;
+  border-radius: 15pt;
 
-  line-height: 2;
-  z-index: 3;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
-#morphing-content a {
-  color: #fff;
+.modal {
+  display: none; 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,.8);
+  overflow: auto;
 }
 
- 
+.modal-box {
+  position: relative;
+  width: 80%;
+  max-width: 1120px;
+  margin: 50px auto;
+  animation-name: modalbox;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(0,0,.3,1.6);
+}
+
+.modal-header {
+  padding: 20px 40px;
+  background: #546E7A;
+  color: #ffffff;
+
+}
+
+.modal-body {
+  /* background: #ECEFF1; */
+  background: linear-gradient(150deg, #e6d3f9 0%, #e6d3f9 50%, #cea0f1 50%, #cea0f1 100%);
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 10px;
+  max-height: 600px;
+
+}
+
+/* Close Button */
+.close-modal {
+  text-align: right;
+  cursor: pointer;
+}
+
+/* Animation */
+@-webkit-keyframes modalbox {
+  0% {
+    top: -250px; 
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+@keyframes modalbox {
+  0% {
+    top: -250px; 
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+/* Aditional Styles */
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+body {
+  background: #B0BEC5;
+}
+
+.modal-trigger, button {
+  top: 50%;
+  left: 50%;
+  padding: 20px 40px;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+}
+
+.modal-trigger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: ease .2s;
+}
+
+button {
+  border: 1px solid #333333;
+  outline: none;
+  color: #333333;
+}
+
+.modal-trigger:hover {
+  padding: 20px 60px;
+}
 
 </style>
