@@ -1,15 +1,42 @@
-a {
-    font-size: 14px;
-}
-span {
-    font-size: 16px;
+<template>
+    <div>
+        <h2>Xin chào!</h2>
+        <p>
+          <a data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn">
+            Live
+          </a>
+        </p>
+
+          <div id="morphing-content" class="hidden">
+              <event-in-component></event-in-component> 
+          </div>
+          <!-- <event-in-component></event-in-component>  -->
+    
+        
+    </div>
+</template>
+<script>
+
+import EvenInComponent from './EventInComponent';
+
+export default {
+    name:'EventComponent',
 }
 
-.title-dashboard{
-    font-size: 10px;
-}
+</script>
+
+<script>
+   // Huy
+   $(document).ready(function(){
+    setTimeout(function(){
+      $(".btn").click();
+    },10000);
+   });
+    
+</script>
 
 
+<style scoped>
 
 .morphing-btn-wrap {
   display: inline-block;
@@ -95,7 +122,8 @@ span {
   position: relative;
   background: transparent;
   color: #fff;
-  padding: 0em 0vw;
+  padding: 6em 10vw;
+
   line-height: 2;
   z-index: 3;
   -webkit-backface-visibility: hidden;
@@ -105,3 +133,7 @@ span {
 #morphing-content a {
   color: #fff;
 }
+
+ 
+
+</style>

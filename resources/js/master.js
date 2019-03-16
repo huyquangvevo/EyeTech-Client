@@ -35,6 +35,8 @@ Vue.component('gallery-upload-component', require('./components/GalleryUploadCom
 Vue.component('statistics-store', require('./components/Statistics.vue'));
 Vue.component('employee-info',require('./components/EmployeeInfo.vue'));
 Vue.component('list-customer',require('./components/ListCustomer.vue'));
+Vue.component('event-component',require('./components/EventComponent.vue'));
+Vue.component('event-in-component',require('./components/EventInComponent.vue'));
 
 const vue = new Vue({
     el: '#vue',

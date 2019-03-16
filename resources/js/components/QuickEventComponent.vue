@@ -1,25 +1,25 @@
 <template>
     <div class="card">
-        <!-- <div class="card-header">
-            <h4 class="card-title">Khách hàng gần đây</h4>
+        <div class="card-header">
+            <h4 class="card-title">Recent Customer</h4>
             <div class="card-toolbar">
                 <ul>
                     <li>
                         <a class="text-gray" v-bind:href="events_route">
-                            <h5>Chi tiết</h5>
+                            <h5>Show Detail</h5>
                         </a>
                     </li>
                 </ul>
             </div>
-        </div> -->
+        </div>
         <div class="table-overflow">
             <table class="table table-lg quick-events">
                 <thead>
                 <tr>
-                    <td class="text-dark text-semibold" >Khách hàng</td>
-                    <td class="text-dark text-semibold" >Thời gian</td>
+                    <td class="text-dark text-semibold" >Customer</td>
+                    <td class="text-dark text-semibold" >Time in</td>
                     <td class="text-dark text-semibold" >Camera</td>
-                    <td class="text-dark text-semibold" >Kiểu</td>
+                    <td class="text-dark text-semibold" >Type</td>
                 </tr>
                 </thead>
                 <tbody class="recent-event-body">
@@ -124,5 +124,4 @@
 </script>
 
 <style scoped>
-
 </style>
