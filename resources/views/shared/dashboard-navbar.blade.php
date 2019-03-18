@@ -92,7 +92,7 @@
                 <li><a href="{{ route('register') }}" style="margin-right: 50px;">Register</a></li>
             @else
                 {{--<nav-right-noti-component></nav-right-noti-component>--}}
-                <nav-right-profile-component route_logout="{{ $logout_route }}"></nav-right-profile-component>
+                {{--<nav-right-profile-component route_logout="{{ $logout_route }}"></nav-right-profile-component>--}}
                 <li class="m-r-10">
                     <a class="quick-view-toggler" href="javascript:void(0);">
                         <i class="mdi mdi-format-indent-decrease"></i>

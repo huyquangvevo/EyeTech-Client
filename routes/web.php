@@ -24,3 +24,6 @@ Route::resource('events', 'EventController');
 Route::resource('feedbacks', 'FeedbackController')->only([
     'index'
 ]);
+Route::get('/analysis', function (){
+   return view('analysis');
+});

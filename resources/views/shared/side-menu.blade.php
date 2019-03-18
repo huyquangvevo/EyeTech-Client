@@ -32,6 +32,25 @@
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
+                        <i class="mdi mdi-gauge"></i>
+                    </span>
+                    <span class="title">Nhân viên</span>
+                    <span class="arrow">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('home') }}">Danh sách nhân viên</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('events.index') }}">Thêm mới nhân viên</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                    <span class="icon-holder">
                         <i class="mdi mdi-file-outline"></i>
                     </span>
                     <span class="title">Form</span>
