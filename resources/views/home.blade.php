@@ -5,6 +5,7 @@
                 <div class="container-fluid">
                         <div class="main-content" >
                                 {{-- <event-component></event-component>        --}}
+                                <list-customer></list-customer>
                         </div>
                 </div>
                 <event-component></event-component>       

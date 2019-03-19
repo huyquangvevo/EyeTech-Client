@@ -1,5 +1,4 @@
 <template>
-    <div>
         <div class="card"><!-- Face 2 -->
             <div class="card-face face-2"><!-- Back trigger -->
                 <button class="card-face__back-button" data-card-back="data-card-back"><img src="http://imgh.us/arrow_1.svg" width="19" height="19" draggable="false"/></button><img class="card-face__stats" src="http://imgh.us/Likes.png" width="100" height="100" draggable="false"/><img class="card-face__stats" src="http://imgh.us/Followers.png" width="100" height="100" draggable="false"/><img class="card-face__stats" src="http://imgh.us/Views.png" width="100" height="100" draggable="false"/><!-- Settings Button --><img class="card-face__settings-button" src="http://imgh.us/cog.svg" width="17" height="17" draggable="false"/>
@@ -14,53 +13,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="card" ><!-- Face 2 -->
-            <div class="card-face face-2"><!-- Back trigger -->
-                <button class="card-face__back-button" data-card-back="data-card-back"><img src="http://imgh.us/arrow_1.svg" width="19" height="19" draggable="false"/></button><img class="card-face__stats" src="http://imgh.us/Likes.png" width="100" height="100" draggable="false"/><img class="card-face__stats" src="http://imgh.us/Followers.png" width="100" height="100" draggable="false"/><img class="card-face__stats" src="http://imgh.us/Views.png" width="100" height="100" draggable="false"/><!-- Settings Button --><img class="card-face__settings-button" src="http://imgh.us/cog.svg" width="17" height="17" draggable="false"/>
-            </div><!-- Face 1 -->
-            <div class="card-face face-1"><!-- Menu trigger -->
-                <button class="card-face__menu-button" data-card-menu="data-card-menu"><img src="http://imgh.us/dots_1.svg" width="5" height="23" draggable="false"/></button><!-- Avatar -->
-                <div class="card-face__avatar"><!-- Bullet notification --><span class="card-face__bullet">21</span><!-- User avatar --><img src="https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg" width="110" height="110" draggable="false"/></div><!-- Name -->
-                <h2 class="card-face__name">Nguyễn Quang Huy</h2><!-- Title --><span class="card-face__title">Bách Khoa, Hà Nội, Việt Nam</span><!-- Cart Footer -->
-                <div class="card-face-footer">
-                    <div><i class="mdi mdi-new-box card-face__social" aria-hidden="true" style="font-size:24pt"></i></div>
-                    <span class="card-face__social">8.00pm</span>                                 
-                </div>
-            </div>
-        </div>
-
-        <div class="card" ><!-- Face 2 -->
-            <div class="card-face face-2"><!-- Back trigger -->
-                <button class="card-face__back-button" data-card-back="data-card-back"><img src="http://imgh.us/arrow_1.svg" width="19" height="19" draggable="false"/></button><img class="card-face__stats" src="http://imgh.us/Likes.png" width="100" height="100" draggable="false"/><img class="card-face__stats" src="http://imgh.us/Followers.png" width="100" height="100" draggable="false"/><img class="card-face__stats" src="http://imgh.us/Views.png" width="100" height="100" draggable="false"/><!-- Settings Button --><img class="card-face__settings-button" src="http://imgh.us/cog.svg" width="17" height="17" draggable="false"/>
-            </div><!-- Face 1 -->
-            <div class="card-face face-1"><!-- Menu trigger -->
-                <button class="card-face__menu-button" data-card-menu="data-card-menu"><img src="http://imgh.us/dots_1.svg" width="5" height="23" draggable="false"/></button><!-- Avatar -->
-                <div class="card-face__avatar"><!-- Bullet notification --><span class="card-face__bullet">21</span><!-- User avatar --><img src="https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg" width="110" height="110" draggable="false"/></div><!-- Name -->
-                <h2 class="card-face__name">Nguyễn Quang Huy</h2><!-- Title --><span class="card-face__title">Bách Khoa, Hà Nội, Việt Nam</span><!-- Cart Footer -->
-                <div class="card-face-footer">
-                    <div><i class="mdi mdi-new-box card-face__social" aria-hidden="true" style="font-size:24pt"></i></div>
-                    <span class="card-face__social">8.00pm</span>                                 
-                </div>
-            </div>
-        </div>
-
-        <div class="card" ><!-- Face 2 -->
-            <div class="card-face face-2"><!-- Back trigger -->
-                <button class="card-face__back-button" data-card-back="data-card-back"><img src="http://imgh.us/arrow_1.svg" width="19" height="19" draggable="false"/></button><img class="card-face__stats" src="http://imgh.us/Likes.png" width="100" height="100" draggable="false"/><img class="card-face__stats" src="http://imgh.us/Followers.png" width="100" height="100" draggable="false"/><img class="card-face__stats" src="http://imgh.us/Views.png" width="100" height="100" draggable="false"/><!-- Settings Button --><img class="card-face__settings-button" src="http://imgh.us/cog.svg" width="17" height="17" draggable="false"/>
-            </div><!-- Face 1 -->
-            <div class="card-face face-1"><!-- Menu trigger -->
-                <button class="card-face__menu-button" data-card-menu="data-card-menu"><img src="http://imgh.us/dots_1.svg" width="5" height="23" draggable="false"/></button><!-- Avatar -->
-                <div class="card-face__avatar"><!-- Bullet notification --><span class="card-face__bullet">21</span><!-- User avatar --><img src="https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg" width="110" height="110" draggable="false"/></div><!-- Name -->
-                <h2 class="card-face__name">Nguyễn Quang Huy</h2><!-- Title --><span class="card-face__title">Bách Khoa, Hà Nội, Việt Nam</span><!-- Cart Footer -->
-                <div class="card-face-footer">
-                    <div><i class="mdi mdi-new-box card-face__social" aria-hidden="true" style="font-size:24pt"></i></div>
-                    <span class="card-face__social">8.00pm</span>                                 
-                </div>
-            </div>
-        </div>
-
-    </div>
 </template>
 
 <script>
@@ -154,7 +106,7 @@ body.show-menu {
   width: 100%;
   height: 100%;
   min-height: 405px;
-  margin: 20pt;
+  margin: 10pt;
   
   transition: all 300ms;
   -webkit-user-select: none;
@@ -167,7 +119,7 @@ body.show-menu {
 }
 @media screen and (min-width: 30em) {
   .card {
-    width: 290px;
+    width: 280px;
     height: 405px;
     border-radius: 3px;
   }

@@ -92393,7 +92393,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.modal[data-v-6b24092e],\n.modal-box[data-v-6b24092e] {\n  z-index: 2000;\n}\n.modal-sandbox[data-v-6b24092e] {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  background: transparent;\n  border-radius: 15pt;\n}\n.modal[data-v-6b24092e] {\n  display: none; \n  position: fixed;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: rgb(0,0,0);\n  background: rgba(0,0,0,.8);\n  overflow: auto;\n}\n.modal-box[data-v-6b24092e] {\n  position: relative;\n  width: 80%;\n  max-width: 1120px;\n  margin: 50px auto;\n  animation-name: modalbox-data-v-6b24092e;\n  animation-duration: .4s;\n  animation-timing-function: cubic-bezier(0,0,.3,1.6);\n}\n.modal-header[data-v-6b24092e] {\n  padding: 20px 40px;\n  background: #546E7A;\n  color: #ffffff;\n}\n.modal-body[data-v-6b24092e] {\n  /* background: #ECEFF1; */\n  background: linear-gradient(150deg, #e6d3f9 0%, #e6d3f9 50%, #cea0f1 50%, #cea0f1 100%);\n  padding: 60px 40px;\n  text-align: center;\n  border-radius: 10px;\n  max-height: 600px;\n}\n\n/* Close Button */\n.close-modal[data-v-6b24092e] {\n  text-align: right;\n  cursor: pointer;\n}\n\n/* Animation */\n@-webkit-keyframes modalbox-data-v-6b24092e {\n0% {\n    top: -250px; \n    opacity: 0;\n}\n100% {\n    top: 0; \n    opacity: 1;\n}\n}\n@keyframes modalbox-data-v-6b24092e {\n0% {\n    top: -250px; \n    opacity: 0;\n}\n100% {\n    top: 0; \n    opacity: 1;\n}\n}\n\n/* Aditional Styles */\n*[data-v-6b24092e] {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: normal;\n}\np[data-v-6b24092e] {\n  line-height: 1.4em;\n}\nbody[data-v-6b24092e] {\n  background: #B0BEC5;\n}\n.modal-trigger[data-v-6b24092e], button[data-v-6b24092e] {\n  top: 50%;\n  left: 50%;\n  padding: 20px 40px;\n  background: transparent;\n  color: #ffffff;\n  border: 1px solid #ffffff;\n  text-decoration: none;\n}\n.modal-trigger[data-v-6b24092e] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  -o-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  transition: ease .2s;\n}\nbutton[data-v-6b24092e] {\n  border: 1px solid #333333;\n  outline: none;\n  color: #333333;\n}\n.modal-trigger[data-v-6b24092e]:hover {\n  padding: 20px 60px;\n}\n\n", ""]);
+exports.push([module.i, "\n.modal[data-v-6b24092e],\n.modal-box[data-v-6b24092e] {\n  z-index: 2000;\n}\n.modal-sandbox[data-v-6b24092e] {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  background: transparent;\n  border-radius: 15pt;\n}\n.modal[data-v-6b24092e] {\n  display: none; \n  position: fixed;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: rgb(0,0,0);\n  background: rgba(0,0,0,.8);\n  overflow: auto;\n}\n.modal-box[data-v-6b24092e] {\n  position: relative;\n  width: 80%;\n  max-width: 1120px;\n  margin: 50px auto;\n  animation-name: modalbox-data-v-6b24092e;\n  animation-duration: .4s;\n  animation-timing-function: cubic-bezier(0,0,.3,1.6);\n}\n.modal-header[data-v-6b24092e] {\n  padding: 20px 40px;\n  background: #546E7A;\n  color: #ffffff;\n}\n.modal-body[data-v-6b24092e] {\n  /* background: #ECEFF1; */\n  background: linear-gradient(150deg, #e6d3f9 0%, #e6d3f9 50%, #cea0f1 50%, #cea0f1 100%);\n  padding: 60px 40px;\n  text-align: center;\n  border-radius: 10px;\n  max-height: 600px;\n}\n\n/* Close Button */\n.close-modal[data-v-6b24092e] {\n  text-align: right;\n  cursor: pointer;\n}\n\n/* Animation */\n@-webkit-keyframes modalbox-data-v-6b24092e {\n0% {\n    top: -250px; \n    opacity: 0;\n}\n100% {\n    top: 0; \n    opacity: 1;\n}\n}\n@keyframes modalbox-data-v-6b24092e {\n0% {\n    top: -250px; \n    opacity: 0;\n}\n100% {\n    top: 0; \n    opacity: 1;\n}\n}\n\n/* Aditional Styles */\n*[data-v-6b24092e] {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: normal;\n}\np[data-v-6b24092e] {\n  line-height: 1.4em;\n}\nbody[data-v-6b24092e] {\n  background: #B0BEC5;\n}\n.modal-trigger[data-v-6b24092e], button[data-v-6b24092e] {\n  top: 50%;\n  left: 50%;\n  padding: 20px 40px;\n  background: transparent;\n  color: #ffffff;\n  border: 1px solid #ffffff;\n  text-decoration: none;\n}\n.modal-trigger[data-v-6b24092e] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  -o-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  transition: ease .2s;\n}\nbutton[data-v-6b24092e] {\n  border: 1px solid #333333;\n  outline: none;\n  color: #333333;\n}\n.modal-trigger[data-v-6b24092e]:hover {\n  padding: 20px 60px;\n}\n\n/* New FadeShow by Huy */\n@charset \"UTF-8\";\n/*\n * CSS Fadeshow by @alexerlandsson\n * This is a fadeshow built in CSS and with customization in focus.\n * Supports quick navigation, prev/next navigation and autoplay.\n * \n * For better documentation and implementation guide, check out the GitHub repository:\n * https://github.com/alexerlandsson/css-fadeshow\n*/\n/*\n * ===== VARIABLES =====\n *\n * Change these variables to match your preferences. For a more detailed\n * description of what each variable do, visit https://github.com/alexerlandsson/css-fadeshow\n */\n/*\n * ===== MIXINS =====\n *\n * This section contains mixin used\n * Do not change anything here unless you know what you are doing.\n */\n/* Mixins to handle prefixes */\n/* Mixins to handle Quick Navigation Button states */\n/*\n * ===== FADESHOW =====\n *\n * Base functionality for the fadeshow.\n * Do not change anything here unless you know what you are doing.\n */\n[data-am-fadeshow][data-v-6b24092e] {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  background-color: #fff;\n  /* Slides */\n  /* Quick Navigation */\n  /* Prev/Next Navigation */\n  /* Base functionality */\n  /* Autohide Prev/Next Navigation */\n}\n[data-am-fadeshow] .fs-slide[data-v-6b24092e] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  opacity: 0;\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  transition: opacity 1s ease;\n  /* Display first child on load */\n}\n[data-am-fadeshow] .fs-slide[data-v-6b24092e]:first-child {\n  opacity: 1;\n}\n[data-am-fadeshow] .fs-quick-nav[data-v-6b24092e] {\n  position: absolute;\n  bottom: 15px;\n  left: 50%;\n  z-index: 1;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-transform: translateX(-50%);\n  transform: translateX(-50%);\n}\n[data-am-fadeshow] .fs-quick-btn[data-v-6b24092e] {\n  display: inline-block;\n  width: 15px;\n  height: 15px;\n  margin: 0 2px;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: opacity 200ms ease;\n  background-color: rgba(255, 255, 255, 0.8);\n  /* Set active state to first button on load */\n}\n[data-am-fadeshow] .fs-quick-btn[data-v-6b24092e]:hover {\n  opacity: 0.8;\n}\n[data-am-fadeshow] .fs-quick-btn[data-v-6b24092e]:first-child {\n  background-color: coral;\n}\n[data-am-fadeshow] .fs-prev-btn[data-v-6b24092e], [data-am-fadeshow] .fs-next-btn[data-v-6b24092e] {\n  position: absolute;\n  display: none;\n  top: 0;\n  bottom: 0;\n  width: 100px;\n  cursor: pointer;\n  font-family: sans-serif;\n  background-color: rgba(255, 255, 255, 0);\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  transition: all 200ms ease;\n}\n@media (max-width: 500px) {\n[data-am-fadeshow] .fs-prev-btn[data-v-6b24092e], [data-am-fadeshow] .fs-next-btn[data-v-6b24092e] {\n    width: 50%;\n}\n}\n[data-am-fadeshow] .fs-prev-btn[data-v-6b24092e]:before, [data-am-fadeshow] .fs-next-btn[data-v-6b24092e]:before {\n  position: absolute;\n  top: 50%;\n  font-size: 3vw;\n  color: rgba(255, 255, 255, 0.5);\n}\n[data-am-fadeshow] .fs-prev-btn[data-v-6b24092e]:hover, [data-am-fadeshow] .fs-next-btn[data-v-6b24092e]:hover {\n  background-color: rgba(255, 255, 255, 0.1);\n}\n@media (max-width: 500px) {\n[data-am-fadeshow] .fs-prev-btn[data-v-6b24092e]:hover, [data-am-fadeshow] .fs-next-btn[data-v-6b24092e]:hover {\n    background-color: rgba(255, 255, 255, 0);\n}\n}\n[data-am-fadeshow] .fs-prev-btn[data-v-6b24092e] {\n  left: 0;\n  -webkit-transform: translateX(-100%);\n  transform: translateX(-100%);\n}\n[data-am-fadeshow] .fs-prev-btn[data-v-6b24092e]:before {\n  content: \"\\276E\";\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n@media (max-width: 500px) {\n[data-am-fadeshow] .fs-prev-btn[data-v-6b24092e]:before {\n    left: 30px;\n}\n}\n@media (max-width: 500px) {\n[data-am-fadeshow] .fs-prev-btn[data-v-6b24092e] {\n    -webkit-transform: translate(0);\n    transform: translate(0);\n}\n}\n[data-am-fadeshow] .fs-next-btn[data-v-6b24092e] {\n  right: 0;\n  -webkit-transform: translateX(100%);\n  transform: translateX(100%);\n}\n[data-am-fadeshow] .fs-next-btn[data-v-6b24092e]:before {\n  content: \"\\276F\";\n  right: 50%;\n  -webkit-transform: translate(50%, -50%);\n  transform: translate(50%, -50%);\n}\n@media (max-width: 500px) {\n[data-am-fadeshow] .fs-next-btn[data-v-6b24092e]:before {\n    right: 30px;\n}\n}\n@media (max-width: 500px) {\n[data-am-fadeshow] .fs-next-btn[data-v-6b24092e] {\n    -webkit-transform: translate(0);\n    transform: translate(0);\n}\n}\n[data-am-fadeshow] input[type=\"radio\"][data-v-6b24092e] {\n  position: fixed;\n  top: -9999px;\n}\n[data-am-fadeshow] input[type=\"radio\"][data-v-6b24092e]:checked {\n  /* This loop handles the slide switching and quick navigation active state */\n  /* Hide navigation if only one slide */\n}\n[data-am-fadeshow] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(5) {\n  /* Show slide */\n  /* Add active state to dot */\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(5) ~ .fs-slides .fs-slide[data-v-6b24092e] {\n  opacity: 0;\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(5) ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(5) {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(5) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e] {\n  background-color: rgba(255, 255, 255, 0.8);\n  /* Cancel autoplay */\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(5) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(5) {\n  background-color: coral;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(5) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(5):hover {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(4) {\n  /* Show slide */\n  /* Add active state to dot */\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(4) ~ .fs-slides .fs-slide[data-v-6b24092e] {\n  opacity: 0;\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(4) ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(4) {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(4) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e] {\n  background-color: rgba(255, 255, 255, 0.8);\n  /* Cancel autoplay */\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(4) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(4) {\n  background-color: coral;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(4) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(4):hover {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(3) {\n  /* Show slide */\n  /* Add active state to dot */\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(3) ~ .fs-slides .fs-slide[data-v-6b24092e] {\n  opacity: 0;\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(3) ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(3) {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(3) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e] {\n  background-color: rgba(255, 255, 255, 0.8);\n  /* Cancel autoplay */\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(3) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(3) {\n  background-color: coral;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(3) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(3):hover {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(2) {\n  /* Show slide */\n  /* Add active state to dot */\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(2) ~ .fs-slides .fs-slide[data-v-6b24092e] {\n  opacity: 0;\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(2) ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(2) {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(2) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e] {\n  background-color: rgba(255, 255, 255, 0.8);\n  /* Cancel autoplay */\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(2) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(2) {\n  background-color: coral;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(2) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(2):hover {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(1) {\n  /* Show slide */\n  /* Add active state to dot */\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(1) ~ .fs-slides .fs-slide[data-v-6b24092e] {\n  opacity: 0;\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(1) ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(1) {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(1) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e] {\n  background-color: rgba(255, 255, 255, 0.8);\n  /* Cancel autoplay */\n  -webkit-animation: none !important;\n  animation: none !important;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(1) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(1) {\n  background-color: coral;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:nth-of-type(1) ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(1):hover {\n  opacity: 1;\n}\n[data-am-fadeshow] input[type=\"radio\"]:checked:first-of-type:last-of-type ~ .fs-quick-nav[data-v-6b24092e],\n[data-am-fadeshow] input[type=\"radio\"]:checked:first-of-type:last-of-type ~ .fs-prev-nav[data-v-6b24092e],\n[data-am-fadeshow] input[type=\"radio\"]:checked:first-of-type:last-of-type ~ .fs-next-nav[data-v-6b24092e] {\n  display: none !important;\n}\n[data-am-fadeshow]:hover .fs-prev-btn[data-v-6b24092e],\n[data-am-fadeshow]:hover .fs-next-btn[data-v-6b24092e] {\n  -webkit-transform: translateX(0);\n  transform: translateX(0);\n}\n\n/*\n * ===== PREV/NEXT NAVIGATION =====\n *\n * This section handles the prev/next navigation.\n */\n/* Handle Prev/Next buttons */\n[data-am-fadeshow~=\"next-prev-navigation\"][data-v-6b24092e] {\n  /* Display first pair of Prev/Next Buttons on load */\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(5) {\n  /* Show previous button */\n  /* Show next button */\n  /* Show last prev button if first slide */\n  /* Show first next button if last slide */\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(5) ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e] {\n  display: none;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(5) ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e]:nth-child(4) {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(5):first-of-type ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e]:last-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(5):last-of-type ~ .fs-next-nav .fs-next-btn[data-v-6b24092e]:first-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(4) {\n  /* Show previous button */\n  /* Show next button */\n  /* Show last prev button if first slide */\n  /* Show first next button if last slide */\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(4) ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e] {\n  display: none;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(4) ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e]:nth-child(3) {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(4) ~ .fs-next-nav .fs-next-btn[data-v-6b24092e] {\n  display: none;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(4) ~ .fs-next-nav .fs-next-btn[data-v-6b24092e]:nth-child(5) {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(4):first-of-type ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e]:last-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(4):last-of-type ~ .fs-next-nav .fs-next-btn[data-v-6b24092e]:first-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(3) {\n  /* Show previous button */\n  /* Show next button */\n  /* Show last prev button if first slide */\n  /* Show first next button if last slide */\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(3) ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e] {\n  display: none;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(3) ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e]:nth-child(2) {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(3) ~ .fs-next-nav .fs-next-btn[data-v-6b24092e] {\n  display: none;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(3) ~ .fs-next-nav .fs-next-btn[data-v-6b24092e]:nth-child(4) {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(3):first-of-type ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e]:last-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(3):last-of-type ~ .fs-next-nav .fs-next-btn[data-v-6b24092e]:first-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(2) {\n  /* Show previous button */\n  /* Show next button */\n  /* Show last prev button if first slide */\n  /* Show first next button if last slide */\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(2) ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e] {\n  display: none;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(2) ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e]:nth-child(1) {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(2) ~ .fs-next-nav .fs-next-btn[data-v-6b24092e] {\n  display: none;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(2) ~ .fs-next-nav .fs-next-btn[data-v-6b24092e]:nth-child(3) {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(2):first-of-type ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e]:last-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(2):last-of-type ~ .fs-next-nav .fs-next-btn[data-v-6b24092e]:first-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"][data-v-6b24092e]:checked:nth-of-type(1) {\n  /* Show previous button */\n  /* Show next button */\n  /* Show last prev button if first slide */\n  /* Show first next button if last slide */\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(1) ~ .fs-next-nav .fs-next-btn[data-v-6b24092e] {\n  display: none;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(1) ~ .fs-next-nav .fs-next-btn[data-v-6b24092e]:nth-child(2) {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(1):first-of-type ~ .fs-prev-nav .fs-prev-btn[data-v-6b24092e]:last-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] input[type=\"radio\"]:checked:nth-of-type(1):last-of-type ~ .fs-next-nav .fs-next-btn[data-v-6b24092e]:first-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] .fs-prev-btn[data-v-6b24092e]:last-child {\n  display: block;\n}\n[data-am-fadeshow~=\"next-prev-navigation\"] .fs-next-btn[data-v-6b24092e]:nth-child(2) {\n  display: block;\n}\n\n/*\n * ===== AUTOPLAY =====\n *\n * Functions to handle autoplay.\n * If you're not going to use autoplay, set $autoplay to false.\n * This part tends to compile into a lot of uneccesary CSS otherwise.\n */\n@keyframes quickNavAnimation-5-data-v-6b24092e {\n0% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n4%,\n\t\t\t20% {\n    background-color: coral;\n}\n24%,\n\t\t\t100% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n}\n@-webkit-keyframes quickNavAnimation-5-data-v-6b24092e {\n0% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n4%,\n\t\t\t\t20% {\n    background-color: coral;\n}\n24%,\n\t\t\t\t100% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n}\n@keyframes slidesAnimation-5-data-v-6b24092e {\n0% {\n    opacity: 0;\n}\n4%,\n\t\t\t20% {\n    opacity: 1;\n}\n24%,\n\t\t\t100% {\n    opacity: 0;\n}\n}\n@-webkit-keyframes slidesAnimation-5-data-v-6b24092e {\n0% {\n    opacity: 0;\n}\n4%,\n\t\t\t\t20% {\n    opacity: 1;\n}\n24%,\n\t\t\t\t100% {\n    opacity: 0;\n}\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"][data-v-6b24092e]:nth-of-type(5):last-of-type {\n  /* Slide animation */\n  /* Quick navigation animation */\n  /* Animation Delay */\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e] {\n  -webkit-animation: slidesAnimation-5-data-v-6b24092e 25s infinite;\n  animation: slidesAnimation-5-data-v-6b24092e 25s infinite;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e] {\n  -webkit-animation: quickNavAnimation-5-data-v-6b24092e 25s infinite;\n  animation: quickNavAnimation-5-data-v-6b24092e 25s infinite;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(1),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(1) {\n  -webkit-animation-delay: -1s;\n  animation-delay: -1s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(2),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(2) {\n  -webkit-animation-delay: 4s;\n  animation-delay: 4s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(3),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(3) {\n  -webkit-animation-delay: 9s;\n  animation-delay: 9s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(4),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(4) {\n  -webkit-animation-delay: 14s;\n  animation-delay: 14s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(5),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(5) {\n  -webkit-animation-delay: 19s;\n  animation-delay: 19s;\n}\n@keyframes quickNavAnimation-4-data-v-6b24092e {\n0% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n5%,\n\t\t\t25% {\n    background-color: coral;\n}\n30%,\n\t\t\t100% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n}\n@-webkit-keyframes quickNavAnimation-4-data-v-6b24092e {\n0% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n5%,\n\t\t\t\t25% {\n    background-color: coral;\n}\n30%,\n\t\t\t\t100% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n}\n@keyframes slidesAnimation-4-data-v-6b24092e {\n0% {\n    opacity: 0;\n}\n5%,\n\t\t\t25% {\n    opacity: 1;\n}\n30%,\n\t\t\t100% {\n    opacity: 0;\n}\n}\n@-webkit-keyframes slidesAnimation-4-data-v-6b24092e {\n0% {\n    opacity: 0;\n}\n5%,\n\t\t\t\t25% {\n    opacity: 1;\n}\n30%,\n\t\t\t\t100% {\n    opacity: 0;\n}\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"][data-v-6b24092e]:nth-of-type(4):last-of-type {\n  /* Slide animation */\n  /* Quick navigation animation */\n  /* Animation Delay */\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e] {\n  -webkit-animation: slidesAnimation-4-data-v-6b24092e 20s infinite;\n  animation: slidesAnimation-4-data-v-6b24092e 20s infinite;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e] {\n  -webkit-animation: quickNavAnimation-4-data-v-6b24092e 20s infinite;\n  animation: quickNavAnimation-4-data-v-6b24092e 20s infinite;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(1),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(1) {\n  -webkit-animation-delay: -1s;\n  animation-delay: -1s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(2),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(2) {\n  -webkit-animation-delay: 4s;\n  animation-delay: 4s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(3),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(3) {\n  -webkit-animation-delay: 9s;\n  animation-delay: 9s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(4),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(4) {\n  -webkit-animation-delay: 14s;\n  animation-delay: 14s;\n}\n@keyframes quickNavAnimation-3-data-v-6b24092e {\n0% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n6.6666666667%,\n\t\t\t33.3333333333% {\n    background-color: coral;\n}\n40%,\n\t\t\t100% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n}\n@-webkit-keyframes quickNavAnimation-3-data-v-6b24092e {\n0% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n6.6666666667%,\n\t\t\t\t33.3333333333% {\n    background-color: coral;\n}\n40%,\n\t\t\t\t100% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n}\n@keyframes slidesAnimation-3-data-v-6b24092e {\n0% {\n    opacity: 0;\n}\n6.6666666667%,\n\t\t\t33.3333333333% {\n    opacity: 1;\n}\n40%,\n\t\t\t100% {\n    opacity: 0;\n}\n}\n@-webkit-keyframes slidesAnimation-3-data-v-6b24092e {\n0% {\n    opacity: 0;\n}\n6.6666666667%,\n\t\t\t\t33.3333333333% {\n    opacity: 1;\n}\n40%,\n\t\t\t\t100% {\n    opacity: 0;\n}\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"][data-v-6b24092e]:nth-of-type(3):last-of-type {\n  /* Slide animation */\n  /* Quick navigation animation */\n  /* Animation Delay */\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(3):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e] {\n  -webkit-animation: slidesAnimation-3-data-v-6b24092e 15s infinite;\n  animation: slidesAnimation-3-data-v-6b24092e 15s infinite;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(3):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e] {\n  -webkit-animation: quickNavAnimation-3-data-v-6b24092e 15s infinite;\n  animation: quickNavAnimation-3-data-v-6b24092e 15s infinite;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(3):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(1),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(3):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(1) {\n  -webkit-animation-delay: -1s;\n  animation-delay: -1s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(3):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(2),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(3):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(2) {\n  -webkit-animation-delay: 4s;\n  animation-delay: 4s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(3):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(3),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(3):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(3) {\n  -webkit-animation-delay: 9s;\n  animation-delay: 9s;\n}\n@keyframes quickNavAnimation-2-data-v-6b24092e {\n0% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n10%,\n\t\t\t50% {\n    background-color: coral;\n}\n60%,\n\t\t\t100% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n}\n@-webkit-keyframes quickNavAnimation-2-data-v-6b24092e {\n0% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n10%,\n\t\t\t\t50% {\n    background-color: coral;\n}\n60%,\n\t\t\t\t100% {\n    background-color: rgba(255, 255, 255, 0.8);\n}\n}\n@keyframes slidesAnimation-2-data-v-6b24092e {\n0% {\n    opacity: 0;\n}\n10%,\n\t\t\t50% {\n    opacity: 1;\n}\n60%,\n\t\t\t100% {\n    opacity: 0;\n}\n}\n@-webkit-keyframes slidesAnimation-2-data-v-6b24092e {\n0% {\n    opacity: 0;\n}\n10%,\n\t\t\t\t50% {\n    opacity: 1;\n}\n60%,\n\t\t\t\t100% {\n    opacity: 0;\n}\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"][data-v-6b24092e]:nth-of-type(2):last-of-type {\n  /* Slide animation */\n  /* Quick navigation animation */\n  /* Animation Delay */\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(2):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e] {\n  -webkit-animation: slidesAnimation-2-data-v-6b24092e 10s infinite;\n  animation: slidesAnimation-2-data-v-6b24092e 10s infinite;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(2):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e] {\n  -webkit-animation: quickNavAnimation-2-data-v-6b24092e 10s infinite;\n  animation: quickNavAnimation-2-data-v-6b24092e 10s infinite;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(2):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(1),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(2):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(1) {\n  -webkit-animation-delay: -1s;\n  animation-delay: -1s;\n}\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(2):last-of-type ~ .fs-slides .fs-slide[data-v-6b24092e]:nth-child(2),\n[data-am-fadeshow~=\"autoplay\"] input[type=\"radio\"]:nth-of-type(2):last-of-type ~ .fs-quick-nav .fs-quick-btn[data-v-6b24092e]:nth-child(2) {\n  -webkit-animation-delay: 4s;\n  animation-delay: 4s;\n}\n\n/* Base Styling */\nbody[data-v-6b24092e] {\n  margin: 0;\n}\n.container[data-v-6b24092e] {\n  /* position: absolute; */\n  height: 550px;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);\n  overflow: hidden;\n}\n\n\n", ""]);
 
 // exports
 
@@ -92438,12 +92438,80 @@ exports.push([module.i, "\n.modal[data-v-6b24092e],\n.modal-box[data-v-6b24092e]
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // Huy
 $(document).ready(function () {
   setTimeout(function () {
-    $(".btn").click();
-  }, 10000);
+    $(".modal-trigger").click();
+  }, 0);
 });
 
 /***/ }),
@@ -92468,30 +92536,171 @@ var render = function() {
       _c("div", { staticClass: "modal-sandbox" }),
       _vm._v(" "),
       _c("div", { staticClass: "modal-box" }, [
-        _c(
-          "div",
-          { staticClass: "modal-body" },
-          [
-            _c("div", { staticClass: "close-modal" }, [_vm._v("✖")]),
+        _c("div", { staticClass: "close-modal" }, [_vm._v("✖")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "container" }, [
+          _c("div", { attrs: { "data-am-fadeshow": "next-prev-navigation" } }, [
+            _c("input", {
+              attrs: { type: "radio", name: "css-fadeshow", id: "slide-1" }
+            }),
             _vm._v(" "),
-            _c("event-in-component"),
+            _c("input", {
+              attrs: { type: "radio", name: "css-fadeshow", id: "slide-2" }
+            }),
             _vm._v(" "),
-            _c("button", { staticClass: "close-modal" }, [_vm._v("Close!")])
-          ],
-          1
-        )
+            _c("input", {
+              attrs: { type: "radio", name: "css-fadeshow", id: "slide-3" }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "fs-slides" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "fs-slide",
+                  staticStyle: {
+                    background:
+                      "linear-gradient(150deg, #e6d3f9 0%, #e6d3f9 50%, #cea0f1 50%, #cea0f1 100%)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticStyle: {
+                        "margin-top": "50px",
+                        "text-align": "center"
+                      }
+                    },
+                    [
+                      _c("event-in-component"),
+                      _vm._v(" "),
+                      _c("event-in-component"),
+                      _vm._v(" "),
+                      _c("event-in-component")
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "fs-slide",
+                  staticStyle: {
+                    background:
+                      "linear-gradient(150deg, #e6d3f9 0%, #e6d3f9 50%, #cea0f1 50%, #cea0f1 100%)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticStyle: {
+                        "margin-top": "50px",
+                        "text-align": "center"
+                      }
+                    },
+                    [
+                      _c("event-in-component"),
+                      _vm._v(" "),
+                      _c("event-in-component"),
+                      _vm._v(" "),
+                      _c("event-in-component")
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "fs-slide",
+                  staticStyle: {
+                    background:
+                      "linear-gradient(150deg, #e6d3f9 0%, #e6d3f9 50%, #cea0f1 50%, #cea0f1 100%)"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticStyle: {
+                        "margin-top": "50px",
+                        "text-align": "center"
+                      }
+                    },
+                    [
+                      _c("event-in-component"),
+                      _vm._v(" "),
+                      _c("event-in-component"),
+                      _vm._v(" "),
+                      _c("event-in-component")
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "fs-slide",
+                staticStyle: {
+                  "background-image":
+                    "url(https://images.unsplash.com/photo-1449057528837-7ca097b3520c?crop=entropy&fit=crop&fm=jpg&h=1325&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=2500)"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2)
+          ])
+        ])
       ])
-    ]),
-    _vm._v(" "),
-    _c("link", {
-      attrs: {
-        href: "https://fonts.googleapis.com/css?family=Roboto:300",
-        rel: "stylesheet"
-      }
-    })
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "fs-quick-nav" }, [
+      _c("label", { staticClass: "fs-quick-btn", attrs: { for: "slide-1" } }),
+      _vm._v(" "),
+      _c("label", { staticClass: "fs-quick-btn", attrs: { for: "slide-2" } }),
+      _vm._v(" "),
+      _c("label", { staticClass: "fs-quick-btn", attrs: { for: "slide-3" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "fs-prev-nav" }, [
+      _c("label", { staticClass: "fs-prev-btn", attrs: { for: "slide-1" } }),
+      _vm._v(" "),
+      _c("label", { staticClass: "fs-prev-btn", attrs: { for: "slide-2" } }),
+      _vm._v(" "),
+      _c("label", { staticClass: "fs-prev-btn", attrs: { for: "slide-3" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "fs-next-nav" }, [
+      _c("label", { staticClass: "fs-next-btn", attrs: { for: "slide-1" } }),
+      _vm._v(" "),
+      _c("label", { staticClass: "fs-next-btn", attrs: { for: "slide-2" } }),
+      _vm._v(" "),
+      _c("label", { staticClass: "fs-next-btn", attrs: { for: "slide-3" } })
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -92587,7 +92796,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 300;\n  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');\n}\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');\n}\nbody[data-v-1f4ecdc9] {\n  height: 100vh;\n  background-color: #f44336;\n  transition: background-color 300ms;\n  font-family: 'Roboto', sans-serif;\n}\n@media screen and (min-width: 30em) {\nbody[data-v-1f4ecdc9] {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n}\nbody.show-menu[data-v-1f4ecdc9] {\n  background-color: #00ACC1;\n}\n.card[data-v-1f4ecdc9] {\n  display: inline-block;\n  /* background-color: #FFF; */\n  background: linear-gradient(to right bottom, #9e66c6 , #6027e1);\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n  height: 100%;\n  min-height: 405px;\n  margin: 20pt;\n  \n  transition: all 300ms;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.18);\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n@media screen and (min-width: 30em) {\n.card[data-v-1f4ecdc9] {\n    width: 290px;\n    height: 405px;\n    border-radius: 3px;\n}\n.card[data-v-1f4ecdc9]:hover {\n    cursor: pointer;\n}\n}\n.card-face[data-v-1f4ecdc9] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  border-radius: 3px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);\n  flex-direction: column;\n}\n.card-face__bullet[data-v-1f4ecdc9] {\n  background-color: #f44336;\n  color: #FFF;\n  display: block;\n  padding: 4px 0;\n  border-radius: 50%;\n  width: 23px;\n  height: 23px;\n  box-sizing: border-box;\n  line-height: 1.2;\n  text-align: center;\n  font-size: 12px;\n  position: absolute;\n  top: 10px;\n  right: 0;\n  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.27);\n  -webkit-animation: bullet-data-v-1f4ecdc9 500ms;\n          animation: bullet-data-v-1f4ecdc9 500ms;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-delay: 1.5s;\n          animation-delay: 1.5s;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n  font-weight: bold;\n}\n.card-face.face-1[data-v-1f4ecdc9] {\n  -webkit-transform: translateX(0);\n          transform: translateX(0);\n}\n.show-menu .card-face.face-1[data-v-1f4ecdc9] {\n  -webkit-transform: translateX(-100%);\n          transform: translateX(-100%);\n}\n.card-face.face-2[data-v-1f4ecdc9] {\n  justify-content: center;\n  -webkit-transform: translateX(100%);\n          transform: translateX(100%);\n}\n.show-menu .card-face.face-2[data-v-1f4ecdc9] {\n  -webkit-transform: translateX(0);\n          transform: translateX(0);\n}\n.card-face__menu-button[data-v-1f4ecdc9] {\n  position: absolute;\n  top: 10px;\n  right: 5px;\n  background: transparent;\n  border: none;\n  outline: none;\n  padding: 5px 15px;\n  -webkit-transform: translateX(150%);\n          transform: translateX(150%);\n  -webkit-animation: menu-data-v-1f4ecdc9 2s;\n          animation: menu-data-v-1f4ecdc9 2s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__menu-button img[data-v-1f4ecdc9] {\n  pointer-events: none;\n}\n.card-face__back-button[data-v-1f4ecdc9] {\n  position: absolute;\n  top: 10px;\n  left: 0px;\n  background: transparent;\n  border: none;\n  outline: none;\n  padding: 5px 15px;\n}\n.card-face__back-button img[data-v-1f4ecdc9] {\n  pointer-events: none;\n}\n.card-face__settings-button[data-v-1f4ecdc9] {\n  position: absolute;\n  bottom: 0px;\n  right: 0px;\n  background: transparent;\n  border: none;\n  outline: none;\n  padding: 10px;\n}\n.card-face__avatar[data-v-1f4ecdc9] {\n  display: block;\n  width: 110px;\n  height: 110px;\n  position: relative;\n  margin-top: 40px;\n  margin-bottom: 40px;\n  -webkit-transform: scale(1.2, 1.2);\n          transform: scale(1.2, 1.2);\n  opacity: 0;\n  -webkit-animation: avatar-data-v-1f4ecdc9 1.5s;\n          animation: avatar-data-v-1f4ecdc9 1.5s;\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__avatar img[data-v-1f4ecdc9] {\n  border-radius: 50%;\n}\n.card-face__name[data-v-1f4ecdc9] {\n  font-size: 24px;\n  font-weight: 400;\n  margin-top: 0;\n  margin-bottom: 0;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  box-sizing: border-box;\n  padding: 0 20px;\n  text-align: center;\n  width: 100%;\n  /* color: #263238; */\n  color:white;\n  -webkit-animation: fadedown-data-v-1f4ecdc9 1s;\n          animation: fadedown-data-v-1f4ecdc9 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__title[data-v-1f4ecdc9] {\n  font-size: 18px;\n  /* color: #90a4ae; */\n        color: rgba(white, 0.8);\n\n  white-space: nowrap;\n  display: block;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  width: 100%;\n  padding: 0 20px;\n  text-align: center;\n  box-sizing: border-box;\n  font-weight: 300;\n  -webkit-animation: fadedown-data-v-1f4ecdc9 1s;\n          animation: fadedown-data-v-1f4ecdc9 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-delay: 100ms;\n          animation-delay: 100ms;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__title[data-v-1f4ecdc9]:after {\n  content: \"\";\n  background-color: #E3EBEE;\n  width: 70px;\n  height: 1px;\n  margin: 20px auto 0 auto;\n  display: block;\n}\n.card-face-footer[data-v-1f4ecdc9] {\n  left: 0;\n  right: 0;\n  position: absolute;\n  text-align: center;\n  bottom: 20px;\n}\n.card-face__social[data-v-1f4ecdc9] {\n  display: inline-block;\n  margin: 7px 7px;\n  width: 100px;\n  height: 36px;\n  -webkit-animation: socials-data-v-1f4ecdc9 1.5s;\n          animation: socials-data-v-1f4ecdc9 1.5s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__social[data-v-1f4ecdc9]:nth-child(1) {\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms;\n}\n.card-face__social[data-v-1f4ecdc9]:nth-child(2) {\n  -webkit-animation-delay: 400ms;\n          animation-delay: 400ms;\n}\n.card-face__social[data-v-1f4ecdc9]:nth-child(3) {\n  -webkit-animation-delay: 600ms;\n          animation-delay: 600ms;\n}\n.card-face__stats[data-v-1f4ecdc9] {\n  display: block;\n  margin: 10px 0;\n}\n.show-menu .card-face__stats[data-v-1f4ecdc9] {\n  -webkit-animation: stats-data-v-1f4ecdc9 1s;\n          animation: stats-data-v-1f4ecdc9 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__stats[data-v-1f4ecdc9]:nth-of-type(1) {\n  -webkit-animation-delay: 0;\n          animation-delay: 0;\n}\n.card-face__stats[data-v-1f4ecdc9]:nth-of-type(2) {\n  -webkit-animation-delay: 100ms;\n          animation-delay: 100ms;\n}\n.card-face__stats[data-v-1f4ecdc9]:nth-of-type(3) {\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms;\n}\n@-webkit-keyframes avatar-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: scale(1.2, 1.2);\n            transform: scale(1.2, 1.2);\n    opacity: 0;\n}\nto {\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n    opacity: 1;\n}\n}\n@keyframes avatar-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: scale(1.2, 1.2);\n            transform: scale(1.2, 1.2);\n    opacity: 0;\n}\nto {\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n    opacity: 1;\n}\n}\n@-webkit-keyframes menu-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateX(150%);\n            transform: translateX(150%);\n}\nto {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n}\n}\n@keyframes menu-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateX(150%);\n            transform: translateX(150%);\n}\nto {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n}\n}\n@-webkit-keyframes fadedown-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    opacity: 0;\n}\nto {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n@keyframes fadedown-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    opacity: 0;\n}\nto {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n@-webkit-keyframes socials-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateY(300%);\n            transform: translateY(300%);\n}\nto {\n    -webkit-transform: translateY(0%);\n            transform: translateY(0%);\n}\n}\n@keyframes socials-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateY(300%);\n            transform: translateY(300%);\n}\nto {\n    -webkit-transform: translateY(0%);\n            transform: translateY(0%);\n}\n}\n@-webkit-keyframes stats-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateX(300%);\n            transform: translateX(300%);\n}\nto {\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%);\n}\n}\n@keyframes stats-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateX(300%);\n            transform: translateX(300%);\n}\nto {\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%);\n}\n}\n@-webkit-keyframes bullet-data-v-1f4ecdc9 {\n0%,\n  20%,\n  40%,\n  60%,\n  80%,\n  100% {\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n}\n0% {\n    opacity: 0;\n    -webkit-transform: scale3d(0.3, 0.3, 0.3);\n            transform: scale3d(0.3, 0.3, 0.3);\n}\n20% {\n    -webkit-transform: scale3d(1.1, 1.1, 1.1);\n            transform: scale3d(1.1, 1.1, 1.1);\n}\n40% {\n    -webkit-transform: scale3d(0.9, 0.9, 0.9);\n            transform: scale3d(0.9, 0.9, 0.9);\n}\n60% {\n    opacity: 1;\n    -webkit-transform: scale3d(1.03, 1.03, 1.03);\n            transform: scale3d(1.03, 1.03, 1.03);\n}\n80% {\n    -webkit-transform: scale3d(0.97, 0.97, 0.97);\n            transform: scale3d(0.97, 0.97, 0.97);\n}\n100% {\n    opacity: 1;\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n}\n}\n@keyframes bullet-data-v-1f4ecdc9 {\n0%,\n  20%,\n  40%,\n  60%,\n  80%,\n  100% {\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n}\n0% {\n    opacity: 0;\n    -webkit-transform: scale3d(0.3, 0.3, 0.3);\n            transform: scale3d(0.3, 0.3, 0.3);\n}\n20% {\n    -webkit-transform: scale3d(1.1, 1.1, 1.1);\n            transform: scale3d(1.1, 1.1, 1.1);\n}\n40% {\n    -webkit-transform: scale3d(0.9, 0.9, 0.9);\n            transform: scale3d(0.9, 0.9, 0.9);\n}\n60% {\n    opacity: 1;\n    -webkit-transform: scale3d(1.03, 1.03, 1.03);\n            transform: scale3d(1.03, 1.03, 1.03);\n}\n80% {\n    -webkit-transform: scale3d(0.97, 0.97, 0.97);\n            transform: scale3d(0.97, 0.97, 0.97);\n}\n100% {\n    opacity: 1;\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n}\n}\n\n", ""]);
+exports.push([module.i, "\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 300;\n  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');\n}\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');\n}\nbody[data-v-1f4ecdc9] {\n  height: 100vh;\n  background-color: #f44336;\n  transition: background-color 300ms;\n  font-family: 'Roboto', sans-serif;\n}\n@media screen and (min-width: 30em) {\nbody[data-v-1f4ecdc9] {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n}\nbody.show-menu[data-v-1f4ecdc9] {\n  background-color: #00ACC1;\n}\n.card[data-v-1f4ecdc9] {\n  display: inline-block;\n  /* background-color: #FFF; */\n  background: linear-gradient(to right bottom, #9e66c6 , #6027e1);\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n  height: 100%;\n  min-height: 405px;\n  margin: 10pt;\n  \n  transition: all 300ms;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.18);\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n@media screen and (min-width: 30em) {\n.card[data-v-1f4ecdc9] {\n    width: 280px;\n    height: 405px;\n    border-radius: 3px;\n}\n.card[data-v-1f4ecdc9]:hover {\n    cursor: pointer;\n}\n}\n.card-face[data-v-1f4ecdc9] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  border-radius: 3px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);\n  flex-direction: column;\n}\n.card-face__bullet[data-v-1f4ecdc9] {\n  background-color: #f44336;\n  color: #FFF;\n  display: block;\n  padding: 4px 0;\n  border-radius: 50%;\n  width: 23px;\n  height: 23px;\n  box-sizing: border-box;\n  line-height: 1.2;\n  text-align: center;\n  font-size: 12px;\n  position: absolute;\n  top: 10px;\n  right: 0;\n  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.27);\n  -webkit-animation: bullet-data-v-1f4ecdc9 500ms;\n          animation: bullet-data-v-1f4ecdc9 500ms;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-delay: 1.5s;\n          animation-delay: 1.5s;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n  font-weight: bold;\n}\n.card-face.face-1[data-v-1f4ecdc9] {\n  -webkit-transform: translateX(0);\n          transform: translateX(0);\n}\n.show-menu .card-face.face-1[data-v-1f4ecdc9] {\n  -webkit-transform: translateX(-100%);\n          transform: translateX(-100%);\n}\n.card-face.face-2[data-v-1f4ecdc9] {\n  justify-content: center;\n  -webkit-transform: translateX(100%);\n          transform: translateX(100%);\n}\n.show-menu .card-face.face-2[data-v-1f4ecdc9] {\n  -webkit-transform: translateX(0);\n          transform: translateX(0);\n}\n.card-face__menu-button[data-v-1f4ecdc9] {\n  position: absolute;\n  top: 10px;\n  right: 5px;\n  background: transparent;\n  border: none;\n  outline: none;\n  padding: 5px 15px;\n  -webkit-transform: translateX(150%);\n          transform: translateX(150%);\n  -webkit-animation: menu-data-v-1f4ecdc9 2s;\n          animation: menu-data-v-1f4ecdc9 2s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__menu-button img[data-v-1f4ecdc9] {\n  pointer-events: none;\n}\n.card-face__back-button[data-v-1f4ecdc9] {\n  position: absolute;\n  top: 10px;\n  left: 0px;\n  background: transparent;\n  border: none;\n  outline: none;\n  padding: 5px 15px;\n}\n.card-face__back-button img[data-v-1f4ecdc9] {\n  pointer-events: none;\n}\n.card-face__settings-button[data-v-1f4ecdc9] {\n  position: absolute;\n  bottom: 0px;\n  right: 0px;\n  background: transparent;\n  border: none;\n  outline: none;\n  padding: 10px;\n}\n.card-face__avatar[data-v-1f4ecdc9] {\n  display: block;\n  width: 110px;\n  height: 110px;\n  position: relative;\n  margin-top: 40px;\n  margin-bottom: 40px;\n  -webkit-transform: scale(1.2, 1.2);\n          transform: scale(1.2, 1.2);\n  opacity: 0;\n  -webkit-animation: avatar-data-v-1f4ecdc9 1.5s;\n          animation: avatar-data-v-1f4ecdc9 1.5s;\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__avatar img[data-v-1f4ecdc9] {\n  border-radius: 50%;\n}\n.card-face__name[data-v-1f4ecdc9] {\n  font-size: 24px;\n  font-weight: 400;\n  margin-top: 0;\n  margin-bottom: 0;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  box-sizing: border-box;\n  padding: 0 20px;\n  text-align: center;\n  width: 100%;\n  /* color: #263238; */\n  color:white;\n  -webkit-animation: fadedown-data-v-1f4ecdc9 1s;\n          animation: fadedown-data-v-1f4ecdc9 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__title[data-v-1f4ecdc9] {\n  font-size: 18px;\n  /* color: #90a4ae; */\n        color: rgba(white, 0.8);\n\n  white-space: nowrap;\n  display: block;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  width: 100%;\n  padding: 0 20px;\n  text-align: center;\n  box-sizing: border-box;\n  font-weight: 300;\n  -webkit-animation: fadedown-data-v-1f4ecdc9 1s;\n          animation: fadedown-data-v-1f4ecdc9 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-delay: 100ms;\n          animation-delay: 100ms;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__title[data-v-1f4ecdc9]:after {\n  content: \"\";\n  background-color: #E3EBEE;\n  width: 70px;\n  height: 1px;\n  margin: 20px auto 0 auto;\n  display: block;\n}\n.card-face-footer[data-v-1f4ecdc9] {\n  left: 0;\n  right: 0;\n  position: absolute;\n  text-align: center;\n  bottom: 20px;\n}\n.card-face__social[data-v-1f4ecdc9] {\n  display: inline-block;\n  margin: 7px 7px;\n  width: 100px;\n  height: 36px;\n  -webkit-animation: socials-data-v-1f4ecdc9 1.5s;\n          animation: socials-data-v-1f4ecdc9 1.5s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__social[data-v-1f4ecdc9]:nth-child(1) {\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms;\n}\n.card-face__social[data-v-1f4ecdc9]:nth-child(2) {\n  -webkit-animation-delay: 400ms;\n          animation-delay: 400ms;\n}\n.card-face__social[data-v-1f4ecdc9]:nth-child(3) {\n  -webkit-animation-delay: 600ms;\n          animation-delay: 600ms;\n}\n.card-face__stats[data-v-1f4ecdc9] {\n  display: block;\n  margin: 10px 0;\n}\n.show-menu .card-face__stats[data-v-1f4ecdc9] {\n  -webkit-animation: stats-data-v-1f4ecdc9 1s;\n          animation: stats-data-v-1f4ecdc9 1s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);\n}\n.card-face__stats[data-v-1f4ecdc9]:nth-of-type(1) {\n  -webkit-animation-delay: 0;\n          animation-delay: 0;\n}\n.card-face__stats[data-v-1f4ecdc9]:nth-of-type(2) {\n  -webkit-animation-delay: 100ms;\n          animation-delay: 100ms;\n}\n.card-face__stats[data-v-1f4ecdc9]:nth-of-type(3) {\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms;\n}\n@-webkit-keyframes avatar-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: scale(1.2, 1.2);\n            transform: scale(1.2, 1.2);\n    opacity: 0;\n}\nto {\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n    opacity: 1;\n}\n}\n@keyframes avatar-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: scale(1.2, 1.2);\n            transform: scale(1.2, 1.2);\n    opacity: 0;\n}\nto {\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n    opacity: 1;\n}\n}\n@-webkit-keyframes menu-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateX(150%);\n            transform: translateX(150%);\n}\nto {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n}\n}\n@keyframes menu-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateX(150%);\n            transform: translateX(150%);\n}\nto {\n    -webkit-transform: translateX(0);\n            transform: translateX(0);\n}\n}\n@-webkit-keyframes fadedown-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    opacity: 0;\n}\nto {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n@keyframes fadedown-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n    opacity: 0;\n}\nto {\n    -webkit-transform: translateY(0);\n            transform: translateY(0);\n    opacity: 1;\n}\n}\n@-webkit-keyframes socials-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateY(300%);\n            transform: translateY(300%);\n}\nto {\n    -webkit-transform: translateY(0%);\n            transform: translateY(0%);\n}\n}\n@keyframes socials-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateY(300%);\n            transform: translateY(300%);\n}\nto {\n    -webkit-transform: translateY(0%);\n            transform: translateY(0%);\n}\n}\n@-webkit-keyframes stats-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateX(300%);\n            transform: translateX(300%);\n}\nto {\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%);\n}\n}\n@keyframes stats-data-v-1f4ecdc9 {\nfrom {\n    -webkit-transform: translateX(300%);\n            transform: translateX(300%);\n}\nto {\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%);\n}\n}\n@-webkit-keyframes bullet-data-v-1f4ecdc9 {\n0%,\n  20%,\n  40%,\n  60%,\n  80%,\n  100% {\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n}\n0% {\n    opacity: 0;\n    -webkit-transform: scale3d(0.3, 0.3, 0.3);\n            transform: scale3d(0.3, 0.3, 0.3);\n}\n20% {\n    -webkit-transform: scale3d(1.1, 1.1, 1.1);\n            transform: scale3d(1.1, 1.1, 1.1);\n}\n40% {\n    -webkit-transform: scale3d(0.9, 0.9, 0.9);\n            transform: scale3d(0.9, 0.9, 0.9);\n}\n60% {\n    opacity: 1;\n    -webkit-transform: scale3d(1.03, 1.03, 1.03);\n            transform: scale3d(1.03, 1.03, 1.03);\n}\n80% {\n    -webkit-transform: scale3d(0.97, 0.97, 0.97);\n            transform: scale3d(0.97, 0.97, 0.97);\n}\n100% {\n    opacity: 1;\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n}\n}\n@keyframes bullet-data-v-1f4ecdc9 {\n0%,\n  20%,\n  40%,\n  60%,\n  80%,\n  100% {\n    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);\n}\n0% {\n    opacity: 0;\n    -webkit-transform: scale3d(0.3, 0.3, 0.3);\n            transform: scale3d(0.3, 0.3, 0.3);\n}\n20% {\n    -webkit-transform: scale3d(1.1, 1.1, 1.1);\n            transform: scale3d(1.1, 1.1, 1.1);\n}\n40% {\n    -webkit-transform: scale3d(0.9, 0.9, 0.9);\n            transform: scale3d(0.9, 0.9, 0.9);\n}\n60% {\n    opacity: 1;\n    -webkit-transform: scale3d(1.03, 1.03, 1.03);\n            transform: scale3d(1.03, 1.03, 1.03);\n}\n80% {\n    -webkit-transform: scale3d(0.97, 0.97, 0.97);\n            transform: scale3d(0.97, 0.97, 0.97);\n}\n100% {\n    opacity: 1;\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n}\n}\n\n", ""]);
 
 // exports
 
@@ -92598,54 +92807,6 @@ exports.push([module.i, "\n@font-face {\n  font-family: 'Roboto';\n  font-style:
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -92731,444 +92892,112 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-face face-2" }, [
-          _c(
-            "button",
-            {
-              staticClass: "card-face__back-button",
-              attrs: { "data-card-back": "data-card-back" }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: "http://imgh.us/arrow_1.svg",
-                  width: "19",
-                  height: "19",
-                  draggable: "false"
-                }
-              })
-            ]
-          ),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Likes.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Followers.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Views.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__settings-button",
-            attrs: {
-              src: "http://imgh.us/cog.svg",
-              width: "17",
-              height: "17",
-              draggable: "false"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-face face-1" }, [
-          _c(
-            "button",
-            {
-              staticClass: "card-face__menu-button",
-              attrs: { "data-card-menu": "data-card-menu" }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: "http://imgh.us/dots_1.svg",
-                  width: "5",
-                  height: "23",
-                  draggable: "false"
-                }
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-face__avatar" }, [
-            _c("span", { staticClass: "card-face__bullet" }, [_vm._v("21")]),
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-face face-2" }, [
+        _c(
+          "button",
+          {
+            staticClass: "card-face__back-button",
+            attrs: { "data-card-back": "data-card-back" }
+          },
+          [
             _c("img", {
               attrs: {
-                src:
-                  "https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg",
-                width: "110",
-                height: "110",
+                src: "http://imgh.us/arrow_1.svg",
+                width: "19",
+                height: "19",
                 draggable: "false"
               }
             })
-          ]),
-          _vm._v(" "),
-          _c("h2", { staticClass: "card-face__name" }, [
-            _vm._v("Nguyễn Quang Huy")
-          ]),
-          _c("span", { staticClass: "card-face__title" }, [
-            _vm._v("Bách Khoa, Hà Nội, Việt Nam")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-face-footer" }, [
-            _c("div", [
-              _c("i", {
-                staticClass: "mdi mdi-new-box card-face__social",
-                staticStyle: { "font-size": "24pt" },
-                attrs: { "aria-hidden": "true" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "card-face__social" }, [_vm._v("8.00pm")])
-          ])
-        ])
+          ]
+        ),
+        _c("img", {
+          staticClass: "card-face__stats",
+          attrs: {
+            src: "http://imgh.us/Likes.png",
+            width: "100",
+            height: "100",
+            draggable: "false"
+          }
+        }),
+        _c("img", {
+          staticClass: "card-face__stats",
+          attrs: {
+            src: "http://imgh.us/Followers.png",
+            width: "100",
+            height: "100",
+            draggable: "false"
+          }
+        }),
+        _c("img", {
+          staticClass: "card-face__stats",
+          attrs: {
+            src: "http://imgh.us/Views.png",
+            width: "100",
+            height: "100",
+            draggable: "false"
+          }
+        }),
+        _c("img", {
+          staticClass: "card-face__settings-button",
+          attrs: {
+            src: "http://imgh.us/cog.svg",
+            width: "17",
+            height: "17",
+            draggable: "false"
+          }
+        })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-face face-2" }, [
-          _c(
-            "button",
-            {
-              staticClass: "card-face__back-button",
-              attrs: { "data-card-back": "data-card-back" }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: "http://imgh.us/arrow_1.svg",
-                  width: "19",
-                  height: "19",
-                  draggable: "false"
-                }
-              })
-            ]
-          ),
+      _c("div", { staticClass: "card-face face-1" }, [
+        _c(
+          "button",
+          {
+            staticClass: "card-face__menu-button",
+            attrs: { "data-card-menu": "data-card-menu" }
+          },
+          [
+            _c("img", {
+              attrs: {
+                src: "http://imgh.us/dots_1.svg",
+                width: "5",
+                height: "23",
+                draggable: "false"
+              }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-face__avatar" }, [
+          _c("span", { staticClass: "card-face__bullet" }, [_vm._v("21")]),
           _c("img", {
-            staticClass: "card-face__stats",
             attrs: {
-              src: "http://imgh.us/Likes.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Followers.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Views.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__settings-button",
-            attrs: {
-              src: "http://imgh.us/cog.svg",
-              width: "17",
-              height: "17",
+              src:
+                "https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg",
+              width: "110",
+              height: "110",
               draggable: "false"
             }
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-face face-1" }, [
-          _c(
-            "button",
-            {
-              staticClass: "card-face__menu-button",
-              attrs: { "data-card-menu": "data-card-menu" }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: "http://imgh.us/dots_1.svg",
-                  width: "5",
-                  height: "23",
-                  draggable: "false"
-                }
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-face__avatar" }, [
-            _c("span", { staticClass: "card-face__bullet" }, [_vm._v("21")]),
-            _c("img", {
-              attrs: {
-                src:
-                  "https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg",
-                width: "110",
-                height: "110",
-                draggable: "false"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("h2", { staticClass: "card-face__name" }, [
-            _vm._v("Nguyễn Quang Huy")
-          ]),
-          _c("span", { staticClass: "card-face__title" }, [
-            _vm._v("Bách Khoa, Hà Nội, Việt Nam")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-face-footer" }, [
-            _c("div", [
-              _c("i", {
-                staticClass: "mdi mdi-new-box card-face__social",
-                staticStyle: { "font-size": "24pt" },
-                attrs: { "aria-hidden": "true" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "card-face__social" }, [_vm._v("8.00pm")])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-face face-2" }, [
-          _c(
-            "button",
-            {
-              staticClass: "card-face__back-button",
-              attrs: { "data-card-back": "data-card-back" }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: "http://imgh.us/arrow_1.svg",
-                  width: "19",
-                  height: "19",
-                  draggable: "false"
-                }
-              })
-            ]
-          ),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Likes.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Followers.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Views.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__settings-button",
-            attrs: {
-              src: "http://imgh.us/cog.svg",
-              width: "17",
-              height: "17",
-              draggable: "false"
-            }
-          })
+        _c("h2", { staticClass: "card-face__name" }, [
+          _vm._v("Nguyễn Quang Huy")
+        ]),
+        _c("span", { staticClass: "card-face__title" }, [
+          _vm._v("Bách Khoa, Hà Nội, Việt Nam")
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-face face-1" }, [
-          _c(
-            "button",
-            {
-              staticClass: "card-face__menu-button",
-              attrs: { "data-card-menu": "data-card-menu" }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: "http://imgh.us/dots_1.svg",
-                  width: "5",
-                  height: "23",
-                  draggable: "false"
-                }
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-face__avatar" }, [
-            _c("span", { staticClass: "card-face__bullet" }, [_vm._v("21")]),
-            _c("img", {
-              attrs: {
-                src:
-                  "https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg",
-                width: "110",
-                height: "110",
-                draggable: "false"
-              }
+        _c("div", { staticClass: "card-face-footer" }, [
+          _c("div", [
+            _c("i", {
+              staticClass: "mdi mdi-new-box card-face__social",
+              staticStyle: { "font-size": "24pt" },
+              attrs: { "aria-hidden": "true" }
             })
           ]),
           _vm._v(" "),
-          _c("h2", { staticClass: "card-face__name" }, [
-            _vm._v("Nguyễn Quang Huy")
-          ]),
-          _c("span", { staticClass: "card-face__title" }, [
-            _vm._v("Bách Khoa, Hà Nội, Việt Nam")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-face-footer" }, [
-            _c("div", [
-              _c("i", {
-                staticClass: "mdi mdi-new-box card-face__social",
-                staticStyle: { "font-size": "24pt" },
-                attrs: { "aria-hidden": "true" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "card-face__social" }, [_vm._v("8.00pm")])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-face face-2" }, [
-          _c(
-            "button",
-            {
-              staticClass: "card-face__back-button",
-              attrs: { "data-card-back": "data-card-back" }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: "http://imgh.us/arrow_1.svg",
-                  width: "19",
-                  height: "19",
-                  draggable: "false"
-                }
-              })
-            ]
-          ),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Likes.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Followers.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__stats",
-            attrs: {
-              src: "http://imgh.us/Views.png",
-              width: "100",
-              height: "100",
-              draggable: "false"
-            }
-          }),
-          _c("img", {
-            staticClass: "card-face__settings-button",
-            attrs: {
-              src: "http://imgh.us/cog.svg",
-              width: "17",
-              height: "17",
-              draggable: "false"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-face face-1" }, [
-          _c(
-            "button",
-            {
-              staticClass: "card-face__menu-button",
-              attrs: { "data-card-menu": "data-card-menu" }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src: "http://imgh.us/dots_1.svg",
-                  width: "5",
-                  height: "23",
-                  draggable: "false"
-                }
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-face__avatar" }, [
-            _c("span", { staticClass: "card-face__bullet" }, [_vm._v("21")]),
-            _c("img", {
-              attrs: {
-                src:
-                  "https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg",
-                width: "110",
-                height: "110",
-                draggable: "false"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("h2", { staticClass: "card-face__name" }, [
-            _vm._v("Nguyễn Quang Huy")
-          ]),
-          _c("span", { staticClass: "card-face__title" }, [
-            _vm._v("Bách Khoa, Hà Nội, Việt Nam")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-face-footer" }, [
-            _c("div", [
-              _c("i", {
-                staticClass: "mdi mdi-new-box card-face__social",
-                staticStyle: { "font-size": "24pt" },
-                attrs: { "aria-hidden": "true" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "card-face__social" }, [_vm._v("8.00pm")])
-          ])
+          _c("span", { staticClass: "card-face__social" }, [_vm._v("8.00pm")])
         ])
       ])
     ])
