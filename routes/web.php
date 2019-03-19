@@ -24,8 +24,14 @@ Route::resource('events', 'EventController');
 Route::resource('feedbacks', 'FeedbackController')->only([
     'index'
 ]);
-Route::get('/analysis', function (){
-   return view('analysis');
+Route::get('/analysis', 'AnalysisController@index');
+
+Route::prefix('employees')->group(function () {
+    Route::get('/','EmployeeController@index')->name('employees.index');
+    Route::get('/create','EmployeeController@create')->name('employee.create');
+    Route::post('/store','EmployeeController@store')->name('employee.store');
+    Route::get('/edit/{id}','EmployeeController@edit')->name('employee.edit');
+    Route::patch('/update/{id}','EmployeeController@update')->name('employee.update');
+    Route::get('/show/{id}','EmployeeController@show')->name('employee.show');
+    Route::delete('/destroy/{id}','EmployeeController@destroy')->name('employee.destroy');
 });
-Route::get('/employees','EmployeeController@index')->name('employees.index');
-Route::get('/employees/create','EmployeeController@create')->name('employees.create');

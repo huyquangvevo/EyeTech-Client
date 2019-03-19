@@ -15,6 +15,11 @@
                     </div>
                 </div>
                 <div class="employees-table">
+                    @if(session()->get('success'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success') }}
+                        </div><br />
+                    @endif
                     <table id="employees-table" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                         <tr>
@@ -26,19 +31,33 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Đỗ Văn Duy</td>
-                            <td>vanduy07c.r@gmail.com</td>
-                            <td></td>
-                            <td>
-                                <div class="btn-group-sm" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-gradient-info">Chi tiết</button>
-                                    <button type="button" class="btn btn-gradient-warning">Sửa</button>
-                                    <button type="button" class="btn btn-gradient-danger">Xóa</button>
-                                </div>
-                            </td>
-                        </tr>
+                        @foreach($users as $index => $user)
+                            <tr>
+                                <td>{{ $user->id }}</td>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>
+                                    @if($user->active == 1)
+                                        <span>Hoạt động</span>
+                                    @else
+                                        <span>Không hoạt động</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    <div class="btn-group-sm" role="group" aria-label="Basic example">
+                                        <a href="{{ route('employee.show', $user->id) }}" class="btn btn-gradient-info">Chi tiết</a>
+                                        <a href="{{ route('employee.edit', $user->id) }}" class="btn btn-gradient-warning">Sửa</a>
+
+                                        <form action="{{ route('employee.destroy', $user->id)}}" method="post" class="inline-block">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-gradient-danger">Xóa</button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
+
                         </tbody>
                         <tfoot>
                         <tr>
@@ -59,7 +78,10 @@
 @section('js')
     <script>
         $(document).ready(function() {
-            $('#employees-table').DataTable();
+            var table = $('#employees-table').DataTable();
+            table
+                .order( [ 0, 'desc' ] )
+                .draw();
         } );
     </script>
 @endsection

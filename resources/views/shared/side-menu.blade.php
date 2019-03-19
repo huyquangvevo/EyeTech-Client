@@ -44,7 +44,7 @@
                         <a href="{{ route('employees.index') }}">Danh sách nhân viên</a>
                     </li>
                     <li>
-                        <a href="{{ route('employees.create') }}">Thêm mới nhân viên</a>
+                        <a href="{{ route('employee.create') }}">Thêm mới nhân viên</a>
                     </li>
                 </ul>
             </li>

@@ -15,36 +15,46 @@
                     </div>
                 </div>
                 <div class="employees-table">
-                    <form>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div><br />
+                    @endif
+                    <form method="post" action="{{ route('employee.store') }}">
+                        @csrf
                         <div class="form-group">
                             <label for="">Tên <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control form-control-sm" id="" aria-describedby="emailHelp" placeholder="Nhập tên">
+                            <input type="text" class="form-control form-control-sm" name="name" aria-describedby="emailHelp" placeholder="Nhập tên">
                         </div>
                         <div class="form-group">
                             <label for="">Email <span class="text-danger">*</span></label>
-                            <input type="email" class="form-control form-control-sm" id="" aria-describedby="emailHelp" placeholder="Nhập email">
+                            <input type="email" class="form-control form-control-sm" name="email" aria-describedby="emailHelp" placeholder="Nhập email">
                         </div>
                         <div class="form-group">
                             <label for="">Password <span class="text-danger">*</span></label>
-                            <input type="password" class="form-control form-control-sm" id="" placeholder="Password">
+                            <input type="password" class="form-control form-control-sm" name="password" placeholder="Password">
                         </div>
                         <div class="form-group">
                             <label for="">Vai trò </label>
-                            <select class="form-control form-control-sm">
-                                <option>Quản lý</option>
-                                <option>Nhân viên</option>
+                            <select class="form-control form-control-sm" name="permission">
+                                <option value="manager">Quản lý</option>
+                                <option value="employee">Nhân viên</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="">Trạng thái </label>
-                            <select class="form-control form-control-sm">
-                                <option>Hoạt động</option>
-                                <option>Không hoạt động</option>
+                            <select class="form-control form-control-sm" name="active">
+                                <option value="1">Hoạt động</option>
+                                <option value="0">Không hoạt động</option>
                             </select>
                         </div>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-gradient-primary">Quay về</button>
-                            <button type="button" class="btn btn-gradient-info">Tạo</button>
+                            <a href="{{ url()->previous() }}" class="btn btn-gradient-primary">Quay về</a>
+                            <button type="submit" class="btn btn-gradient-info">Tạo</button>
                         </div>
                     </form>
                 </div>
