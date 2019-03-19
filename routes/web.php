@@ -27,3 +27,5 @@ Route::resource('feedbacks', 'FeedbackController')->only([
 Route::get('/analysis', function (){
    return view('analysis');
 });
+Route::get('/employees','EmployeeController@index')->name('employees.index');
+Route::get('/employees/create','EmployeeController@create')->name('employees.create');

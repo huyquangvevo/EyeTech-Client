@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ url('public/css/dashboard/vue2Dropzone.css') }}">
     <link href="{{ url('public/css/dashboard/app.css') }}" rel="stylesheet">
     <link href="{{ url('public/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ url('public/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="app side-nav-dark header-info-gradient">
@@ -35,7 +36,11 @@
     <script src="{{ url('public/js/dashboard/app.min.js')}}"></script>
     <script src="{{ url('public/js/dashboard/Chart.min.js') }}"></script>
     <script src="{{ url('public/js/dashboard/analytical.js') }}"></script>
-    <script src="{{ url('public/js/dashboard/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ url('public/js/dashboard/jquery.dataTables.js') }}"></script>
+    <script src="{{ url('public/js/dashboard/dataTables.bootstrap4.min.js') }}"></script>
+
+    @yield('js')
+
+
 </body>
 </html>

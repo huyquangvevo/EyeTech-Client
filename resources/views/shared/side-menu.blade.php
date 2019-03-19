@@ -41,10 +41,10 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="{{ route('home') }}">Danh sách nhân viên</a>
+                        <a href="{{ route('employees.index') }}">Danh sách nhân viên</a>
                     </li>
                     <li>
-                        <a href="{{ route('events.index') }}">Thêm mới nhân viên</a>
+                        <a href="{{ route('employees.create') }}">Thêm mới nhân viên</a>
                     </li>
                 </ul>
             </li>
