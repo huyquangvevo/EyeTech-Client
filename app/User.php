@@ -51,11 +51,13 @@ class User extends Authenticatable
 
     public function hasAnyRole($roles)
     {
-        return null !== $this->permissions()->roles()->whereIn('name', $roles)->first();
+        $permission = $this->getPermission();
+        return null !== $permission->roles()->whereIn('name', $roles)->first();
     }
 
     public function hasRole($role)
     {
-        return null !== $this->permissions()->roles()->where('name', $role)->first();
+        $permission = $this->getPermission();
+        return null !== $permission->roles()->where('name', $role)->first();
     }
 }

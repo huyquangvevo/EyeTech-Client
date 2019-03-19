@@ -69,7 +69,7 @@ class EmployeeController extends Controller
         $user->email = $request->email;
         $user->active = $request->active;
         if($user->password != bcrypt($request->password)) {
-            $user->password != bcrypt($request->password);
+            $user->password == bcrypt($request->password);
         };
         $user->save();
         $permission = $user->getPermission();

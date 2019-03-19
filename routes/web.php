@@ -24,7 +24,7 @@ Route::resource('events', 'EventController');
 Route::resource('feedbacks', 'FeedbackController')->only([
     'index'
 ]);
-Route::get('/analysis', 'AnalysisController@index');
+Route::get('/analysis', 'AnalysisController@index')->name('analysis');
 
 Route::prefix('employees')->group(function () {
     Route::get('/','EmployeeController@index')->name('employees.index');
