@@ -10,11 +10,14 @@ import {ClientTable} from 'vue-tables-2';
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import vueDropzone from 'vue2-dropzone';
+import VueApexCharts from 'vue-apexcharts';
 
 Vue.use(ClientTable);
 Vue.use(BootstrapVue);
 Vue.use(vueDropzone);
+Vue.use(VueApexCharts);
 
+Vue.component('apexchart', VueApexCharts)
 Vue.component('vue-dropzone', vueDropzone);
 Vue.component('v-select', VueSelect.VueSelect);
 Vue.component('quick-event-component', require('./components/QuickEventComponent.vue'));
@@ -30,7 +33,12 @@ Vue.component('register-component', require('./components/RegisterComponent.vue'
 Vue.component('feedback-component', require('./components/FeedbackComponent.vue'));
 Vue.component('gallery-component', require('./components/GalleryComponent.vue'));
 Vue.component('gallery-upload-component', require('./components/GalleryUploadComponent.vue'));
+Vue.component('analysis', require('./components/AnalysisComponent.vue'));
+
+
 
 const vue = new Vue({
     el: '#vue',
 });
+
+
