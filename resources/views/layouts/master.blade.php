@@ -15,7 +15,9 @@
     {{-- <link rel="stylesheet" type="text/css" href="{{ url('public/css/dashboard/jquery.fancybox.min.css') }}" > --}}
     {{-- <link rel="stylesheet" href="{{ url('/public/css/newstyle.css')}}">  --}}
     <link href="{{ url('public/css/custom.css') }}" rel="stylesheet">
-
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 </head>
 <body style="font-family:'Roboto';font-size:12pt">
 <div class="app side-nav-dark header-info-gradient">
@@ -31,8 +33,15 @@
 <script src="{{ url('public/js/dashboard/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ url('public/js/dashboard/jquery.fancybox.min.js')}}"></script>
 <script src="{{ url('public/js/dashboard/morphing-fancy.js')}}"></script>
-
 <script src="{{ url('public/js/dashboard/app.min.js')}}"></script>
+<script>
+    $(document).ready(function(){
+        $("#form-filter").hide();
+        $("#btn-filter").click(function(){
+            $("#form-filter").slideToggle();
+        });
+    });
+</script>
 
 {{-- <script src="{{ url('public/js/master.js') }}"></script>
 <script src="{{ url('public/js/dashboard/vendor.js') }}"></script>

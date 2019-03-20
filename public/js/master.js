@@ -92027,7 +92027,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.row-pagination[data-v-38c9dc87] {\n    margin-top: 10px;\n    padding:0% 35%;\n}\n.row-list[data-v-38c9dc87] {\n    height: 50pt;\n    border-top: 1px solid gainsboro;\n}\n.container[data-v-38c9dc87] {\n    background-color: white;\n}\n.card-img-top-1[data-v-38c9dc87] {\n    border-radius: 50%;\n}\n.card[data-v-38c9dc87] {\n    border: none;\n}\n.col-title[data-v-38c9dc87]{\n    color: darkorange;\n    font-size: 13pt;\n    padding-top: 8pt;\n    padding-bottom: 10px;\n    height: 35pt;\n}\n.col-info[data-v-38c9dc87] {\n    height: 100%;\n    padding: 2% 0%;\n}\n.detail-col[data-v-38c9dc87] {\n    float: left;\n    padding: 1% 0%;\n    font-size: 10pt;\n    width: 80%;\n    height: 100%;\n}\n.img-cus[data-v-38c9dc87] {\n    float: left;\n    width: 20%;\n    height: 100%;\n}\n.info-detail[data-v-38c9dc87]{\n    font-weight: bolder;\n    font-size: 10pt;\n}\n.fav-detail[data-v-38c9dc87] {\n    font-weight: bolder;\n    font-size: 10pt;\n    padding: 5% 0%;\n}\n.type-cus[data-v-38c9dc87] {\n    font-weight: bolder;\n    font-size: 14pt;\n    color:goldenrod;\n    padding: 10% 0%;\n}\n.time-in[data-v-38c9dc87] {\n    font-weight: bolder;\n    font-size: 12pt;\n    padding: 10% 0%;\n}\n\n", ""]);
+exports.push([module.i, "\n.row-pagination[data-v-38c9dc87] {\n    margin-top: 10px;\n    padding:0% 35%;\n}\n.row-list[data-v-38c9dc87] {\n    height: 50pt;\n    border-top: 1px solid gainsboro;\n}\n.container[data-v-38c9dc87] {\n    background-color: white;\n}\n.card-img-top-1[data-v-38c9dc87] {\n    border-radius: 50%;\n}\n.card[data-v-38c9dc87] {\n    border: none;\n}\n.col-title[data-v-38c9dc87]{\n    color: #ff4411;\n    font-size: 14pt;\n    padding-top: 8pt;\n    padding-bottom: 10px;\n    height: 35pt;\n}\n.col-info[data-v-38c9dc87] {\n    height: 100%;\n    padding: 2% 0%;\n}\n.detail-col[data-v-38c9dc87] {\n    float: left;\n    padding: 1% 0%;\n    font-size: 10pt;\n    width: 80%;\n    height: 100%;\n}\n.img-cus[data-v-38c9dc87] {\n    float: left;\n    width: 20%;\n    height: 100%;\n}\n.info-detail[data-v-38c9dc87]{\n    font-weight: bolder;\n    font-size: 10pt;\n}\n.fav-detail[data-v-38c9dc87] {\n    font-weight: bolder;\n    font-size: 10pt;\n    padding: 5% 0%;\n}\n.type-cus[data-v-38c9dc87] {\n    color:#FFD700;\n    font-size: 25pt;\n    padding: 8px 6px;\n    height: 35pt;\n}\n.time-in[data-v-38c9dc87] {\n    font-weight: bolder;\n    font-size: 12pt;\n    padding: 10% 0%;\n}\n\n/* Input filter */\n.input-filter[data-v-38c9dc87] {\n    height: 20pt;\n    width: 120pt;\n}\n.custom-select[data-v-38c9dc87] {\n    width: 60pt;\n}\n.time-filter[data-v-38c9dc87] {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 165pt;\n    margin: 3pt 0px;\n}\n#title-table[data-v-38c9dc87] {\n}\n\n", ""]);
 
 // exports
 
@@ -92114,9 +92114,96 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: 'ListComponent'
+    name: "ListComponent",
+    props: {
+        id_branch: '',
+        events_route: '',
+        header_route: ''
+    },
+    data: function data() {
+        return {
+            events: [],
+            timer: '',
+            delayTime: 5000,
+            quantity: 5
+        };
+    },
+    created: function created() {
+        this.fetchQuickEventFormat();
+        this.timer = setInterval(this.fetchQuickEventFormat, this.delayTime);
+    },
+
+    methods: {
+        fetchQuickEventFormat: function fetchQuickEventFormat() {
+            var _this = this;
+
+            axios({
+                url: 'http://202.191.56.249/eyetech/api/v1/quick-events-format',
+                method: 'post',
+                data: {
+                    branch_id: this.id_branch,
+                    route_header: this.header_route,
+                    number_field: this.quantity
+                }
+            }).then(function (response) {
+                console.log(response);
+                _this.events = response.data.data;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        cancelAutoUpdate: function cancelAutoUpdate() {
+            clearInterval(this.timer);
+        },
+
+        redirectCustomerProfile: function redirectCustomerProfile(route) {
+            window.location = route;
+        },
+        filter: function filter() {
+            alert("Huy");
+        }
+    },
+    beforeDestroy: function beforeDestroy() {
+        this.cancelAutoUpdate();
+    }
 });
 
 /***/ }),
@@ -92133,19 +92220,153 @@ var render = function() {
     [
       _vm._m(0),
       _vm._v(" "),
-      _vm._l(10, function(i) {
+      _c(
+        "form",
+        {
+          attrs: { action: "events", method: "POST" },
+          on: { submit: _vm.filter }
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "row",
+              staticStyle: { display: "hidden" },
+              attrs: { id: "form-filter" }
+            },
+            [
+              _c("div", { staticClass: "col-sm-4 col-title" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.name_filter,
+                      expression: "name_filter"
+                    }
+                  ],
+                  staticClass: "input-filter form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.name_filter },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.name_filter = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-sm-2 col-title" }, [
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.type_filter,
+                        expression: "type_filter"
+                      }
+                    ],
+                    staticClass: "custom-select custom-select-sm",
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.type_filter = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      }
+                    }
+                  },
+                  [
+                    _c("option", { attrs: { selected: "" } }, [_vm._v("Mới")]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "2" } }, [_vm._v("VIP")]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "3" } }, [_vm._v("Thường")])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-sm-2 col-title" }),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2)
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _vm._l(_vm.events, function(event) {
         return _c("div", { staticClass: "row-list row" }, [
-          _vm._m(1, true),
-          _vm._v(" "),
-          _vm._m(2, true),
+          _c("div", { staticClass: "col-sm-4" }, [
+            _c(
+              "div",
+              { staticClass: "col-info", staticStyle: { width: "100%" } },
+              [
+                _c("div", { staticClass: "img-cus" }, [
+                  _c("img", {
+                    staticClass: "card-img-top-1",
+                    attrs: {
+                      src: event.avatar,
+                      alt: "Card image cap",
+                      height: "50pt",
+                      width: "50pt"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "detail-col" }, [
+                  _c("div", { staticClass: "info-detail" }, [
+                    _vm._v(_vm._s(event.name))
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "location-cus" }, [
+                    _vm._v("21 tuổi")
+                  ])
+                ])
+              ]
+            )
+          ]),
           _vm._v(" "),
           _vm._m(3, true),
           _vm._v(" "),
-          _vm._m(4, true)
+          _c("div", { staticClass: "col-sm-2" }, [
+            _c("div", { staticClass: "col-info" }, [
+              _c("div", { staticClass: "img-cus" }, [
+                _c("img", {
+                  staticClass: "card-img-top-1",
+                  attrs: {
+                    src: event.image_camera_url_array,
+                    alt: "Card image cap",
+                    height: "50pt",
+                    width: "50pt"
+                  }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-3" }, [
+            _c("div", { staticClass: "col-info time-in" }, [
+              _vm._v(_vm._s(event.time_in))
+            ])
+          ])
         ])
       }),
       _vm._v(" "),
-      _vm._m(5)
+      _vm._m(4)
     ],
     2
   )
@@ -92155,7 +92376,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    return _c("div", { staticClass: "row", attrs: { id: "title-table" } }, [
       _c("div", { staticClass: "col-sm-4 col-title" }, [
         _c("span", [_vm._v("\n                Khách hàng\n            ")]),
         _vm._v(" "),
@@ -92163,10 +92384,6 @@ var staticRenderFns = [
           staticClass: "mdi mdi-arrow-down",
           attrs: { "aria-hidden": "true" }
         })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-sm-3 col-title" }, [
-        _vm._v("\n            Sở thích\n        ")
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-sm-2 col-title" }, [
@@ -92179,7 +92396,19 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-sm-2 col-title" }, [
-        _vm._v("\n            Thời gian\n        ")
+        _c("span", [_vm._v("Camera")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-sm-3 col-title" }, [
+        _c("span", [_vm._v(" Thời gian")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-sm-1 col-title" }, [
+        _c("i", {
+          staticClass: "mdi mdi-filter-variant",
+          staticStyle: { float: "right" },
+          attrs: { id: "btn-filter", "aria-hidden": "true" }
+        })
       ])
     ])
   },
@@ -92187,42 +92416,31 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-4" }, [
-      _c("div", { staticClass: "col-info", staticStyle: { width: "100%" } }, [
-        _c("div", { staticClass: "img-cus" }, [
-          _c("img", {
-            staticClass: "card-img-top-1",
-            attrs: {
-              src: "/public/images/dtmh.jpg",
-              alt: "Card image cap",
-              height: "50pt",
-              width: "50pt"
-            }
-          })
-        ]),
+    return _c(
+      "div",
+      { staticClass: "col-sm-3 ", staticStyle: { margin: "0px" } },
+      [
+        _c("input", {
+          staticClass: "time-filter",
+          attrs: { type: "datetime-local", name: "from-time" }
+        }),
         _vm._v(" "),
-        _c("div", { staticClass: "detail-col" }, [
-          _c("div", { staticClass: "info-detail" }, [
-            _vm._v("Dam Thi Minh Hang, 21")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "location-cus" }, [
-            _vm._v("Bách Khoa, Hà Nội, Việt Nam")
-          ])
-        ])
-      ])
-    ])
+        _c("input", {
+          staticClass: "time-filter",
+          attrs: { type: "datetime-local", name: "to-time" }
+        })
+      ]
+    )
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-3" }, [
-      _c("div", { staticClass: "col-info fav-detail" }, [
-        _vm._v(
-          "\n                Socola đá xay, Mocha, Caramen, Cappucinno\n            "
-        )
-      ])
+    return _c("div", { staticClass: "col-sm-1 col-title" }, [
+      _c("input", {
+        staticClass: "btn btn-primary btn-sm",
+        attrs: { type: "submit", value: "Tìm" }
+      })
     ])
   },
   function() {
@@ -92231,16 +92449,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-2" }, [
       _c("div", { staticClass: "type-cus" }, [
-        _vm._v("\n                V.I.P\n            ")
+        _c("i", {
+          staticClass: "mdi mdi-star",
+          attrs: { "aria-hidden": "true" }
+        })
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-2" }, [
-      _c("div", { staticClass: "col-info time-in" }, [_vm._v("8:00 p.m")])
     ])
   },
   function() {
