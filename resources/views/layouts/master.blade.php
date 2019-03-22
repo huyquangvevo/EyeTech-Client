@@ -13,7 +13,7 @@
     <link href="{{ url('public/css/dashboard/app.css') }}" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> 
     {{-- <link rel="stylesheet" type="text/css" href="{{ url('public/css/dashboard/jquery.fancybox.min.css') }}" > --}}
-    {{-- <link rel="stylesheet" href="{{ url('/public/css/newstyle.css')}}">  --}}
+    <link rel="stylesheet" href="{{ url('/public/css/newstyle.css')}}"> 
     <link href="{{ url('public/css/custom.css') }}" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>

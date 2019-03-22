@@ -23,6 +23,7 @@ class EventController extends Controller
         $branch_id = Auth::user()->branch_id;
         $route_header = route('customers.index');
         return view('events.index', compact('branch_id', 'route_header', 'logout_route'));
+        // return view('events.event');
     }
 
     /**

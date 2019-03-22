@@ -23,31 +23,32 @@
             </div>
 
         </div>
-        <form v-on:submit="filter" action="events" method="POST">
+        <!-- <form @submit="filter" action="#" method="get"> -->
             <div class="row" id="form-filter" style="display:hidden;">
                     <div class="col-sm-4 col-title">
-                            <input type="text" v-model="name_filter" class="input-filter form-control">
+                            <input type="text" v-model="name_filter" name="name_filter" class="input-filter form-control" >
                     </div>
                     <div class="col-sm-2 col-title">
-                        <select class="custom-select custom-select-sm" v-model="type_filter">
-                            <option selected>Mới</option>
-                            <option value="2">VIP</option>
-                            <option value="3">Thường</option>
+                        <select class="custom-select custom-select-sm"  v-model="type_filter" name="type_filter">
+                            <option value="1">Tất cả</option>
+                            <option value="New">Mới</option>
+                            <option value="VIP">VIP</option>
+                            <option value="Default">Thường</option>
                         </select>
                     </div>
                     <div class="col-sm-2 col-title">
 
                     </div>
                     <div class="col-sm-3 " style="margin:0px;">
-                            <input type="datetime-local" name="from-time" class="time-filter">
-                            <input type="datetime-local" name="to-time" class="time-filter">
+                            <input type="datetime-local" v-model="from_time" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" name="from_time" class="time-filter" >
+                            <input type="datetime-local" v-model="to_time" name="to_time" class="time-filter" >
                     </div>
 
                     <div class="col-sm-1 col-title">
-                            <input type="submit" value="Tìm" class="btn btn-primary btn-sm">
+                            <input type="button" value="Tìm" class="btn btn-primary btn-sm" v-on:click="filter">
                     </div>
             </div>
-        </form>
+        <!-- </form> -->
 
         <div class="row-list row" v-for="event in events">
             <div class="col-sm-4">
@@ -64,7 +65,9 @@
             </div>
             <div class="col-sm-2">
                 <div class="type-cus">
-                     <i class="mdi mdi-star" aria-hidden="true"></i>
+                     <i v-if="event.type == 'VIP'" class="mdi mdi-star" style="color:yellow;" aria-hidden="true"></i>
+                     <i v-if="event.type == 'New'" class="mdi mdi-new-box" aria-hidden="true"></i>
+                     <i v-if="event.type == 'Default'" class="mdi mdi-apple" aria-hidden="true"></i>
                 </div>
             </div>
              <div class="col-sm-2">
@@ -91,11 +94,11 @@
                         <span class="sr-only">Previous</span>
                     </a>
                     </li>
-                    <li class="page-item active"><a class="page-link">1</a></li>
-                    <li class="page-item"><a class="page-link">2</a></li>
-                    <li class="page-item"><a class="page-link">3</a></li>
-                    <li class="page-item"><a class="page-link">4</a></li>
-                    <li class="page-item"><a class="page-link">5</a></li>
+                    <li class="page-item active"><button class="page-link" v-on:click="fetchQuickEventFormat(1)">1</button></li>
+                    <li class="page-item"><button class="page-link" v-on:click="fetchQuickEventFormat(2)">2</button></li>
+                    <li class="page-item"><button class="page-link" v-on:click="fetchQuickEventFormat(3)">3</button></li>
+                    <li class="page-item"><button class="page-link" v-on:click="fetchQuickEventFormat(4)">4</button></li>
+                    <li class="page-item"><button class="page-link" v-on:click="fetchQuickEventFormat(5)">5</button></li>
                     <li class="page-item">
                     <a class="page-link" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
@@ -123,22 +126,29 @@
                 events: [],
                 timer: '',
                 delayTime: 5000,
-                quantity: 5,
+                quantity: 20,
+                page_num:0,
+                type_filter:'',
+                name_filter:'',
+                from_time:'',
+                to_time:'',
+                isUpdated:false,
             }
         },
         created() {
-            this.fetchQuickEventFormat();
-            this.timer = setInterval(this.fetchQuickEventFormat, this.delayTime);
+                this.fetchQuickEventFormat(1);
         },
         methods: {
-            fetchQuickEventFormat() {
+            fetchQuickEventFormat(pn) {
+                this.page_num = (pn-1)*this.quantity;
                 axios({
-                    url: 'http://202.191.56.249/eyetech/api/v1/quick-events-format',
+                    url: 'http://eyeserver.com/api/v1/quick-events-format',
                     method: 'post',
                     data: {
                         branch_id: this.id_branch,
                         route_header: this.header_route,
                         number_field: this.quantity,
+                        page_num: this.page_num,
                     }
                 })
                     .then(response => {
@@ -156,8 +166,37 @@
                 window.location = route;
             },
             filter(){
-                alert("Huy");
+                this.setFormatTime();
+                // alert(this.type_filter+"\n"+this.name_filter+this.from_time+"\n"+this.to_time);
+                axios({
+                    url: 'http://eyeserver.com/api/v1/filter-events',
+                    method: 'post',
+                    data: {
+                        branch_id: this.id_branch,
+                        route_header: this.header_route,
+                        number_field: this.quantity,
+                        type_filter : this.type_filter,
+                        name_filter : this.name_filter,
+                        from_time : this.from_time,
+                        to_time : this.to_time,
+                    }
+                })
+                    .then(response => {
+                        console.log(response);
+                        this.events = response.data.data;
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
             },
+            setFormatTime(){
+                var s_time = this.from_time;
+                if(s_time!="")
+                    this.from_time = s_time.substring(0,10)+" "+s_time.substring(11,16)+":00";
+                s_time = this.to_time;
+                if(s_time!="")
+                    this.to_time = s_time.substring(0,10)+" "+s_time.substring(11,16)+":00";
+            }
         },
         beforeDestroy() {
             this.cancelAutoUpdate();
@@ -174,11 +213,11 @@
 
 .row-list {
     height: 50pt;
-    border-top: 1px solid gainsboro;
+    border-top: 1px solid rgba(255,255,255,0.3);;
 }
 
 .container {
-    background-color: white;
+    background-color: none;
 }
 
 .card-img-top-1 {
@@ -200,6 +239,7 @@
 .col-info {
     height: 100%;
     padding: 2% 0%;
+    color: #fff;
 }
 
 .detail-col {
@@ -229,14 +269,14 @@
 }
 
 .type-cus {
-    color:#FFD700;
-    font-size: 25pt;
+    /* color:#FFD700; */
+    color:aliceblue;
+    font-size: 20pt;
     padding: 8px 6px;
     height: 35pt;
 }
 .time-in {
-    font-weight: bolder;
-    font-size: 12pt;
+    font-size: 11pt;
     padding: 10% 0%;
 }
 
@@ -258,7 +298,8 @@
 }
 
 #title-table {
-    
+    padding: 6pt 0pt;
+    background: rgba(255,255,255,0.3);
 }
 
 </style>

@@ -24,3 +24,4 @@ Route::resource('events', 'EventController');
 Route::resource('feedbacks', 'FeedbackController')->only([
     'index'
 ]);
+

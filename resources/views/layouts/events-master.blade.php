@@ -35,5 +35,7 @@
 <script src="{{ url('public/js/dashboard/jquery.dataTables.js') }}"></script>
 <script src="{{ url('public/js/dashboard/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ url('public/js/dashboard/data-table.js') }}"></script>
+<script src="{{ url('public/js/dashboard/jquery-3.3.1.min.js') }}"></script>
+
 </body>
 </html>
