@@ -119969,42 +119969,114 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             series: [{
-                name: 'Website Blog',
-                type: 'column',
-                data: [440, 505, 414, 671, 227, 413, 201, 352, 752, 320, 257, 160]
+                name: 'Khách quen',
+                data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
             }, {
-                name: 'Social Media',
-                type: 'line',
-                data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
+                name: 'Khách mới',
+                data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+            }, {
+                name: 'Tổng',
+                data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
             }],
             chartOptions: {
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        endingShape: 'rounded',
+                        columnWidth: '55%'
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
                 stroke: {
-                    width: [0, 4]
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
                 },
-                title: {
-                    text: 'Traffic Sources'
-                },
-                // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                labels: ['01 Jan 2001', '02 Jan 2001', '03 Jan 2001', '04 Jan 2001', '05 Jan 2001', '06 Jan 2001', '07 Jan 2001', '08 Jan 2001', '09 Jan 2001', '10 Jan 2001', '11 Jan 2001', '12 Jan 2001'],
-                xaxis: {
-                    type: 'datetime'
-                },
-                yaxis: [{
-                    title: {
-                        text: 'Website Blog'
-                    }
 
-                }, {
-                    opposite: true,
+                xaxis: {
+                    categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
+                },
+                yaxis: {
                     title: {
-                        text: 'Social Media'
+                        text: 'Người'
                     }
-                }]
+                },
+                fill: {
+                    opacity: 1
+
+                },
+                tooltip: {
+                    y: {
+                        formatter: function formatter(val) {
+                            return val + " khách";
+                        }
+                    }
+                }
             }
         };
     }
@@ -120018,22 +120090,144 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("apexchart", {
-        attrs: {
-          width: "500",
-          type: "line",
-          options: _vm.chartOptions,
-          series: _vm.series
-        }
-      })
-    ],
-    1
-  )
+  return _c("div", { staticClass: "row analysis px-3" }, [
+    _c(
+      "div",
+      { staticClass: "bg-white col-md-8 column-chart shadow-sm rounded pb-0" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mt-5", attrs: { id: "chart" } },
+          [
+            _c("apexchart", {
+              attrs: {
+                type: "bar",
+                height: "350",
+                width: "100%",
+                options: _vm.chartOptions,
+                series: _vm.series
+              }
+            })
+          ],
+          1
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _vm._m(1)
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "chart-filter" }, [
+      _c("ul", [
+        _c("li", [_vm._v("Thống kê theo")]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("Ngày")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("Tuần")])]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { staticClass: "active", attrs: { href: "" } }, [
+            _vm._v("Tháng")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("Năm")])])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-4 pr-0" }, [
+      _c("div", { staticClass: "card" }, [
+        _c(
+          "div",
+          {
+            staticClass: "card-body text-white",
+            staticStyle: {
+              "background-image":
+                "linear-gradient(45deg,#f39c12 0,#e91e63 100%)"
+            }
+          },
+          [
+            _c("div", { staticClass: "d-flex justify-content-between mb-5" }, [
+              _c("div", [
+                _c("h4", { staticClass: " mb-2 text-white" }, [
+                  _vm._v("Tổng khách hàng")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-light font-13" }, [
+                  _vm._v("From 14.12 - 21.12")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flexbox mb-2" }, [
+              _c("div", { staticClass: "font-size-25 mb-0" }, [_vm._v("+620")]),
+              _vm._v(" "),
+              _c("span", { staticClass: "text-white font-18 " }, [
+                _c("i", { staticClass: "ti-arrow-top-right mr-2" }),
+                _vm._v("24.05%")
+              ])
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "d-flex justify-content-between mb-5" }, [
+            _c("div", [
+              _c("h4", { staticClass: " mb-2" }, [_vm._v("Khách hàng mới")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-muted font-13" }, [
+                _vm._v("From 14.12 - 21.12")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "flexbox mb-2" }, [
+            _c("div", { staticClass: "font-size-25 mb-0" }, [_vm._v("+420")]),
+            _c("span", { staticClass: "text-success font-18" }, [
+              _c("i", { staticClass: "ti-arrow-top-right mr-2" }),
+              _vm._v("24.05%")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card mb-0" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "d-flex justify-content-between mb-5" }, [
+            _c("div", [
+              _c("h4", { staticClass: "mb-2" }, [_vm._v("Khách hàng quen")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-muted font-13" }, [
+                _vm._v("From 14.12 - 21.12")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "flexbox mb-2" }, [
+            _c("div", { staticClass: "font-size-25 mb-0" }, [_vm._v("+200")]),
+            _c("span", { staticClass: "text-success font-18" }, [
+              _c("i", { staticClass: "ti-arrow-top-right mr-2" }),
+              _vm._v("24.05%")
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
