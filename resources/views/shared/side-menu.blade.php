@@ -33,7 +33,7 @@
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
-                        <i class="mdi mdi-gauge"></i>
+                        <i class="fas fa-users"></i>
                     </span>
                     <span class="title">Nhân viên</span>
                     <span class="arrow">
@@ -54,7 +54,7 @@
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
-                        <i class="mdi mdi-gauge"></i>
+                        <i class="fas fa-chart-bar"></i>
                     </span>
                     <span class="title">Thống kê</span>
                     <span class="arrow">

@@ -4,3 +4,48 @@
     padding: 15px;
     background: white;
 }
+/*.column-chart {*/
+    /*padding: 15px;*/
+/*}*/
+#reportrange {
+    font-size: 16px;
+    width: 320px;
+    background: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.analysis .card {
+    border-radius: 10px;
+}
+
+.analysis .chart-filter ul {
+    list-style: none;
+    float: right;
+}
+
+.analysis .chart-filter ul li {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.analysis .chart-filter ul .active {
+    color: red;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexbox span {
+    text-align: right;
+}
+
+.font-13 {
+    font-size: 13px;
+}
+
