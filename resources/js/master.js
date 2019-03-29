@@ -35,7 +35,9 @@ Vue.component('gallery-component', require('./components/GalleryComponent.vue'))
 Vue.component('gallery-upload-component', require('./components/GalleryUploadComponent.vue'));
 Vue.component('analysis', require('./components/AnalysisComponent.vue'));
 
-
+Vue.component('list-customer',require('./components/ListCustomer.vue'));
+Vue.component('event-component',require('./components/EventComponent.vue'));
+Vue.component('event-in-component',require('./components/EventInComponent.vue'));
 
 const vue = new Vue({
     el: '#vue',

@@ -16,6 +16,8 @@
                 </div>
                 <detail-event-component id_branch="{{ $branch_id }}" header_route="{{ $route_header }}"></detail-event-component>
             </div>
+            {{-- <event-component></event-component>        --}}
+
         </div>
         @include('shared.footer')
     </div>
