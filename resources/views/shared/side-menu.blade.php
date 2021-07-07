@@ -29,6 +29,45 @@
                     </li>
                 </ul>
             </li>
+            @if(Auth::user()->hasRole('view_employees'))
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                    <span class="icon-holder">
+                        <i class="fas fa-users"></i>
+                    </span>
+                    <span class="title">Nhân viên</span>
+                    <span class="arrow">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('employees.index') }}">Danh sách nhân viên</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('employee.create') }}">Thêm mới nhân viên</a>
+                    </li>
+                </ul>
+            </li>
+            @endif
+            @if(Auth::user()->hasRole('view_analysis'))
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle" href="javascript:void(0);">
+                    <span class="icon-holder">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="title">Thống kê</span>
+                    <span class="arrow">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('analysis') }}">Thống kê khách hàng</a>
+                    </li>
+                </ul>
+            </li>
+            @endif
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="javascript:void(0);">
                     <span class="icon-holder">
